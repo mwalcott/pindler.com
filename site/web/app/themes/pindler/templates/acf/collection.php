@@ -45,30 +45,73 @@
 			// The Loop
 			if ( $the_query->have_posts() ) {
 				while ( $the_query->have_posts() ) {
-					$the_query->the_post(); ?>
+					$the_query->the_post(); 
+					
+					$pushCol = '';
+					$pullCol = '';
+					if( get_sub_field('image_offset') ) {
+						$pushCol = 'push-sm-6';
+						$pullCol = 'pull-sm-6';
+					}
+					
+					$featured = '';
+					$collectionLink = '';
+					if( get_sub_field('featured_collections') ) {
+						$featured = 'featured-collection';
+						$collectionLink = '<a href="'. get_permalink() .'" class="btn btn-secondary"><span>View Collection</span></a>';
+					} else {
+						$collectionLink = '<a href="'. get_permalink() .'" class=""><span>View Collection</span></a>';
+					}
+					
+					?>
 					
 						<?php if($i == 1) { ?>
 						
-							<div class="col-sm-6">
-								<div class="collection-portrait " style="background-image: url(<?php the_post_thumbnail_url('collection_tall'); ?>);">
-									<a class="align-middle" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+							<div class="col-sm-6 <?php echo $pushCol; ?>">
+								<div class="collection-portrait <?php echo $featured; ?>" style="background-image: url(<?php the_post_thumbnail_url('collection_tall'); ?>);">
+									
+									<div class="collection-cta">
+										<div>
+											<?php the_title('<h2>', '</h2>'); ?>									
+											<?php echo $collectionLink; ?>
+										</div>
+									</div>
+									
 								</div>
 							</div>
 						
 						<?php } elseif($i == 2) { ?>
-							<div class="col-sm-6 collection-multiple">
-								<div class="collection-landscape img-2 h-50" style="background-image: url(<?php the_post_thumbnail_url('collection'); ?>);">
-									<?php the_title(); ?>
+							
+							<div class="col-sm-6 <?php echo $pullCol; ?> collection-multiple">
+								<div class="collection-landscape img-2 h-50 <?php echo $featured; ?>" style="background-image: url(<?php the_post_thumbnail_url('collection'); ?>);">
+
+									<div class="collection-cta">
+										<div>
+											<?php the_title('<h2>', '</h2>'); ?>									
+											<?php echo $collectionLink; ?>
+										</div>
+									</div>
+
 								</div>
 								
 						<?php } elseif($i == 3) { ?>
 								
-								<div class="collection-landscape img-3 h-50" style="background-image: url(<?php the_post_thumbnail_url('collection'); ?>);">
-									<?php the_title(); ?>
+								<div class="collection-landscape img-3 h-50 <?php echo $featured; ?>" style="background-image: url(<?php the_post_thumbnail_url('collection'); ?>);">
+
+									<div class="collection-cta">
+										<div>
+											<?php the_title('<h2>', '</h2>'); ?>									
+											<?php echo $collectionLink; ?>
+										</div>
+									</div>
+
 								</div>
 							</div>
+							
 						<?php } else { ?>
+							
 							</div>
+							
 						<?php } ?> 
 					
 					
