@@ -1,0 +1,111 @@
+// Start Main Header
+header.banner {
+	padding-bottom: 2rem;
+	
+	// Start Header Top
+	.header-top {
+		background: $brand-light-background;
+		margin-bottom: 2rem;
+		font-size: .8rem;
+		
+		// Start User Links
+		ul.user-links {
+			@extend .clearfix;
+			li {
+				position: relative;
+				margin: 0;
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+				a {
+					padding: .8rem 1rem;
+					@include animate-element(.2s);
+					&:hover {
+						background: $brand-secondary;
+						color: $white;
+						text-decoration: none;
+						cursor: pointer;
+					}
+				}
+			}
+		} // End User Links
+		
+		// Start Header Social
+		.header-social {
+			font-size: 1rem;
+			ul {
+				li {
+					margin-left: 1rem;
+					&:first-child {
+						display: none;
+					}
+					
+					a {
+						
+					}
+					
+				}
+			}
+		} // End Header Social
+		
+	} // End Header Top
+	
+} // End Main Header
+
+// Start Navigation
+.nav-primary {
+	
+	// Start Nav
+	.nav {
+		padding-left: 15px;
+		font-size: 1rem;
+		li {
+			position: relative;
+			width: 33.333333%;
+			text-align: center;
+			a {
+				
+			}
+			.sub-menu {
+				display: none;
+				position: absolute;
+				top: 100%;
+				z-index: 100;
+				left: 50%;
+				background: $brand-primary;
+				list-style: none;
+				padding: 0;
+				min-width: 200px;
+				margin-left: -100px;
+				li {
+					width: 100%;
+					a {
+						color: $white;
+						text-decoration: none;
+						display: block;
+						font-size: .8rem;
+					}
+				}
+			}
+			&:hover {
+				.sub-menu {
+					display: block;
+				}
+			}
+		}
+	} // End Nav
+	
+}
+// End Navigation
+
+
+// Start Logo
+	.brand {
+		text-align: center;
+		img {
+			width: 75%;
+		}
+	}
+// Start Logo

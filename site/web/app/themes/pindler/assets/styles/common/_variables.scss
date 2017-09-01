@@ -1,0 +1,38 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         	#00334b;
+$brand-secondary:					#3f464a;
+$brand-light-background:	#efefef;
+
+$white:										#ffffff;
+
+
+
+// Fonts
+$global-font:							'Tinos', serif;
+
+
+// Mixins
+@mixin animate-element($time) {
+	-webkit-transition: 	all $time ease-in-out;
+	-moz-transition: 			all $time ease-in-out;
+	-ms-transition: 			all $time ease-in-out;
+	-o-transition: 				all $time ease-in-out;
+	transition: 					all $time ease-in-out;	
+}
+
+@mixin background-cover() {
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+@mixin round($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
