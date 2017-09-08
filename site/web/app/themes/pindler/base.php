@@ -23,7 +23,13 @@ use Roots\Sage\Wrapper;
       <div class="content row">
         <main class="main">
 	        <?= Pindler\content_acf(); ?>
-          <?php include Wrapper\template_path(); ?>
+          <?php 
+	          if(is_front_page()) {
+		          
+	          } else {
+	          	include Wrapper\template_path(); 
+						}
+	        ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
           <aside class="sidebar">
