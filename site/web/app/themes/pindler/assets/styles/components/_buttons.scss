@@ -1,0 +1,13 @@
+.btn {
+	@include round(0px);
+	padding: .8rem 1.5rem;	
+	font-size: .9rem;
+	// Primary
+	&.btn-primary {
+		font-style: italic;
+		&:hover {
+			background: $brand-secondary;
+		}
+	}
+	
+}

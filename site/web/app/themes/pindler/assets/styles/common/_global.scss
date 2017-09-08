@@ -1,5 +1,6 @@
 // Font Import from google
 @import url('https://fonts.googleapis.com/css?family=Tinos:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
 
 body {
 	font-family: $global-font;
@@ -19,4 +20,12 @@ ul {
 		}
 	}
 	
+}
+
+a {
+	@include animate-element(.2s);
+	&:hover {
+		text-decoration: none;
+		color: $brand-secondary;
+	}
 }

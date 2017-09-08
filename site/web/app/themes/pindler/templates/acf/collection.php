@@ -2,7 +2,7 @@
 	$i = 1;
 	$collection_term_id = get_sub_field('collection_category'); 
 ?>
-<section class="collection-block cb-block">
+<section class="collection-block section-block">
 	<header class="section-header">
 		<h2><?php the_sub_field('heading'); ?></h2>
 	</header>
@@ -33,6 +33,13 @@
 							'field'    => 'term_id',
 							'terms'    => $collection_term_id,
 						),
+					),
+					'meta_query' => array(
+						array(
+							'key' => 'included',
+							'compare' => '==',
+							'value' => '1'
+						)						
 					),
 				);
 		

@@ -30,6 +30,8 @@ function setup() {
     'left_navigation' => __('Left Navigation', 'sage'),
     'right_navigation' => __('Right Navigation', 'sage'),
     'footer_navigation' => __('Footer Navigation', 'sage'),
+    'fabric_navigation' => __('Fabric Navigation', 'sage'),
+    'trim_navigation' => __('Trim Navigation', 'sage'),
   ]);
 
   // Enable post thumbnails
@@ -87,6 +89,9 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_tax( array('collection') ),
+    is_singular( array( 'collections' ) ),
+    is_post_type_archive( array( 'collections' ) ),
     is_page_template('template-custom.php'),
   ]);
 

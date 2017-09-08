@@ -20,7 +20,7 @@
       init: function() {
         // JavaScript to be fired on all pages
         
-        $(".owl-carousel").owlCarousel({
+        $(".owl-banner").owlCarousel({
 					animateOut: 'fadeOut',
 					loop: false,
 					margin: 0,
@@ -29,6 +29,51 @@
  					autoplay: false,
 			    items: 1
         });
+
+				$('.owl-asi').owlCarousel({
+				    loop:true,
+				    margin:10,
+				    nav:true,
+				    responsive:{
+				        0:{
+				            items:1
+				        },
+				        600:{
+				            items:3
+				        },
+				        1000:{
+				            items:6
+				        }
+				    }
+				});
+
+				$('.owl-installs').owlCarousel({
+				    loop:true,
+				    margin:10,
+				    nav:true,
+				    responsive:{
+				        0:{
+				            items:1
+				        },
+				        600:{
+				            items:3
+				        },
+				        1000:{
+				            items:3
+				        }
+				    }
+				});
+
+/*
+        $(".owl-asi").owlCarousel({
+					loop: true,
+					margin: 0,
+					nav: false,
+					dots: true,
+ 					autoplay: false,
+			    items: 6
+        });
+*/
 
 				var collectionHeight = function() {
 				  var height = $('.collection-multiple').height();

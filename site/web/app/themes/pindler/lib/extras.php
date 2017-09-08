@@ -59,6 +59,9 @@ add_image_size( 'slider', 1920, 800, array( 'center', 'center' ) );
 // Collection Images
 add_image_size( 'collection', 1080, 730, array( 'center', 'center' ) );
 add_image_size( 'collection_tall', 700, 1080, array( 'center', 'center' ) );
+add_image_size( 'collection_landing', 1000, 700, array( 'center', 'center' ) );
+
+add_image_size( 'featured_installs', 600, 400, array( 'center', 'center' ) );
 
 namespace Pindler;
 
@@ -94,7 +97,7 @@ function banner() {
 	
 		if( have_rows('slides') ):
 	
-			echo '<div class="owl-carousel">';
+			echo '<div class="owl-carousel owl-banner">';
 				while ( have_rows('slides') ) : the_row(); ?>
 					
 					<?php 
@@ -148,6 +151,14 @@ function content_acf() {
 			if( get_row_layout() == 'collection' )
 			
 				get_template_part('templates/acf/collection');
+
+			if( get_row_layout() == 'as_seen_in' )
+			
+				get_template_part('templates/acf/as-seen-in');
+
+			if( get_row_layout() == 'featured_installs' )
+			
+				get_template_part('templates/acf/featured-installs');
 									
 		endwhile;
 	
@@ -158,3 +169,20 @@ function content_acf() {
 endif;
 
 }
+
+/**
+ * Remove Acrhive & Category Titles
+ */
+
+function filter_archives_title($title) {
+	if(is_archive()) {
+		return str_replace('Archives: ', '', $title);	
+	}
+  
+}
+add_filter('get_the_archive_title', __NAMESPACE__ . '\\filter_archives_title');
+
+function filter_category_title($title) {
+  return str_replace('Category: ', '', $title);
+}
+add_filter('get_the_archive_title', __NAMESPACE__ . '\\filter_category_title');
