@@ -2,22 +2,14 @@
 	<header class="section-header">
 		<h2><?php the_sub_field('heading'); ?></h2>
 	</header>
-	
-	<?php if( get_sub_field('intro') ) { ?>
-		<div class="row justify-content-sm-center">
-			<div class="col-sm-8 text-center intro">
-				<p><?php the_sub_field('intro'); ?></p>
-			</div>
-		</div>
-	<?php } ?>
 
-	<div class="owl-carousel owl-asi owl-theme">
+<!--
+	<div class="owl-carousel owl-installs owl-theme">
 
 		<?php
 			$args = array(
-				'post_type' => 'post',
+				'post_type' => 'featured_installs',
 				'posts_per_page' => 12,
-				'category_name' => 'as-seen-in'
 
 			);
 			// The Query
@@ -29,11 +21,11 @@
 					$the_query->the_post(); 
 			
 		?>					
-			<div class="">
+			<div>
 				<a href="<?php the_permalink(); ?>">
 					<?php									 
 						if ( has_post_thumbnail() ) {
-						  the_post_thumbnail('full', array('class' => 'img-fluid'));
+						  the_post_thumbnail('featured_installs', array('class' => 'img-fluid'));
 						}
 					?>
 				</a>
@@ -47,6 +39,7 @@
 		?>
 	
 	</div>
+-->
 	
 	
 </section>

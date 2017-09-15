@@ -1,6 +1,6 @@
 // Start Main Header
 header.banner {
-	padding-bottom: 2rem;
+	//padding-bottom: 2rem;
 	
 	// Start Header Top
 	.header-top {
@@ -56,6 +56,8 @@ header.banner {
 
 // Start Navigation
 .nav-primary {
+	border-bottom: 1px solid $brand-border;
+	padding-bottom: 2rem;
 	
 	// Start Nav
 	.nav {
@@ -97,6 +99,11 @@ header.banner {
 		}
 	} // End Nav
 	
+}
+body.home {
+	.nav-primary {
+		border-bottom: none;
+	}
 }
 // End Navigation
 

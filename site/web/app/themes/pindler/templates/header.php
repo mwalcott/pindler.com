@@ -4,7 +4,7 @@
 			
 			<div class="row align-items-center">
 				<div class="col-sm-4 text-left">
-					<a href="#FIXME">Search Fabrics <i class="fa fa-search" aria-hidden="true"></i></a>
+					<a href="http://trade.pindler.com/cgi-bin/fccgi.exe?w3exec=public&cmd=cust.fabric.search&stype=fabric">Search Fabrics <i class="fa fa-search" aria-hidden="true"></i></a>
 				</div>
 				<div class="col-sm-4 text-center">
 					<ul class="user-links head-foot-links">

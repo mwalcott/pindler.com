@@ -1,4 +1,12 @@
 <footer class="content-info">
+	<?php if( get_field('image') ) { ?>
+  <div class="bottom-background">
+  	<div style="background-image: url(<?php the_field('image'); ?>);">
+	  	
+  	</div>
+  </div>
+  <?php } ?>
+
   <div class="container">
 		<div class="row footer-columns align-items-center">
 			

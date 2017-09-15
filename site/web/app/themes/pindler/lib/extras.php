@@ -148,6 +148,14 @@ function content_acf() {
 		// loop through the rows of data
 		while ( have_rows('section') ) : the_row();
 
+			if( get_row_layout() == 'standard_text' )
+			
+				get_template_part('templates/acf/standard-text');
+
+			if( get_row_layout() == 'image_block' )
+			
+				get_template_part('templates/acf/image-block');
+
 			if( get_row_layout() == 'collection' )
 			
 				get_template_part('templates/acf/collection');
@@ -159,6 +167,10 @@ function content_acf() {
 			if( get_row_layout() == 'featured_installs' )
 			
 				get_template_part('templates/acf/featured-installs');
+
+			if( get_row_layout() == 'history' )
+			
+				get_template_part('templates/acf/history');
 									
 		endwhile;
 	

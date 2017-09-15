@@ -1,5 +1,6 @@
 main.main {
 	padding-top: 3.5rem;
+	padding-bottom: 3.5rem;
 }
 
 .modal-backdrop.show {
@@ -11,7 +12,7 @@ main.main {
 	position: relative;
 	.owl-item {
 		> div {
-			min-height: 60vh;
+			min-height: 70vh;
 			position: relative;
 			@include background-cover();
 			
@@ -53,6 +54,41 @@ main.main {
 		}
 	}
 	
+	.owl-nav {
+		
+		.owl-prev {
+			
+		}
+		
+	}
+	
+}
+
+.owl-carousel {
+	
+	.owl-nav {
+		.owl-prev,
+		.owl-next {
+			font-size: 5rem;
+			position: absolute;
+			top: 50%;
+			color: $white;
+			display: block;
+			padding: 0 2rem;
+			margin-top: -60px;
+			text-shadow: 0px 0px 5px #000;
+			&.disabled {
+				display: none;
+			}
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+	
 }
 
 
@@ -76,6 +112,11 @@ main.main {
 			}
 		}
 	}
+	
+	.intro {
+		margin-bottom: 2.5rem;
+	}
+	
 }
 
 // Start Collection Block Styles
@@ -190,8 +231,8 @@ body.tax-collection {
 }
 .collection-nav {
 	text-align: center;
-	border-top: 1px solid $brand-border;
-	padding: 2rem 0;
+	//border-top: 1px solid $brand-border;
+	padding: 2rem 0 4rem;
 	margin-bottom: 0;
 	text-transform: uppercase;
 	font-family: $nav-font;
@@ -229,3 +270,14 @@ article.collections {
 		margin-bottom: 1.5rem;
 	}
 } // End Article Collection Styles
+
+// Start Standard Text Styles
+.standard-text {
+	
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+} // End Standard Text Styles

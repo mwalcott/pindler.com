@@ -24,7 +24,7 @@ use Roots\Sage\Wrapper;
         <main class="main">
 	        <?= Pindler\content_acf(); ?>
           <?php 
-	          if(is_front_page()) {
+	          if( is_front_page() || is_page() ) {
 		          
 	          } else {
 	          	include Wrapper\template_path(); 
@@ -38,6 +38,7 @@ use Roots\Sage\Wrapper;
         <?php endif; ?>
       </div><!-- /.content -->
     </div><!-- /.wrap -->
+        
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
@@ -55,7 +56,13 @@ use Roots\Sage\Wrapper;
 		        </button>
 		      </div>
 		      <div class="modal-body">
-		        Login Form Goes Here
+						<form method="POST" action="http://trade.pindler.com/cgi-bin/FCcgi.exe?w3exec=custportal&w3serverpool=cust&callingpage=logon" name="Form1">
+							<div class="login-user"><input type="text" name="w3user" size="9" placeholder="Account #" /></div>
+							<div class="login-pass"><input type="password" name="w3userpass" size="25" placeholder="Password" /></div>
+							<div class="login-submit"><input type="submit" value="Login" /></div>
+						</form>
+						<a class="brown-button" href="/sign-up/">Register for Online Account</a>
+						<a class="brown-button" href="/login/">Forgot Password?</a>
 		      </div>
 		    </div>
 		  </div>

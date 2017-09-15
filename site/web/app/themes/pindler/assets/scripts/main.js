@@ -20,68 +20,64 @@
       init: function() {
         // JavaScript to be fired on all pages
         
+        // Start Owl Carousel
         $(".owl-banner").owlCarousel({
 					animateOut: 'fadeOut',
-					loop: false,
+					loop: true,
 					margin: 0,
-					nav: false,
+					nav: true,
+					navText: [
+					   "<i class='fa fa-angle-left'></i>",
+					   "<i class='fa fa-angle-right'></i>"
+					],
 					dots: true,
- 					autoplay: false,
+ 					autoplay: true,
 			    items: 1
         });
 
 				$('.owl-asi').owlCarousel({
-				    loop:true,
-				    margin:10,
-				    nav:true,
-						navText: [
-						   "<i class='fa fa-angle-left'></i>",
-						   "<i class='fa fa-angle-right'></i>"
-						],
-				    responsive:{
-				        0:{
-				            items:1
-				        },
-				        600:{
-				            items:3
-				        },
-				        1000:{
-				            items:6
-				        }
-				    }
+			    loop:true,
+			    margin:10,
+			    nav:true,
+					navText: [
+					   "<i class='fa fa-angle-left'></i>",
+					   "<i class='fa fa-angle-right'></i>"
+					],
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:6
+			        }
+			    }
 				});
 
 				$('.owl-installs').owlCarousel({
-				    loop:true,
-				    margin:10,
-				    nav:true,
-						navText: [
-						   "<i class='fa fa-angle-left'></i>",
-						   "<i class='fa fa-angle-right'></i>"
-						],
-				    responsive:{
-				        0:{
-				            items:1
-				        },
-				        600:{
-				            items:3
-				        },
-				        1000:{
-				            items:3
-				        }
-				    }
-				});
+			    loop:true,
+			    margin:10,
+			    nav:true,
+					navText: [
+					   "<i class='fa fa-angle-left'></i>",
+					   "<i class='fa fa-angle-right'></i>"
+					],
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:3
+			        }
+			    }
+				}); 
+				// End Owl Carousel
 
-/*
-        $(".owl-asi").owlCarousel({
-					loop: true,
-					margin: 0,
-					nav: false,
-					dots: true,
- 					autoplay: false,
-			    items: 6
-        });
-*/
 
 				var collectionHeight = function() {
 				  var height = $('.collection-multiple').height();
