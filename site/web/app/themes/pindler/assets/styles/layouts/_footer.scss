@@ -1,16 +1,24 @@
 footer.content-info {
-	background: $brand-primary;
-	border-top: 1px solid $brand-primary;
-	color: $white;
+	//background: $brand-primary;
+	//border-top: 1px solid $brand-primary;
+	//color: $white;
+	color: $brand-primary;
 	font-size: .7rem;
 	position: relative;
+	border-top: 1px solid $brand-primary;
+	
+	.container {
+		
+	}
+	
 	img.footer-logo {
-		filter: brightness(0) invert(1);
+		//filter: brightness(0) invert(1);
 		max-width: 60%;		
 	}
 	
 	a {
-		color: $white;
+		//color: $white;
+		color: $brand-primary;
 	}
 	
 	.footer-columns {
@@ -54,9 +62,10 @@ footer.content-info {
 	}
 	
 	.copyright {
-		border-top: 1px solid $white;
-		padding-top: .7rem;
-		padding-bottom: .7rem;
+		//border-top: 1px solid $white;
+		//border-top: 1px solid $brand-primary;
+		padding-top: 0;
+		padding-bottom: 2rem;
 	}
 	
 }
