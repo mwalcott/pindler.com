@@ -67,8 +67,25 @@ header.banner {
 			position: relative;
 			width: 33.333333%;
 			text-align: center;
+			padding: .7rem 0;
 			a {
-				
+				display: block;
+			}
+			&.active {
+				a {
+					position: relative;
+					&:after {
+						content: '';
+						width: 40px;
+						height: 1px;
+						background: $brand-primary;
+						display: block;
+						position: absolute;
+						bottom: -10px;
+						left: 50%;
+						margin-left: -20px;
+					}
+				}
 			}
 			.sub-menu {
 				display: none;
@@ -79,15 +96,29 @@ header.banner {
 				background: $brand-primary;
 				list-style: none;
 				padding: 0;
-				min-width: 200px;
-				margin-left: -100px;
+				min-width: 220px;
+				margin-left: -110px;
+				padding: 0;
 				li {
 					width: 100%;
+					text-align: left;
+					border-bottom: 1px solid $brand-border;
+					padding: 0;
 					a {
 						color: $white;
 						text-decoration: none;
 						display: block;
-						font-size: .8rem;
+						font-size: .9rem;
+						padding: .5rem 1rem;
+						left: 0;
+						position: relative;
+						@include animate-element(.2s);
+						&:hover {
+							left: 5px;
+						}
+					}
+					&:last-child {
+						border-bottom: none;
 					}
 				}
 			}
