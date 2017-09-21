@@ -62,6 +62,7 @@ add_image_size( 'collection_tall', 700, 1080, array( 'center', 'center' ) );
 add_image_size( 'collection_landing', 1000, 700, array( 'center', 'center' ) );
 
 add_image_size( 'featured_installs', 600, 400, array( 'center', 'center' ) );
+add_image_size( 'square', 800, 800, array( 'center', 'center' ) );
 
 namespace Pindler;
 
@@ -94,9 +95,18 @@ function social_links() {
  */
 function banner() { 
 	while (have_posts()) : the_post();
-	
+		$buttonURL = get_field('button_url');
+		$buttonText = get_field('button_button_label');
+		$collectionTitle = get_the_title();
 		if( have_rows('slides') ):
-	
+		echo '<div class="banner-wrap">';
+			if(is_singular('collections')) {
+				echo '<div class="collection-banner-info">';
+					echo '<h1>'. str_replace(' ', '<br/>', $collectionTitle) .'</h1>';
+					//echo '<h1>'. get_the_title() .'</h1>';
+					echo '<a class="btn btn-secondary" href="'. $buttonURL .'"><i>'. $buttonText .'</i></a>';
+				echo '</div>';
+			}
 			echo '<div class="owl-carousel owl-banner">';
 				while ( have_rows('slides') ) : the_row(); ?>
 					
@@ -126,6 +136,9 @@ function banner() {
 						
 					</div>		
 				<?php endwhile;
+				
+				
+			echo '</div>';				
 			echo '</div>';
 		
 		else :
@@ -171,6 +184,10 @@ function content_acf() {
 			if( get_row_layout() == 'history' )
 			
 				get_template_part('templates/acf/history');
+
+			if( get_row_layout() == 'featured_fabrics' )
+			
+				get_template_part('templates/acf/featured-fabrics');
 									
 		endwhile;
 	

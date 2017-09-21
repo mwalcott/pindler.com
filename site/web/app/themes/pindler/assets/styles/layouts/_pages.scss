@@ -75,8 +75,9 @@ main.main {
 			color: $white;
 			display: block;
 			padding: 0 2rem;
-			margin-top: -60px;
+			margin-top: -70px;
 			text-shadow: 0px 0px 5px #000;
+			z-index: 2001;
 			&.disabled {
 				display: none;
 			}
@@ -91,10 +92,31 @@ main.main {
 	
 }
 
+.banner-wrap {
+	position: relative;
+	.collection-banner-info {
+		position: absolute;
+		top: 50%;
+		left: 5rem;
+		right: 5rem;
+		text-align: center;
+		z-index: 2000;
+		margin-top: -6%;
+		h1 {
+			color: $white;
+			margin-bottom: 5rem;
+			text-shadow: 0px 0px 5px #000;
+			font-size: 4rem;
+		}
+	}
+}
+
 
 // Start Section Styles
 .section-block {
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
+	border-bottom: 1px solid $brand-light-background;
+	padding-bottom: 4rem;
 	header.section-header {
 		text-align: center;
 		margin-bottom: 2.5rem;
@@ -273,6 +295,15 @@ article.collections {
 
 // Start Standard Text Styles
 .standard-text {
+
+	.content-padding {
+		padding-left: 2rem;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 2rem;
+		font-size: 3rem;
+	}
 	
 	p {
 		&:last-child {
@@ -281,3 +312,24 @@ article.collections {
 	}
 	
 } // End Standard Text Styles
+
+// Start Featured Fabrics Styles
+.featured-fabrics {
+	
+	img {
+		max-width: 60%;
+		margin-bottom: 1.5rem;
+	}
+	
+	h4 {
+		font-size: 1.3rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	p {
+		font-size: .9rem;
+		line-height: 1.5rem;
+		margin: 0 1.5rem 1.5rem;
+	}
+	
+} // End Featured Fabrics Styles

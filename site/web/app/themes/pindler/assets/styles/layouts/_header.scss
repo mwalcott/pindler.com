@@ -55,8 +55,15 @@ header.banner {
 } // End Main Header
 
 // Start Navigation
+
+body.single-collections {
+	.nav-primary {
+		border-bottom: none !important;
+	}
+}
+
 .nav-primary {
-	border-bottom: 1px solid $brand-border;
+	border-bottom: 1px solid $brand-light-background;
 	padding-bottom: 2rem;
 	
 	// Start Nav
@@ -114,7 +121,8 @@ header.banner {
 						position: relative;
 						@include animate-element(.2s);
 						&:hover {
-							left: 5px;
+							
+							background: #0D4F74;
 						}
 					}
 					&:last-child {

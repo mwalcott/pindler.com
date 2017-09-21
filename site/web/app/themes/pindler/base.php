@@ -24,7 +24,7 @@ use Roots\Sage\Wrapper;
         <main class="main">
 	        <?= Pindler\content_acf(); ?>
           <?php 
-	          if( is_front_page() || is_page() ) {
+	          if( is_front_page() || is_page() || is_singular('collections') ) {
 		          
 	          } else {
 	          	include Wrapper\template_path(); 
