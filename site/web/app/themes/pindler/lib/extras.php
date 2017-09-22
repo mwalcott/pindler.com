@@ -90,6 +90,7 @@ function social_links() {
 	
 }
 
+
 /**
  * Banner
  */
@@ -102,7 +103,7 @@ function banner() {
 		echo '<div class="banner-wrap">';
 			if(is_singular('collections')) {
 				echo '<div class="collection-banner-info">';
-					echo '<h1>'. str_replace(' ', '<br/>', $collectionTitle) .'</h1>';
+					echo '<h1>'. $collectionTitle .'</h1>';
 					//echo '<h1>'. get_the_title() .'</h1>';
 					echo '<a class="btn btn-secondary" href="'. $buttonURL .'"><i>'. $buttonText .'</i></a>';
 				echo '</div>';
@@ -149,6 +150,35 @@ function banner() {
 	
 }
 
+/**
+ * Button
+ */
+function button($label,$link,$buttonClass) {
+	$buttonText = get_field($label);
+	$buttonURL = get_field($link);
+	
+	?>
+		<?php if( $buttonText && $buttonURL ) { ?>
+		<a class="btn <?php echo $buttonClass ?>" href="<?php echo $link; ?>">
+			<?php echo $buttonText; ?>
+		</a>
+		<?php } ?>
+	
+	<?php
+}
+
+
+/**
+ * Collection Buttons
+ */
+function collection_buttons() {
+	$buttonText = get_field('tear_sheet_button_button_label');
+	echo '<div class="collection-buttons">';
+		button('tear_sheet_button_button_label', 'tear_sheet_button_upload_file', 'btn-primary');
+		button('collection_booklet_button_button_label', 'collection_booklet_button_upload_file', 'btn-info');
+	echo '</div>';
+	
+}
 
 /**
  * Content Builder ACF

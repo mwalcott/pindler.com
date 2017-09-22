@@ -122,7 +122,7 @@ body.single-collections {
 						@include animate-element(.2s);
 						&:hover {
 							
-							background: #0D4F74;
+							background: $brand-hover;
 						}
 					}
 					&:last-child {

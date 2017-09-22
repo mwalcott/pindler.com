@@ -30,6 +30,11 @@ use Roots\Sage\Wrapper;
 	          } else {
 	          	include Wrapper\template_path(); 
 						}
+						
+						if( is_singular('collections') ) {
+							Pindler\collection_buttons();
+						}
+						
 	        ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
