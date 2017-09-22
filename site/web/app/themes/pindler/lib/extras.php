@@ -215,3 +215,11 @@ function filter_category_title($title) {
   return str_replace('Category: ', '', $title);
 }
 add_filter('get_the_archive_title', __NAMESPACE__ . '\\filter_category_title');
+
+function custom_tax_order( $qry ) {
+    if ( $qry->is_main_query() && $qry->is_tax() ) {
+        $qry->set( 'orderby', 'menu_order' );
+        $qry->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\custom_tax_order' );

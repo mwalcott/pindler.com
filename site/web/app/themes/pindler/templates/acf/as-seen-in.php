@@ -17,7 +17,8 @@
 			$args = array(
 				'post_type' => 'post',
 				'posts_per_page' => 12,
-				'category_name' => 'as-seen-in'
+				'category_name' => 'as-seen-in',
+				'post_status' => 'publish'
 
 			);
 			// The Query

@@ -36,7 +36,7 @@
         });
 
 				$('.owl-asi').owlCarousel({
-			    loop:true,
+			    loop:false,
 			    margin:10,
 			    nav:true,
 					navText: [
@@ -57,7 +57,7 @@
 				});
 
 				$('.owl-installs').owlCarousel({
-			    loop:true,
+			    loop:false,
 			    margin:10,
 			    nav:true,
 					navText: [

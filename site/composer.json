@@ -44,7 +44,7 @@
     "wpackagist-plugin/custom-post-type-ui": "1.5.5",
     "wpackagist-plugin/duplicate-post": "3.2",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "5.1.1.1",
-    "wpackagist-plugin/intuitive-custom-post-order": "3.1.0",
+    "wpackagist-plugin/simple-custom-post-order": "2.3.2",
     "wpackagist-plugin/redirection": "2.6.6",
     "wpackagist-plugin/regenerate-thumbnails": "2.2.6",
     "roots/soil": "3.7.0",

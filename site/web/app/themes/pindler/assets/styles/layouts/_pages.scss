@@ -90,6 +90,51 @@ main.main {
 		}
 	}
 	
+	&.owl-installs,
+	&.owl-asi {
+		
+		.owl-nav {
+			.owl-prev,
+			.owl-next {
+				margin-top: -25px;
+				background: $brand-primary;
+				line-height: 50px;
+				padding: 0;
+				width: 50px;
+				height: 50px;
+				text-shadow: 0px 0px 0px #000;
+				color: $white;
+				font-size: 2rem;
+				text-align: center;
+				@include round(300px);
+				@include animate-element(.2s);
+				i.fa {
+					line-height: 50px;
+					position: relative;
+					top: -1px;
+				}
+				&:hover {
+					background: $brand-secondary;
+				}
+			}
+			.owl-prev {
+				left: -25px;
+				padding-right: 0px;
+				i.fa {
+					left: -2px;
+				}
+			}
+			.owl-next {
+				right: -25px;
+				padding-left: 0px;
+				i.fa {
+					right: -2px;
+				}
+			}			
+		}
+		
+	}
+	
 }
 
 .banner-wrap {

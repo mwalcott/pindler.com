@@ -18,14 +18,15 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <?= Pindler\banner(); ?>
+    <?php if( is_front_page() || is_page() || is_singular('collections') ) {
+	    Pindler\banner();
+    } ?>
     <div class="wrap container" role="document">
       <div class="content row">
         <main class="main">
-	        <?= Pindler\content_acf(); ?>
           <?php 
 	          if( is_front_page() || is_page() || is_singular('collections') ) {
-		          
+		          Pindler\content_acf();
 	          } else {
 	          	include Wrapper\template_path(); 
 						}
