@@ -157,9 +157,10 @@ function button($label,$link,$buttonClass) {
 	$buttonText = get_field($label);
 	$buttonURL = get_field($link);
 	
+	
 	?>
 		<?php if( $buttonText && $buttonURL ) { ?>
-		<a class="btn <?php echo $buttonClass ?>" href="<?php echo $link; ?>">
+		<a target="_blank" class="btn <?php echo $buttonClass ?>" href="<?php echo $buttonURL; ?>">
 			<?php echo $buttonText; ?>
 		</a>
 		<?php } ?>
@@ -172,7 +173,7 @@ function button($label,$link,$buttonClass) {
  * Collection Buttons
  */
 function collection_buttons() {
-	$buttonText = get_field('tear_sheet_button_button_label');
+	//$buttonText = get_field('tear_sheet_button_button_label');
 	echo '<div class="collection-buttons">';
 		button('tear_sheet_button_button_label', 'tear_sheet_button_upload_file', 'btn-primary');
 		button('collection_booklet_button_button_label', 'collection_booklet_button_upload_file', 'btn-info');
