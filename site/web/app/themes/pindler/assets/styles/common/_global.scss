@@ -22,10 +22,27 @@ ul {
 	
 }
 
+p {
+	a {
+		display: inline-block;
+		border-bottom: 1px dotted $brand-primary;
+		&:hover {
+			
+		}
+	}
+}
+
 a {
 	@include animate-element(.2s);
 	&:hover {
 		text-decoration: none;
 		color: $brand-secondary;
+	}
+}
+
+div {
+	&.login-user,
+	&.login-pass {
+		margin-bottom: 1rem;	
 	}
 }

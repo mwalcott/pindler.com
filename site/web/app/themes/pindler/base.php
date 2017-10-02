@@ -25,7 +25,8 @@ use Roots\Sage\Wrapper;
       <div class="content row">
         <main class="main">
           <?php 
-	          if( is_front_page() || is_page() || is_singular('collections') ) {
+	          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
+		          include Wrapper\template_path(); 
 		          Pindler\content_acf();
 	          } else {
 	          	include Wrapper\template_path(); 
@@ -61,18 +62,24 @@ use Roots\Sage\Wrapper;
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
-		      <div class="modal-body">
-						<form method="POST" action="http://trade.pindler.com/cgi-bin/FCcgi.exe?w3exec=custportal&w3serverpool=cust&callingpage=logon" name="Form1">
-							<div class="login-user"><input type="text" name="w3user" size="9" placeholder="Account #" /></div>
-							<div class="login-pass"><input type="password" name="w3userpass" size="25" placeholder="Password" /></div>
-							<div class="login-submit"><input type="submit" value="Login" /></div>
-						</form>
-						<a class="brown-button" href="/sign-up/">Register for Online Account</a>
-						<a class="brown-button" href="/login/">Forgot Password?</a>
-		      </div>
+		      <form method="POST" action="http://trade.pindler.com/cgi-bin/FCcgi.exe?w3exec=custportal&w3serverpool=cust&callingpage=logon" name="Form1">
+			      <div class="modal-body clearfix">
+							
+								<div class="login-user"><input class="form-control" type="text" name="w3user" size="9" placeholder="Account #" /></div>
+								<div class="login-pass"><input class="form-control" type="password" name="w3userpass" size="25" placeholder="Password" /></div>
+								<div class="login-submit float-right"><input class="btn btn-primary" type="submit" value="Login" /></div>
+							
+			      </div>
+			      <div class="modal-footer clearfix">
+							<a class="float-left" href="/login/">Forgot Password?</a>
+							<a class="float-right" href="/sign-up/">Register for Online Account</a>
+			      </div>
+		      </form>
 		    </div>
 		  </div>
 		</div>
+		
+		<?= Pindler\modal(); ?>
 
 		<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
   </body>

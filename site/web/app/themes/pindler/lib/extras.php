@@ -33,6 +33,16 @@ function excerpt_more() {
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 /**
+ * Google Maps API key ACF
+ */
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM');
+}
+
+add_action('acf/init', __NAMESPACE__ . '\\my_acf_init');
+
+/**
  * Add theme options ACF
  */
 if( function_exists('acf_add_options_page') ) {
@@ -63,6 +73,7 @@ add_image_size( 'collection_landing', 1000, 700, array( 'center', 'center' ) );
 
 add_image_size( 'featured_installs', 600, 400, array( 'center', 'center' ) );
 add_image_size( 'square', 800, 800, array( 'center', 'center' ) );
+add_image_size( 'magazine', 627, 800, array( 'center', 'center' ) );
 
 namespace Pindler;
 
@@ -105,7 +116,7 @@ function banner() {
 				echo '<div class="collection-banner-info">';
 					echo '<h1>'. $collectionTitle .'</h1>';
 					//echo '<h1>'. get_the_title() .'</h1>';
-					echo '<a class="btn btn-secondary" href="'. $buttonURL .'"><i>'. $buttonText .'</i></a>';
+					echo '<a class="btn btn-secondary" href="'. $buttonURL .'"><em>'. $buttonText .' <i class="fa fa-search" aria-hidden="true"></i></em></a>';
 				echo '</div>';
 			}
 			echo '<div class="owl-carousel owl-banner">';
@@ -153,19 +164,102 @@ function banner() {
 /**
  * Button
  */
-function button($label,$link,$buttonClass) {
-	$buttonText = get_field($label);
-	$buttonURL = get_field($link);
+/*
+$button_type = get_sub_field('type');
+$button_link = '';
+
+$field_type
+$field_prefix, 
+
+get_sub_field('type')
+get_field('type')
+
+*/
+ 
+function button( $field_type, $field_prefix, $field_name, $btn_class ) {
+	
+	
+	// Start Building ACF Field
+	$has_prefix = '';
+	$field = '';
+	
+	$button_type = '';
+	$button_label = '';
+	$button_url = '';
+	$button_upload_file = '';
+	$button_modal_id = '';
+
+
+
+	
+	if( $field_prefix ) {
+		
+		if( $field_prefix == 'tear_sheet_button' ) {
+			$button_type = $field_type('tear_sheet_button_type');
+			$button_label = $field_type('tear_sheet_button_button_label');
+			$button_url = $field_type('tear_sheet_button_url');
+			$button_upload_file = $field_type('tear_sheet_button_upload_file');
+			$button_modal_id = $field_type('tear_sheet_button_modal_id');
+		} elseif( $field_prefix == 'collection_booklet_button' ) {
+			$button_type = $field_type('collection_booklet_button_type');
+			$button_label = $field_type('collection_booklet_button_button_label');
+			$button_url = $field_type('collection_booklet_button_url');
+			$button_upload_file = $field_type('collection_booklet_button_upload_file');
+			$button_modal_id = $field_type('collection_booklet_button_modal_id');			
+		} elseif( $field_prefix == 'modal' ) {
+			$button_type = $field_type('modal_type');
+			$button_label = $field_type('modal_button_label');
+			$button_url = $field_type('modal_url');
+			$button_upload_file = $field_type('modal_upload_file');
+			$button_modal_id = $field_type('modal_modal_id');			
+		} else {
+
+		}
+		
+		
+	} else {
+		
+		$button_type = $field_type('type');
+		$button_label = $field_type('button_label');
+		$button_url = $field_type('url');
+		$button_upload_file = $field_type('upload_file');
+		$button_modal_id = $field_type('modal_id');
+		
+	}
+	// End Building ACF Field
+	
 	
 	
 	?>
-		<?php if( $buttonText && $buttonURL ) { ?>
-		<a target="_blank" class="btn <?php echo $buttonClass ?>" href="<?php echo $buttonURL; ?>">
-			<?php echo $buttonText; ?>
-		</a>
-		<?php } ?>
+	<?php if( $button_label) { ?>
+	<?php if( $button_type == 'file' ) { ?>
+
+			<a target="_blank" class="btn <?php echo $btn_class; ?>" href="<?php echo $button_upload_file; ?>">
+				<?php echo $button_label; ?> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+			</a>
+
+	<?php	} elseif( $button_type == 'modal' ) { ?>
+
+		<button type="button" class="btn <?php echo $btn_class; ?>" data-toggle="modal" data-target="#<?php echo $button_modal_id; ?>">
+		  <?php echo $button_label; ?> modal
+		</button>
+
+	<?php	} elseif( $button_type == 'custom' ) { ?>
+
+			<a class="btn <?php echo $btn_class; ?>" href="#FIXME">
+				<?php echo $button_label; ?> custom
+			</a>
+		
+	<?php } else { ?>
+
+			<a class="btn <?php echo $btn_class; ?>" href="<?php echo $button_url; ?>">
+				<?php echo $button_label; ?> url
+			</a>
+
+	<?php	} ?>
 	
 	<?php
+		}
 }
 
 
@@ -175,8 +269,12 @@ function button($label,$link,$buttonClass) {
 function collection_buttons() {
 	//$buttonText = get_field('tear_sheet_button_button_label');
 	echo '<div class="collection-buttons">';
-		button('tear_sheet_button_button_label', 'tear_sheet_button_upload_file', 'btn-primary');
-		button('collection_booklet_button_button_label', 'collection_booklet_button_upload_file', 'btn-info');
+		button( 'get_field', 'tear_sheet_button', '', 'btn-primary' );
+		button( 'get_field', 'collection_booklet_button', '', 'btn-info' );
+/*
+		button('tear_sheet_button_button_label', 'tear_sheet_button_upload_file', 'btn-primary', 'get_field');
+		button('collection_booklet_button_button_label', 'collection_booklet_button_upload_file', 'btn-info', 'get_field');
+*/
 	echo '</div>';
 	
 }
@@ -220,6 +318,10 @@ function content_acf() {
 			
 				get_template_part('templates/acf/featured-fabrics');
 									
+			if( get_row_layout() == 'content_columns' )
+			
+				get_template_part('templates/acf/content-columns');
+
 		endwhile;
 	
 	else :
@@ -248,9 +350,53 @@ function filter_category_title($title) {
 add_filter('get_the_archive_title', __NAMESPACE__ . '\\filter_category_title');
 
 function custom_tax_order( $qry ) {
-    if ( $qry->is_main_query() && $qry->is_tax() ) {
-        $qry->set( 'orderby', 'menu_order' );
-        $qry->set( 'order', 'ASC' );
-    }
+
+	if ( $qry->is_main_query() && $qry->is_tax() ) {
+	  $qry->set( 'orderby', 'menu_order' );
+	  $qry->set( 'order', 'ASC' );
+	}
+
+	if ( $qry->is_main_query() && $qry->is_category() ) {
+	  $qry->set( 'posts_per_page', -1 );
+	}
+
 }
 add_action( 'pre_get_posts', __NAMESPACE__ . '\\custom_tax_order' );
+
+function modal() { 
+
+$modalID = get_field('modal_id');
+
+/*
+if( have_rows('section') ) {
+	while ( have_rows('section') ) : the_row() {
+		if( get_row_layout() == 'content_columns' ) {
+			
+		}
+	}
+}
+*/
+
+?>
+
+<!-- Modal -->
+<div class="modal fade" id="<?php echo $modalID; ?>" tabindex="-1" role="dialog" aria-labelledby="apply" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><?php the_field('modal_title'); ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php the_field('modal_content'); ?>
+      </div>
+      <div class="modal-footer">
+        <?= button( 'get_field', 'modal', '', 'btn-primary float-right' ); ?>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<?php }

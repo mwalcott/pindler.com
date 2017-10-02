@@ -1,12 +1,23 @@
+button {
+	font-family: $global-font;
+	&:hover {
+		cursor: pointer;
+	}
+}
 .btn {
 	@include round(0px);
 	padding: .8rem 1.5rem;	
 	font-size: .9rem;
 	border: none;
 	
+	i.fa {
+		margin-left: 15px;
+	}
+	
 	// Primary
 	&.btn-primary {
 		font-style: italic;
+		color: $white;
 		&:hover {
 			background: $brand-hover;
 		}
@@ -26,4 +37,15 @@
 		}
 	}
 	
+}
+
+a.btn.btn-primary {
+	color: $white;
+	&:hover {
+		color: $white;
+		cursor: pointer;
+	}
+	&:visited {
+		color: $white;
+	}
 }

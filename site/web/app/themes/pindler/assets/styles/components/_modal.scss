@@ -1,0 +1,52 @@
+.modal {
+	.modal-title {
+		font-size: 2rem;
+		color: $brand-primary;
+		padding: 0 1rem;
+	}
+	.modal-body {
+		padding: 2rem;
+		h3 {
+			font-size: 1.5rem;
+			color: $brand-primary;
+			clear: both;
+			padding-bottom: .5rem;
+			border-bottom: 1px solid $brand-light-background;
+			margin-bottom: 1rem;
+		}
+		ol, ul {
+			font-size: .9rem;
+			margin-bottom: 1.5rem;
+			li {
+				margin-bottom: .5rem;
+			}
+		}
+		ol {
+			li {
+				
+				a {
+					display: inline-block;
+					border-bottom: 1px dotted $brand-primary;
+				}
+			}
+		}
+		ul.columns {
+			li {
+				display: block;
+				width: 50%;
+				float: left;
+				padding: 0 1.5rem;
+			}
+		}
+	}
+	.modal-footer {
+		display: block;
+		justify-content: inherit;
+		text-align: center;
+		font-size: .9rem;
+		padding: 1rem 2rem;
+		a {
+			border-bottom: 1px dotted $brand-primary;
+		}
+	}
+}

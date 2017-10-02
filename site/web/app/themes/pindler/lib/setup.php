@@ -91,6 +91,7 @@ function display_sidebar() {
     is_page(),
     is_front_page(),
     is_category(),
+    is_single(),
     is_tax( array('collection') ),
     is_singular( array( 'collections' ) ),
     is_post_type_archive( array( 'collections' ) ),

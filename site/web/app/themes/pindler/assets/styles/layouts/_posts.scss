@@ -1,0 +1,36 @@
+article {
+	margin-bottom: 3rem;
+	
+	header {
+		h2 {
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+			color: $brand-secondary;
+			
+			&.entry-title {
+				margin: 0 1rem .5rem;	
+			}
+		}
+	}
+	
+	ul {
+		font-size: 1rem;
+	}
+	
+	&.magazine-block {
+		margin-bottom: 2rem;
+	}
+	
+	&.advertise-block {
+		
+		header {
+			border-bottom: 1px solid $tan;
+			margin-bottom: 1rem;
+			h2 {
+				
+			}
+		}
+		
+	}
+	
+}
