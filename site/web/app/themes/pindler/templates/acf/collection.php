@@ -5,12 +5,14 @@
 	$featured = get_sub_field('featured_collections');
 	$featuredClass = '';
 	$collectionLink = '';
+/*
 	if( $featured == 1 ) {
 		$featuredClass = 'featured-collection';
 		$collectionLink = '<a href="'. get_permalink() .'" class="btn btn-secondary"><span>View Collection</span></a>';
 	} else {
 		$collectionLink = '<a href="'. get_permalink() .'" class=""><span>View Collection</span></a>';
 	}
+*/
 	
 	$imageOffset = get_sub_field('image_offset');
 	$pushCol = '';
@@ -34,6 +36,17 @@
 		
 		if( $post_objects ) { ?>
 			<?php foreach( $post_objects as $post): $i++; // variable must be called $post (IMPORTANT) ?>
+
+<?php
+	if( $featured == 1 ) {
+		$featuredClass = 'featured-collection';
+		$collectionLink = '<a href="'. get_permalink() .'" class="btn btn-secondary"><span>View Collection</span></a>';
+	} else {
+		$collectionLink = '<a href="'. get_permalink() .'" class=""><span>View Collection</span></a>';
+	}
+	
+
+?>
 						
 				<?php setup_postdata($post); ?>
 

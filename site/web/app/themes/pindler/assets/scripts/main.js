@@ -37,7 +37,7 @@
 
 				$('.owl-asi').owlCarousel({
 			    loop:false,
-			    margin:10,
+			    margin:30,
 			    nav:true,
 					navText: [
 					   "<i class='fa fa-angle-left'></i>",
@@ -89,6 +89,11 @@
 				$(window).resize(function() {
 				  $('.collection-multiple').css('height', collectionHeight);
 				});				
+
+
+
+
+
 
       },
       finalize: function() {

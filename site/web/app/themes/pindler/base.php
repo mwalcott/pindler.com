@@ -26,7 +26,10 @@ use Roots\Sage\Wrapper;
         <main class="main">
           <?php 
 	          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
-		          include Wrapper\template_path(); 
+		          
+		          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) ) {
+			         include Wrapper\template_path();  
+		          }
 		          Pindler\content_acf();
 	          } else {
 	          	include Wrapper\template_path(); 
@@ -82,6 +85,7 @@ use Roots\Sage\Wrapper;
 		<?= Pindler\modal(); ?>
 
 		<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
   </body>
   
 </html>

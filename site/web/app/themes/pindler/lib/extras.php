@@ -73,6 +73,7 @@ add_image_size( 'collection_landing', 1000, 700, array( 'center', 'center' ) );
 
 add_image_size( 'featured_installs', 600, 400, array( 'center', 'center' ) );
 add_image_size( 'square', 800, 800, array( 'center', 'center' ) );
+add_image_size( 'square_small', 500, 500, array( 'center', 'center' ) );
 add_image_size( 'magazine', 627, 800, array( 'center', 'center' ) );
 
 namespace Pindler;
@@ -134,6 +135,28 @@ function banner() {
 					?>
 	
 					<div style="background-image: url(<?php echo $imgUrl; ?>);">
+						
+						<?php if( $pageLink ) { ?>
+							<a class="slide-link" href="<?php echo $pageLink; ?>">
+						<?php	} elseif( $customLink ) { ?>
+							<a class="slide-link" href="<?php echo $customLink; ?>">
+						<?php } else { ?>
+							<div class="slide-link">
+						<?php	} ?>
+
+							<?php the_sub_field('heading'); ?>	
+
+						<?php if( $pageLink ) { ?>
+							</a>
+						<?php	} elseif( $customLink ) { ?>
+							</a>
+						<?php } else { ?>
+							</div>
+						<?php	} ?>
+
+
+						
+<!--
 						<?php if( $pageLink ) { ?>
 							<a class="slide-link" href="<?php echo $pageLink; ?>">
 								<?php the_sub_field('heading'); ?>	
@@ -145,6 +168,7 @@ function banner() {
 						<?php } else { ?>
 							
 						<?php	} ?>
+-->
 						
 					</div>		
 				<?php endwhile;

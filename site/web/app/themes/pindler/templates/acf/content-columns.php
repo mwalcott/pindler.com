@@ -14,45 +14,101 @@
 				
 				$buttonURL = get_sub_field('url');
 				$buttonText = get_sub_field('button_label');
+				$colSize = get_sub_field('column_size');
+				$colColor = get_sub_field('column_background_color');
 				
+
 				$colClass = '';
-				
-				switch ( $numrows ) {
+				$colClassColor = '';
+				switch ( $colSize ) {
 					
-					case 1:
-						$colClass = 'col-sm-12';
-					case 2:
-						$colClass = 'col-sm-6';
-					case 3:
-						$colClass = 'col-sm-4';
-					case 4:
-						$colClass = 'col-sm-3';
-					case 5:
+					case 'auto':
 						$colClass = 'col';
-					case 6:
-						$colClass = 'col-sm-2';
-					case 7:
-						$colClass = 'col';
-					case 8:
-						$colClass = 'col';
-					case 9:
-						$colClass = 'col';
-					case 10:
-						$colClass = 'col';
-					case 11:
-						$colClass = 'col';
-					case 12:
-						$colClass = 'col-sm-1';
-							
+						break;
+					case 'half':
+						$colClass = 'col-6';
+						break;
+					case 'third':
+						$colClass = 'col-4';
+						break;
+					case 'quarter':
+						$colClass = 'col-3';
+						break;
 				}		
+				
+				if($colColor) {
+					$colClassColor = 'gray';
+				}
+
+				$attachment_id = get_sub_field('image');
+				$size = 'square'; // (thumbnail, medium, large, full or custom size)
+				$image = wp_get_attachment_image_src( $attachment_id, $size );		
+
 			
 			?>
 		
-				<div class="col">	
+				<div class="<?php echo $colClass; ?> <?php echo $colClassColor; ?>">	
 					<div class="col-inner">
-						<h4><?php the_sub_field('heading'); ?></h4>
+						<?php if( get_sub_field('heading') ) { ?>
+							<h4>
+								<?php the_sub_field('heading'); ?>
+							</h4>
+						<?php } ?>
+
 						<?php the_sub_field('description'); ?>
+						<img class="img-fluid" alt="" src="<?php echo $image[0]; ?>" />
+						
+						
 						<?= Pindler\button( 'get_sub_field', '', '', 'btn-primary' ); ?>
+
+						<?php
+							$ai = 0;
+							if( get_sub_field('column_background_color_copy') ) {
+							if( have_rows('accordion_sections') ):
+								echo '<div id="accordion" role="tablist" aria-multiselectable="true">';
+									while ( have_rows('accordion_sections') ) : the_row(); $ai++; ?>
+
+									  <div class="card">
+									    <div class="card-header" role="tab" id="heading-<?php echo $ai; ?>">
+									      <h5 class="mb-0">
+									        <?php the_sub_field('heading'); ?>
+									      </h5>									      
+									      
+									      <p><?php the_sub_field('short_description'); ?></p>
+									      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $ai; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $ai; ?>">
+										    	Learn More
+									      </a>
+									    </div>
+									
+									    <div id="collapse-<?php echo $ai; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $ai; ?>">
+									      <div class="card-block">
+									        <?php the_sub_field('job_description'); ?>
+									      </div>
+									    </div>
+									  </div>
+									
+										
+									
+									<?php endwhile; 								
+								echo '</div>';
+							
+							else :
+							
+							endif;
+							
+							}
+						
+						?>
+										
+						
+						<?php
+							$location = get_sub_field('google_map');
+							if( !empty($location) ):
+						?>
+						<div class="acf-map">
+							<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+						</div>
+						<?php endif; ?>
 					</div>
 
 				</div>
@@ -60,8 +116,6 @@
 			<?php endwhile;
 		
 		else :
-		
-		    // no rows found
 		
 		endif;
 		

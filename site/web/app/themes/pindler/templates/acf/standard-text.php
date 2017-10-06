@@ -47,6 +47,7 @@
 		<div class="<?php echo $colClassRight; ?>">
 			<div class="content-padding">
 				<?php the_sub_field('text'); ?>
+				<?= Pindler\button( 'get_sub_field', '', '', 'btn-primary' ); ?>
 			</div>
 		</div>
 	</div>	

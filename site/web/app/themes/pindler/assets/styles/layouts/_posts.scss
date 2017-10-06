@@ -3,18 +3,45 @@ article {
 	
 	header {
 		h2 {
-			font-size: 1.2rem;
+			font-size: 1.3rem;
 			line-height: 1.5rem;
 			color: $brand-secondary;
+			text-align: center;
 			
 			&.entry-title {
-				margin: 0 1rem .5rem;	
+				margin: 1rem 1rem 1rem;	
+
+			}
+		}
+		a {
+			&:hover {
+				color: $tan;
 			}
 		}
 	}
 	
 	ul {
 		font-size: 1rem;
+	}
+	
+	&.category-whats-new {
+		border-bottom: 1px solid $brand-light-background;
+		padding-bottom: 1rem;	
+		img {
+			@include animate-element(.2s);
+			-moz-transform: 		scale(1);
+			-webkit-transform:  scale(1);
+			-o-transform: 			scale(1);
+			-ms-transform: 			scale(1);
+			transform: 					scale(1);				
+			&:hover {
+				-moz-transform: 		scale(1.03);
+				-webkit-transform:  scale(1.03);
+				-o-transform: 			scale(1.03);
+				-ms-transform: 			scale(1.03);
+				transform: 					scale(1.03);				
+			}
+		}
 	}
 	
 	&.magazine-block {
@@ -31,6 +58,31 @@ article {
 			}
 		}
 		
+	}
+	
+	img {
+		
+		&.magazine {
+			
+		}
+		
+	}
+	
+	&.asi {
+		border-bottom: 1px solid $brand-light-background;
+		padding-bottom: 3rem;
+		h1, 
+		p,
+		a.btn-primary {
+			margin-left: 1rem;
+			margin-right: 1rem;	
+		}
+		h1 {
+			color: $brand-primary;
+		}
+		a.btn-primary {
+			margin-bottom: 1.3rem;
+		}
 	}
 	
 }
