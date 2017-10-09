@@ -14,6 +14,30 @@ main.main {
 	@include media-breakpoint-up(sm) { 
 		padding-top: 3.5rem;
 	}
+	article,
+	.standard-text,
+	.featured-fabrics,
+	.history,
+	 {
+		ul {
+			padding: 0 1rem;
+			li {
+				position: relative;
+				padding-left: .7rem;
+				margin-bottom: .2rem;
+				&:before {
+					content: '\f111';
+					font-family: $fontawesome;
+					position: absolute;
+					top: 8px;
+					left: 0;
+					font-size: 5px;
+					color: $brand-primary;
+				}
+				
+			}
+		}
+	}
 }
 
 .modal-backdrop.show {
@@ -411,6 +435,7 @@ body.tax-collection {
 		padding-top: 0;
 	}
 }
+
 .collection-nav {
 	text-align: center;
 	//border-top: 1px solid $brand-border;
