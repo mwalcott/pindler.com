@@ -9,83 +9,96 @@ use Roots\Sage\Wrapper;
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
-    <!--[if IE]>
-      <div class="alert alert-warning">
-        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
-      </div>
-    <![endif]-->
-    <?php
-      do_action('get_header');
-      get_template_part('templates/header');
-    ?>
-    <?php if( is_front_page() || is_page() || is_singular('collections') ) {
-	    Pindler\banner();
-    } ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
-        <main class="main">
-          <?php 
-	          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
-		          
-		          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) ) {
-			         include Wrapper\template_path();  
-		          }
-		          Pindler\content_acf();
-	          } else {
-	          	include Wrapper\template_path(); 
-						}
-						
-						if( is_singular('collections') ) {
-							Pindler\collection_buttons();
-						}
-						
-	        ?>
-        </main><!-- /.main -->
-        <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
-        
-    <?php
-      do_action('get_footer');
-      get_template_part('templates/footer');
-      wp_footer();
-    ?>
-
-		<!-- Modal -->
-		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="loginLabel">Login</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <form method="POST" action="http://trade.pindler.com/cgi-bin/FCcgi.exe?w3exec=custportal&w3serverpool=cust&callingpage=logon" name="Form1">
-			      <div class="modal-body clearfix">
+    <div id="">
+	    <!--[if IE]>
+	      <div class="alert alert-warning">
+	        <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+	      </div>
+	    <![endif]-->
+			
+			<nav id="my-menu">
+	      <?php
+	      if (has_nav_menu('mobile_navigation')) :
+	        wp_nav_menu(['theme_location' => 'mobile_navigation', 'menu_class' => 'nav']);
+	      endif;
+	      ?>
+			</nav>
+	    
+	    
+	    <?php
+	      do_action('get_header');
+	      get_template_part('templates/header');
+	    ?>
+	    <?php if( is_front_page() || is_page() || is_singular('collections') ) {
+		    Pindler\banner();
+	    } ?>
+	    <div class="wrap container" role="document">
+	      <div class="content row">
+	        <main class="main">
+	          <?php 
+		          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
+			          
+			          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) ) {
+				         include Wrapper\template_path();  
+			          }
+			          Pindler\content_acf();
+		          } else {
+		          	include Wrapper\template_path(); 
+							}
 							
-								<div class="login-user"><input class="form-control" type="text" name="w3user" size="9" placeholder="Account #" /></div>
-								<div class="login-pass"><input class="form-control" type="password" name="w3userpass" size="25" placeholder="Password" /></div>
-								<div class="login-submit float-right"><input class="btn btn-primary" type="submit" value="Login" /></div>
+							if( is_singular('collections') ) {
+								Pindler\collection_buttons();
+							}
 							
+		        ?>
+	        </main><!-- /.main -->
+	        <?php if (Setup\display_sidebar()) : ?>
+	          <aside class="sidebar">
+	            <?php include Wrapper\sidebar_path(); ?>
+	          </aside><!-- /.sidebar -->
+	        <?php endif; ?>
+	      </div><!-- /.content -->
+	    </div><!-- /.wrap -->
+	        
+	    <?php
+	      do_action('get_footer');
+	      get_template_part('templates/footer');
+	      wp_footer();
+	    ?>
+	
+			<!-- Modal -->
+			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="loginLabel">Login</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
 			      </div>
-			      <div class="modal-footer clearfix">
-							<a class="float-left" href="/login/">Forgot Password?</a>
-							<a class="float-right" href="/sign-up/">Register for Online Account</a>
-			      </div>
-		      </form>
-		    </div>
-		  </div>
-		</div>
-		
-		<?= Pindler\modal(); ?>
-
-		<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
+			      <form method="POST" action="http://trade.pindler.com/cgi-bin/FCcgi.exe?w3exec=custportal&w3serverpool=cust&callingpage=logon" name="Form1">
+				      <div class="modal-body clearfix">
+								
+									<div class="login-user"><input class="form-control" type="text" name="w3user" size="9" placeholder="Account #" /></div>
+									<div class="login-pass"><input class="form-control" type="password" name="w3userpass" size="25" placeholder="Password" /></div>
+									<div class="login-submit float-right"><input class="btn btn-primary" type="submit" value="Login" /></div>
+								
+				      </div>
+				      <div class="modal-footer clearfix">
+								<a class="float-left" href="/login/">Forgot Password?</a>
+								<a class="float-right" href="/sign-up/">Register for Online Account</a>
+				      </div>
+			      </form>
+			    </div>
+			  </div>
+			</div>
+			
+			<?= Pindler\modal(); ?>
+	
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
+    </div>
   </body>
   
 </html>

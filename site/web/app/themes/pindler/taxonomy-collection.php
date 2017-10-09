@@ -22,7 +22,7 @@
 
 <?php
 	if (has_nav_menu($collectionNav)) {
-	  wp_nav_menu(['theme_location' => $collectionNav, 'menu_class' => 'collection-nav']);
+	  wp_nav_menu(['theme_location' => $collectionNav, 'menu_class' => 'collection-nav hidden-sm-down']);
 	}
 ?>
 

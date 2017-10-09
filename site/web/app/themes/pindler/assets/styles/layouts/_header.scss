@@ -6,7 +6,17 @@ header.banner {
 	.header-top {
 		background: $brand-light-background;
 		margin-bottom: 2rem;
-		font-size: .8rem;
+		font-size: .6rem;
+		
+		@include media-breakpoint-up(sm) { 
+			font-size: .8rem;
+		}
+		
+		.head-search-link {
+			i.fa {
+				margin-left: .2rem;
+			}	
+		}
 		
 		// Start User Links
 		ul.user-links {
@@ -20,8 +30,12 @@ header.banner {
 					}
 				}
 				a {
-					padding: .8rem 1rem;
+					padding: .5rem .5rem;
 					@include animate-element(.2s);
+					
+					@include media-breakpoint-up(sm) { 
+						padding: .8rem 1rem;
+					}
 					&:hover {
 						background: $brand-secondary;
 						color: $white;
@@ -34,10 +48,18 @@ header.banner {
 		
 		// Start Header Social
 		.header-social {
-			font-size: 1rem;
+			font-size: .8rem;
+			
+			@include media-breakpoint-up(sm) { 
+				font-size: 1rem;
+			}
+			
 			ul {
 				li {
-					margin-left: 1rem;
+					margin-left: .5rem;
+					@include media-breakpoint-up(sm) { 
+						margin-left: 1rem;
+					}
 					&:first-child {
 						display: none;
 					}
@@ -151,7 +173,34 @@ body.home {
 	.brand {
 		text-align: center;
 		img {
-			width: 75%;
+			width: 50%;
+			@include media-breakpoint-up(sm) { 
+				width: 75%;
+			}
 		}
 	}
 // Start Logo
+
+#my-icon {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -33px;
+	z-index: 20;
+	padding: .2rem 1rem;
+	.hamburger-inner,
+	.hamburger-inner:after, 
+	.hamburger-inner:before {
+		background: $tan;
+	}
+	.hamburger-box {
+		width: 30px;
+	}
+	.hamburger-inner, 
+	.hamburger-inner:after, 
+	.hamburger-inner:before {
+		width: 30px;
+		height: 3px;
+	}
+	
+}

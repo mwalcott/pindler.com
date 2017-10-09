@@ -3,9 +3,13 @@ footer.content-info {
 	//border-top: 1px solid $brand-primary;
 	//color: $white;
 	color: $brand-primary;
-	font-size: .7rem;
+	font-size: .6rem;
 	position: relative;
 	border-top: 1px solid $brand-light-background;
+	
+	@include media-breakpoint-up(sm) { 
+		font-size: .7rem;
+	}
 	
 	.container {
 		
@@ -31,12 +35,29 @@ footer.content-info {
 		margin-bottom: 0;
 		
 		li {
-			display: inline-block;
-			padding: 0 .7rem;
+			display: block;
+			padding: .2rem 0;
 			a {
 				display: block;
 			}
 		}	
+		
+		@include media-breakpoint-up(sm) { 
+			
+			li {
+				display: inline-block;
+				padding: 0 .7rem;
+			}
+		
+		}
+	}
+	
+	.footer-logo-wrap {
+		margin-bottom: 1.5rem;
+	}
+	
+	.footer-nav-wrap {
+		margin-bottom: 1.5rem;
 	}
 	
 	.footer-social {
@@ -59,6 +80,28 @@ footer.content-info {
 				}
 			}
 		}
+	}
+	
+	.footer-logo-wrap,
+	.footer-nav-wrap,
+	.footer-social {
+		text-align: center;
+	}
+	
+	@include media-breakpoint-up(sm) { 
+		.footer-logo-wrap {
+			text-align: left;
+			margin-bottom: 0;
+		}
+		
+		.footer-nav-wrap {
+			margin-bottom: 0;
+		} 
+		
+		.footer-social {
+			text-align: right;
+		}
+		
 	}
 	
 	.copyright {

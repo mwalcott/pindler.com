@@ -140,8 +140,10 @@ function banner() {
 							<a class="slide-link" href="<?php echo $pageLink; ?>">
 						<?php	} elseif( $customLink ) { ?>
 							<a class="slide-link" href="<?php echo $customLink; ?>">
-						<?php } else { ?>
+						<?php } elseif( get_sub_field('heading') ) { ?>
 							<div class="slide-link">
+						<?php } else { ?>
+							
 						<?php	} ?>
 
 							<?php the_sub_field('heading'); ?>	
@@ -150,8 +152,10 @@ function banner() {
 							</a>
 						<?php	} elseif( $customLink ) { ?>
 							</a>
-						<?php } else { ?>
+						<?php } elseif( get_sub_field('heading') ) { ?>
 							</div>
+						<?php } else { ?>
+							
 						<?php	} ?>
 
 

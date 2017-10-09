@@ -10,7 +10,7 @@
   <div class="container">
 		<div class="row footer-columns align-items-center">
 			
-			<div class="col-sm-3">
+			<div class="col-sm-3 footer-logo-wrap">
 				<?php 
 				
 				$image = get_field('footer_logo', 'option');
@@ -22,7 +22,7 @@
 				<?php endif; ?>				
 
 			</div>
-			<div class="col-sm-6 text-center">
+			<div class="col-sm-6 footer-nav-wrap">
 	      <?php
 	      if (has_nav_menu('footer_navigation')) :
 	        wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'footer-nav']);
@@ -30,7 +30,7 @@
 	      ?>
 			</div>
 			
-			<div class="col-sm-3 text-right footer-social">
+			<div class="col-sm-3 footer-social">
 				<?= Pindler\social_links(); ?>
 			</div>
 			

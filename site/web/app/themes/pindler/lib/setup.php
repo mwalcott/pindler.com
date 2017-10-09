@@ -27,11 +27,14 @@ function setup() {
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
-    'left_navigation' => __('Left Navigation', 'sage'),
-    'right_navigation' => __('Right Navigation', 'sage'),
-    'footer_navigation' => __('Footer Navigation', 'sage'),
-    'fabric_navigation' => __('Fabric Navigation', 'sage'),
-    'trim_navigation' => __('Trim Navigation', 'sage'),
+    'left_navigation' 		=> __('Left Navigation', 'sage'),
+    'right_navigation' 		=> __('Right Navigation', 'sage'),
+    'footer_navigation' 	=> __('Footer Navigation', 'sage'),
+    'fabric_navigation' 	=> __('Fabric Navigation', 'sage'),
+    'trim_navigation' 		=> __('Trim Navigation', 'sage'),
+    'media_navigation' 		=> __('Media Navigation', 'sage'),
+    'contact_navigation' 	=> __('Contact Navigation', 'sage'),
+    'mobile_navigation' 	=> __('Mobile Navigation', 'sage'),
   ]);
 
   // Enable post thumbnails

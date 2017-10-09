@@ -9,8 +9,11 @@
 }
 
 main.main {
-	padding-top: 3.5rem;
+	padding-top: 5rem;
 	padding-bottom: 3.5rem;
+	@include media-breakpoint-up(sm) { 
+		padding-top: 3.5rem;
+	}
 }
 
 .modal-backdrop.show {
@@ -22,7 +25,7 @@ main.main {
 	position: relative;
 	.owl-item {
 		> div {
-			min-height: 70vh;
+			min-height: 40vh;
 			position: relative;
 			@include background-cover();
 			
@@ -33,14 +36,22 @@ main.main {
 				display: block;
 				background: $brand-secondary;
 				color: $white;
-				padding: 2rem 3rem;
-				font-size: 1.5rem;
+				padding: 1rem 1rem;
+				font-size: 1rem;
 				width: auto;
 				@include animate-element(.2s);
 				&:hover {
 					text-decoration: none;
 					background: $brand-primary;
 				}
+				@include media-breakpoint-up(sm) { 
+					padding: 2rem 3rem;
+					font-size: 1.5rem;
+				}
+			}
+			
+			@include media-breakpoint-up(sm) { 
+				min-height: 70vh;
 			}
 			
 		}
@@ -48,18 +59,33 @@ main.main {
 	
 	.owl-dots {
 		position: absolute;
-		right: 2rem;
-		bottom: 2rem;
+		left: 0;
+		right: 0;
+		bottom: -40px;
+		text-align: center;
 		.owl-dot {
 			width: 15px;
 			height: 15px;
 			background: transparent;
-			border: 1px solid $white;
+			border: 1px solid $brand-primary;
 			display: inline-block;
 			margin: 0 .3rem;
+			
 			@include round(15px);
 			&.active {
-				background: $white;
+				background: $brand-primary;
+			}
+		}
+		
+		@include media-breakpoint-up(sm) { 
+			right: 2rem;
+			left: inherit;
+			bottom: 2rem;
+			.owl-dot {
+				border: 1px solid $white;
+				&.active {
+					background: $white;
+				}
 			}
 		}
 	}
@@ -79,13 +105,13 @@ main.main {
 	.owl-nav {
 		.owl-prev,
 		.owl-next {
-			font-size: 5rem;
+			font-size: 4rem;
 			position: absolute;
 			top: 50%;
 			color: $white;
 			display: block;
-			padding: 0 2rem;
-			margin-top: -70px;
+			padding: 0 1rem;
+			margin-top: -60px;
 			text-shadow: 0px 0px 5px #000;
 			z-index: 2001;
 			&.disabled {
@@ -97,6 +123,18 @@ main.main {
 		}
 		.owl-next {
 			right: 0;
+		}
+
+		
+		@include media-breakpoint-up(sm) { 
+
+			.owl-prev,
+			.owl-next {
+				font-size: 5rem;
+				padding: 0 2rem;
+				margin-top: -70px;
+			}
+		
 		}
 	}
 	
@@ -110,13 +148,13 @@ main.main {
 				background: $brand-primary;
 				line-height: 50px;
 				padding: 0;
-				width: 50px;
+				width: 30px;
 				height: 50px;
 				text-shadow: 0px 0px 0px #000;
 				color: $white;
 				font-size: 2rem;
 				text-align: center;
-				@include round(300px);
+				
 				@include animate-element(.2s);
 				i.fa {
 					line-height: 50px;
@@ -128,19 +166,47 @@ main.main {
 				}
 			}
 			.owl-prev {
-				left: -25px;
+				left: 0px;
 				padding-right: 0px;
+				-webkit-border-top-right-radius: 300px;
+				-webkit-border-bottom-right-radius: 300px;
+				-moz-border-radius-topright: 300px;
+				-moz-border-radius-bottomright: 300px;
+				border-top-right-radius: 300px;
+				border-bottom-right-radius: 300px;
+
 				i.fa {
 					left: -2px;
 				}
 			}
 			.owl-next {
-				right: -25px;
+				right: 0px;
 				padding-left: 0px;
+				-webkit-border-top-left-radius: 300px;
+				-webkit-border-bottom-left-radius: 300px;
+				-moz-border-radius-topleft: 300px;
+				-moz-border-radius-bottomleft: 300px;
+				border-top-left-radius: 300px;
+				border-bottom-left-radius: 300px;
 				i.fa {
 					right: -2px;
 				}
-			}			
+			}	
+	
+			@include media-breakpoint-up(sm) { 
+				.owl-prev,
+				.owl-next {
+					@include round(300px);
+					width: 50px;
+				}
+				.owl-prev {
+					left: -25px;
+				}
+				.owl-next {
+					right: -25px;
+				}				
+			}					
+
 		}
 		
 	}
@@ -149,19 +215,36 @@ main.main {
 
 .banner-wrap {
 	position: relative;
+	
+	.owl-nav {
+		display: none;
+		@include media-breakpoint-up(sm) { 
+			display: block;
+		}
+	}
+	
 	.collection-banner-info {
 		position: absolute;
 		top: 50%;
-		left: 5rem;
-		right: 5rem;
+		left: 2rem;
+		right: 2rem;
 		text-align: center;
 		z-index: 2000;
-		margin-top: -6%;
+		margin-top: -15%;
 		h1 {
 			color: $white;
-			margin-bottom: 5rem;
+			margin-bottom: 2rem;
+			font-size: 1.7rem;
 			text-shadow: 0px 0px 5px #000;
-			font-size: 4rem;
+		}
+		@include media-breakpoint-up(sm) { 
+			left: 5rem;
+			right: 5rem;
+			margin-top: -6%;
+			h1 {
+				font-size: 4rem;
+				margin-bottom: 5rem;				
+			}
 		}
 	}
 }
@@ -169,9 +252,9 @@ main.main {
 
 // Start Section Styles
 .section-block {
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 	border-bottom: 1px solid $brand-light-background;
-	padding-bottom: 4rem;
+	padding-bottom: 1.5rem;
 	header.section-header {
 		text-align: center;
 		margin-bottom: 2.5rem;
@@ -192,6 +275,11 @@ main.main {
 	
 	.intro {
 		margin-bottom: 2.5rem;
+	}
+	
+	@include media-breakpoint-up(sm) {
+		margin-bottom: 4rem;
+		padding-bottom: 4rem;
 	}
 	
 }
@@ -242,15 +330,24 @@ main.main {
 				margin-top: -13%;
 				padding: 0;
 				div {
-					max-width: 50%;
+					max-width: 70%;
 					margin: 0 auto;
 				}
 				
 				h2 {
 					color: $white;
-					font-size: 2rem;
+					font-size: 1.5rem;
 					margin-bottom: 1rem;
 					text-shadow: 2px 2px 5px #000000;
+				}
+				
+				@include media-breakpoint-up(sm) { 
+					div {
+						max-width: 50%;
+					}
+					h2 {
+						font-size: 2rem;
+					}
 				}
 			}
 			
@@ -258,8 +355,12 @@ main.main {
 	
 	}
 	.collection-portrait {
-		height: 80vh;
-		
+		height: 60vh;
+		margin-bottom: 30px;
+		@include media-breakpoint-up(sm) { 
+			height: 80vh;
+			margin-bottom: 0;
+		}
 	}	
 	.collection-landscape {
 		
@@ -271,6 +372,7 @@ main.main {
 		
 		&.img-2,
 		&.img-3 {
+			min-height: 40vh;
 			&:after {
 				content: '';
 				width: 100%;
@@ -279,6 +381,9 @@ main.main {
 				display: block;
 				background: $white;
 				z-index: 20;
+			}
+			@include media-breakpoint-up(sm) { 
+				min-height: inherit;
 			}
 		}
 		
@@ -332,19 +437,46 @@ body.tax-collection {
 }
 
 article.collections {
-	margin-bottom: 5rem;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
 	.pad-content {
-		padding: 0 2rem;
+		padding: 0 1rem;
 	}
 	h2 {
-		font-size: 2.5rem;
-		line-height: 2.5rem;
-		margin-bottom: 1rem;
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+		margin-bottom: .5rem;
 	}
 	p {
 		font-size: .9rem;
 		line-height: 1.5rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	img {
+		margin-bottom: 1.2rem;
+	}
+	.pull-md-6.text-right {
+		text-align: left !important;
+	}
+	@include media-breakpoint-up(md) { 
+		margin-top: 0;
+		margin-bottom: 5rem;
+		.pad-content {
+			padding: 0 2rem;
+		}
+		h2 {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+		}
+		p {
+			margin-bottom: 1.5rem;
+		}
+		img {
+			margin-bottom: 0;
+		}
+		.pull-md-6.text-right {
+			text-align: right !important;
+		}
 	}
 } // End Article Collection Styles
 
@@ -352,7 +484,7 @@ article.collections {
 .standard-text {
 
 	.content-padding {
-		padding-left: 2rem;
+		padding-left: 0rem;
 	}
 	
 	h1, h2, h3, h4, h5, h6 {
@@ -366,11 +498,26 @@ article.collections {
 		}
 	}
 	
+	img {
+		margin-bottom: 2rem;
+	}
+	
+	@include media-breakpoint-up(sm) {
+		.content-padding {
+			padding-left: 2rem;
+		}
+		img {
+			margin-bottom: 0;
+		}
+	}
+	
 } // End Standard Text Styles
 
 // Start Featured Fabrics Styles
 .featured-fabrics {
-	
+	.col-sm-4 {
+		margin-bottom: 2rem;
+	}
 	img {
 		max-width: 60%;
 		margin-bottom: 1.5rem;
@@ -387,13 +534,26 @@ article.collections {
 		margin: 0 1.5rem 1.5rem;
 	}
 	
+	@include media-breakpoint-up(sm) {
+		.col-sm-4 {
+			margin-bottom: 0;	
+		}
+		
+	}
+	
 } // End Featured Fabrics Styles
 
 .collection-buttons {
 	text-align: center;
+	
 	a.btn {
 		display: inline-block;
-		margin: 0 1rem;
+		margin: 0 1rem 1rem;
+	}
+	@include media-breakpoint-up(sm) {
+		a.btn {
+			margin: 0 1rem;	
+		}
 	}
 }
 
@@ -498,8 +658,16 @@ section.columns {
 }
 
 .history {
-
-	.flex-first {
+	
+	margin-left: 15px;
+	margin-right: 15px;
+	
+	.pull-sm-6 {
+		text-align: left !important;
+	}
+/*
+	.pull-sm-6,
+	.img-left {
 		position: relative;
 		&.history-content {
 			border-right: 1px solid $brand-primary;
@@ -520,9 +688,10 @@ section.columns {
 			border-bottom: 2px solid $white;
 		}
 	}
+*/
 
 	.inner {
-		padding: 0 2.5rem 2.5rem;
+		padding: 0 0 2.5rem;
 	}
 	
 	cite,
@@ -545,6 +714,40 @@ section.columns {
 	p {
 		font-style: italic;
 		font-size: .9rem;
+	}
+	
+	@include media-breakpoint-up(sm) { 
+		margin-left: -15px;
+		margin-right: -15px;
+		.inner {
+			padding: 0 2.5rem 2.5rem;
+		}
+		.pull-sm-6 {
+			text-align: right !important;
+		}
+		.pull-sm-6,
+		.img-left {
+			position: relative;
+			&.history-content {
+				border-right: 1px solid $brand-primary;
+			}
+			&.image {
+				border-right: 1px solid $brand-primary;
+			}
+			
+			&:before {
+				content: '\f111';
+				font-family: $fontawesome;
+				position: absolute;
+				top: 15px;
+				right: -5px;
+				font-size: 10px;
+				color: $brand-primary;
+				border-top: 2px solid $white;
+				border-bottom: 2px solid $white;
+			}
+		}
+
 	}
 
 }
