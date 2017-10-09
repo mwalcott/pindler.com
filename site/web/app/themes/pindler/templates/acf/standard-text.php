@@ -2,7 +2,7 @@
 	$col_size = get_sub_field('column_size');
 
 	$attachment_id = get_sub_field('image');
-	$size = 'square'; // (thumbnail, medium, large, full or custom size)
+	$size = 'full'; // (thumbnail, medium, large, full or custom size)
 	$image = wp_get_attachment_image_src( $attachment_id, $size );	
 	
 	
@@ -31,7 +31,7 @@
 	
 	$image_style = '';
 	if( is_singular('collections') ) {
-		$image_style = 'img-thumbnail';	
+		$image_style = '';	
 	}
 ?>
 <section class="section-block standard-text">

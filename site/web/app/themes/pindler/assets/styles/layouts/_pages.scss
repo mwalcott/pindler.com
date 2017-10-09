@@ -257,7 +257,7 @@ main.main {
 	padding-bottom: 1.5rem;
 	header.section-header {
 		text-align: center;
-		margin-bottom: 2.5rem;
+		margin-bottom: 2rem;
 		h2 {
 			margin-bottom: 0;
 			color: $brand-primary;
@@ -466,6 +466,7 @@ article.collections {
 		}
 		h2 {
 			font-size: 2.5rem;
+			line-height: 2.6rem;
 			margin-bottom: 1rem;
 		}
 		p {
@@ -500,6 +501,7 @@ article.collections {
 	
 	img {
 		margin-bottom: 2rem;
+		max-height: 600px;
 	}
 	
 	@include media-breakpoint-up(sm) {
@@ -564,7 +566,7 @@ section.columns {
 	}
 	
 	.col-inner {
-		padding: 2rem;	
+		padding: 0rem 2rem 2rem;	
 	}
 	
 	h1, h2, h3, h4, h5, h6 {

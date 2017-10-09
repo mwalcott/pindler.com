@@ -4,7 +4,7 @@
 		<h2><?php the_sub_field('heading'); ?></h2>
 	</header>
 	
-	<div class="row text-center">
+	<div class="row text-center justify-content-center">
 
 <?php
 
@@ -22,7 +22,7 @@ if( have_rows('fabrics') ):
 	?>
 
 		<div class="col-sm-4">	
-			<img class="img-fluid img-thumbnail" alt="" src="<?php echo $image[0]; ?>" />
+			<img class="img-fluid" alt="" src="<?php echo $image[0]; ?>" />
 			<h4><?php the_sub_field('heading'); ?></h4>
 			<?php the_sub_field('content'); ?>
 			<a class="btn btn-primary" href="<?php echo $buttonURL; ?>">

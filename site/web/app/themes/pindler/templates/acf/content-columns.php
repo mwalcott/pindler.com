@@ -2,7 +2,7 @@
 	<header class="section-header">
 		<h2><?php the_sub_field('heading'); ?></h2>
 	</header>
-	<div class="row">
+	<div class="row justify-content-center">
 		<?php
 		$numrows = count( get_sub_field( 'column' ) );	
 
@@ -58,43 +58,44 @@
 						<?php the_sub_field('description'); ?>
 						<img class="img-fluid" alt="" src="<?php echo $image[0]; ?>" />
 						
-						
-						<?= Pindler\button( 'get_sub_field', '', '', 'btn-primary' ); ?>
+						<div class="text-center">
+							<?= Pindler\button( 'get_sub_field', '', '', 'btn-primary' ); ?>
+						</div>
 
 						<?php
 							$ai = 0;
 							if( get_sub_field('column_background_color_copy') ) {
-							if( have_rows('accordion_sections') ):
-								echo '<div id="accordion" role="tablist" aria-multiselectable="true">';
-									while ( have_rows('accordion_sections') ) : the_row(); $ai++; ?>
-
-									  <div class="card">
-									    <div class="card-header" role="tab" id="heading-<?php echo $ai; ?>">
-									      <h5 class="mb-0">
-									        <?php the_sub_field('heading'); ?>
-									      </h5>									      
-									      
-									      <p><?php the_sub_field('short_description'); ?></p>
-									      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $ai; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $ai; ?>">
-										    	Learn More
-									      </a>
-									    </div>
-									
-									    <div id="collapse-<?php echo $ai; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $ai; ?>">
-									      <div class="card-block">
-									        <?php the_sub_field('job_description'); ?>
-									      </div>
-									    </div>
-									  </div>
-									
+								if( have_rows('accordion_sections') ):
+									echo '<div id="accordion" role="tablist" aria-multiselectable="true">';
+										while ( have_rows('accordion_sections') ) : the_row(); $ai++; ?>
+	
+										  <div class="card">
+										    <div class="card-header" role="tab" id="heading-<?php echo $ai; ?>">
+										      <h5 class="mb-0">
+										        <?php the_sub_field('heading'); ?>
+										      </h5>									      
+										      
+										      <p><?php the_sub_field('short_description'); ?></p>
+										      <a data-toggle="collapse" data-parent="#accordion" href="#collapse-<?php echo $ai; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $ai; ?>">
+											    	Learn More
+										      </a>
+										    </div>
 										
-									
-									<?php endwhile; 								
-								echo '</div>';
-							
-							else :
-							
-							endif;
+										    <div id="collapse-<?php echo $ai; ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php echo $ai; ?>">
+										      <div class="card-block">
+										        <?php the_sub_field('job_description'); ?>
+										      </div>
+										    </div>
+										  </div>
+										
+											
+										
+										<?php endwhile; 								
+									echo '</div>';
+								
+								else :
+								
+								endif;
 							
 							}
 						

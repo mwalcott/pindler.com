@@ -2,7 +2,7 @@
 		<?php									 
 			if ( has_post_thumbnail() ) {
 				echo '<a href="'. get_permalink() .'">';
-			  	the_post_thumbnail('square_small', array('class' => 'img-fluid img-thumbnail'));
+			  	the_post_thumbnail('square_small', array('class' => 'img-fluid'));
 			  echo '</a>';
 			}
 		?>

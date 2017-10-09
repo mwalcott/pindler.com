@@ -160,19 +160,6 @@ function banner() {
 
 
 						
-<!--
-						<?php if( $pageLink ) { ?>
-							<a class="slide-link" href="<?php echo $pageLink; ?>">
-								<?php the_sub_field('heading'); ?>	
-							</a>
-						<?php	} elseif( $customLink ) { ?>
-							<a class="slide-link" href="<?php echo $customLink; ?>">
-								<?php the_sub_field('heading'); ?>	
-							</a>						
-						<?php } else { ?>
-							
-						<?php	} ?>
--->
 						
 					</div>		
 				<?php endwhile;
@@ -191,19 +178,7 @@ function banner() {
 
 /**
  * Button
- */
-/*
-$button_type = get_sub_field('type');
-$button_link = '';
-
-$field_type
-$field_prefix, 
-
-get_sub_field('type')
-get_field('type')
-
-*/
- 
+ */ 
 function button( $field_type, $field_prefix, $field_name, $btn_class ) {
 	
 	
@@ -269,19 +244,19 @@ function button( $field_type, $field_prefix, $field_name, $btn_class ) {
 	<?php	} elseif( $button_type == 'modal' ) { ?>
 
 		<button type="button" class="btn <?php echo $btn_class; ?>" data-toggle="modal" data-target="#<?php echo $button_modal_id; ?>">
-		  <?php echo $button_label; ?> modal
+		  <?php echo $button_label; ?>
 		</button>
 
 	<?php	} elseif( $button_type == 'custom' ) { ?>
 
 			<a class="btn <?php echo $btn_class; ?>" href="#FIXME">
-				<?php echo $button_label; ?> custom
+				<?php echo $button_label; ?>
 			</a>
 		
 	<?php } else { ?>
 
 			<a class="btn <?php echo $btn_class; ?>" href="<?php echo $button_url; ?>">
-				<?php echo $button_label; ?> url
+				<?php echo $button_label; ?>
 			</a>
 
 	<?php	} ?>
