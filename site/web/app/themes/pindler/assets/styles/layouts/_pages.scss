@@ -25,6 +25,7 @@ main.main {
 				position: relative;
 				padding-left: .7rem;
 				margin-bottom: .2rem;
+				font-style: italic;
 				&:before {
 					content: '\f111';
 					font-family: $fontawesome;
