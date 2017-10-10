@@ -58,9 +58,8 @@
 						<?php the_sub_field('description'); ?>
 						<img class="img-fluid" alt="" src="<?php echo $image[0]; ?>" />
 						
-						<div class="text-center">
 							<?= Pindler\button( 'get_sub_field', '', '', 'btn-primary' ); ?>
-						</div>
+
 
 						<?php
 							$ai = 0;

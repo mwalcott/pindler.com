@@ -72,6 +72,43 @@ use Roots\Sage\Wrapper;
 			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
 			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
+
+			<?php 
+			
+				$args2 = array(
+					'post_type' => 'showrooms',
+					'orderby' => 'title',
+					'order' => 'ASC'
+				);
+				
+				query_posts($args2);
+				echo '<div class="row">';
+				if (have_posts()) : while (have_posts()) : the_post(); 
+			
+					global $post;
+					$post_slug = $post->post_name;
+			
+				?>
+				
+					<div class="modal fade bd-example-modal-lg" id="<?php echo $post_slug; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $post_slug; ?>" aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="loginLabel"><?php the_title(); ?></h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+						      <div class="modal-body clearfix">
+										<?php the_field('location'); ?>
+						      </div>
+					    </div>
+					  </div>
+					</div>
+			
+			
+				<?php endwhile; endif; ?>
+			
 			<?= Pindler\modal(); ?>
 
 			<!-- Modal -->

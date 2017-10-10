@@ -33,7 +33,12 @@
 		
 		query_posts($args);
 		echo '<div class="row">';
-		if (have_posts()) : while (have_posts()) : the_post(); ?>
+		if (have_posts()) : while (have_posts()) : the_post(); 
+
+			global $post;
+			$post_slug = $post->post_name;
+		
+		?>
 			<div class="col-sm-4 showroom">
 				
 				<h5><?php the_title(); ?></h5>
@@ -79,7 +84,7 @@
 					<?php } ?>
 				</ul>
 				<?php if( get_field('location') ) { ?>
-					<button href="" class="btn btn-info">
+					<button class="btn btn-info" data-toggle="modal" data-target="#<?php echo $post_slug; ?>">
 						<i class="fa fa-map-marker" aria-hidden="true"></i> View Map
 					</button>
 				<?php } ?>
@@ -92,3 +97,4 @@
 	}
 	
 ?>
+
