@@ -111,6 +111,9 @@
 				   }, 100);
 				});
 
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
 
 
       },

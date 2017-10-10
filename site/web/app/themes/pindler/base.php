@@ -38,7 +38,7 @@ use Roots\Sage\Wrapper;
 	          <?php 
 		          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
 			          
-			          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) ) {
+			          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) || is_page_template( 'template-resources.php' ) ) {
 				         include Wrapper\template_path();  
 			          }
 			          Pindler\content_acf();
@@ -65,7 +65,15 @@ use Roots\Sage\Wrapper;
 	      get_template_part('templates/footer');
 	      wp_footer();
 	    ?>
+    </div>
 	
+			
+	
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
+			<?= Pindler\modal(); ?>
+
 			<!-- Modal -->
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
 			  <div class="modal-dialog" role="document">
@@ -92,13 +100,6 @@ use Roots\Sage\Wrapper;
 			    </div>
 			  </div>
 			</div>
-			
-			<?= Pindler\modal(); ?>
-	
-			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
-			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
-    </div>
   </body>
   
 </html>

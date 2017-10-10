@@ -1,7 +1,6 @@
 <?php
 /**
- * Template Name: Showrooms
+ * Template Name: Resources
  */
 ?>
-
-<?php get_template_part('templates/content', 'showrooms'); ?>
+<?php get_template_part('templates/content', 'resources'); ?>

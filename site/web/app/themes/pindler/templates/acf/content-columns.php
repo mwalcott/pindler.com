@@ -23,16 +23,16 @@
 				switch ( $colSize ) {
 					
 					case 'auto':
-						$colClass = 'col';
+						$colClass = 'col-sm';
 						break;
 					case 'half':
-						$colClass = 'col-6';
+						$colClass = 'col-sm-6';
 						break;
 					case 'third':
-						$colClass = 'col-4';
+						$colClass = 'col-sm-4';
 						break;
 					case 'quarter':
-						$colClass = 'col-3';
+						$colClass = 'col-sm-3';
 						break;
 				}		
 				
