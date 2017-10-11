@@ -20,6 +20,7 @@
 
 				$colClass = '';
 				$colClassColor = '';
+				$colPadding = '';
 				switch ( $colSize ) {
 					
 					case 'auto':
@@ -38,6 +39,7 @@
 				
 				if($colColor) {
 					$colClassColor = 'gray';
+					$colPadding = 'top-padding';
 				}
 
 				$attachment_id = get_sub_field('image');
@@ -53,7 +55,7 @@
 			?>
 		
 				<div class="<?php echo $colClass; ?> <?php echo $colClassColor; ?> <?php echo $center; ?>">	
-					<div class="col-inner">
+					<div class="col-inner <?php echo $colPadding; ?>">
 						<?php if( get_sub_field('heading') ) { ?>
 							<h4>
 								<?php the_sub_field('heading'); ?>

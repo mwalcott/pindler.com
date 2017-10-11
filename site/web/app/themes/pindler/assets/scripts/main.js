@@ -83,14 +83,18 @@
 
 				var collectionHeight = function() {
 				  var height = $('.collection-multiple').height();
-				  $('.collection-multiple').height(height);
+				  $(window).resize(function() {
+				  	$('.collection-multiple').height(height);
+				  });
 				};
 				
+/*
 				$('.collection-multiple').css('height', collectionHeight);
 
 				$(window).resize(function() {
 				  $('.collection-multiple').css('height', collectionHeight);
 				});				
+*/
 
 				var $menu = $("#my-menu").mmenu({
 				   //   options

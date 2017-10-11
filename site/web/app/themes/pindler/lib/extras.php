@@ -249,7 +249,7 @@ function button( $field_type, $field_prefix, $field_name, $btn_class ) {
 
 	<?php	} elseif( $button_type == 'custom' ) { ?>
 
-			<a class="btn <?php echo $btn_class; ?>" href="<?php echo $button_url; ?>">
+			<a target="_blank" class="btn <?php echo $btn_class; ?>" href="<?php echo $button_url; ?>">
 				<?php echo $button_label; ?>
 			</a>
 		

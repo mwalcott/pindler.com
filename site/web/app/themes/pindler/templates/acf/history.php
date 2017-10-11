@@ -29,7 +29,7 @@
 						
 				<div class="row history ">
 					<div class="col-sm-6 <?php echo $flexOrderImage; ?> image">
-						<div class="inner">
+						<div class="inner text-center">
 							<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
 						</div>
 					</div>

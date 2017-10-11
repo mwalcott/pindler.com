@@ -592,7 +592,10 @@ section.columns {
 	}
 	
 	.col-inner {
-		padding: 2rem 2rem 2rem;	
+		padding: 0rem 2rem 2rem;
+		&.top-padding {
+			padding: 2rem 2rem 2rem;	
+		}	
 	}
 	
 	h1, h2, h3, h4, h5, h6 {
@@ -693,30 +696,6 @@ section.columns {
 	.pull-sm-6 {
 		text-align: left !important;
 	}
-/*
-	.pull-sm-6,
-	.img-left {
-		position: relative;
-		&.history-content {
-			border-right: 1px solid $brand-primary;
-		}
-		&.image {
-			border-right: 1px solid $brand-primary;
-		}
-		
-		&:before {
-			content: '\f111';
-			font-family: $fontawesome;
-			position: absolute;
-			top: 15px;
-			right: -5px;
-			font-size: 10px;
-			color: $brand-primary;
-			border-top: 2px solid $white;
-			border-bottom: 2px solid $white;
-		}
-	}
-*/
 
 	.inner {
 		padding: 0 0 2.5rem;
@@ -742,6 +721,12 @@ section.columns {
 	p {
 		font-style: italic;
 		font-size: .9rem;
+	}
+	
+	img {
+		max-height: 300px;
+		margin: 0 auto;
+		width: auto;
 	}
 	
 	@include media-breakpoint-up(sm) { 
