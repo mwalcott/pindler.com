@@ -43,11 +43,16 @@
 				$attachment_id = get_sub_field('image');
 				$size = 'square'; // (thumbnail, medium, large, full or custom size)
 				$image = wp_get_attachment_image_src( $attachment_id, $size );		
-
+				
+				$center = '';
+				if( $numrows == 1 ) {
+					$center = 'text-center';
+				}
+				
 			
 			?>
 		
-				<div class="<?php echo $colClass; ?> <?php echo $colClassColor; ?>">	
+				<div class="<?php echo $colClass; ?> <?php echo $colClassColor; ?> <?php echo $center; ?>">	
 					<div class="col-inner">
 						<?php if( get_sub_field('heading') ) { ?>
 							<h4>

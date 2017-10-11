@@ -57,9 +57,11 @@
 				});
 
 				$('.owl-installs').owlCarousel({
-			    loop:false,
+			    loop:true,
 			    margin:10,
 			    nav:true,
+			    autoplay: true,
+			    autoplayTimeout: 3000,
 					navText: [
 					   "<i class='fa fa-angle-left'></i>",
 					   "<i class='fa fa-angle-right'></i>"
@@ -115,6 +117,11 @@ $(function () {
   $('[data-toggle="popover"]').popover();
 });
 
+/*
+$('.popover-dismiss').popover({
+  trigger: 'focus'
+});
+*/
 
       },
       finalize: function() {
