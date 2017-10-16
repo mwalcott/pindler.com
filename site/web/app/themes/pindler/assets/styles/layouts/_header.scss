@@ -2,6 +2,11 @@
 header.banner {
 	//padding-bottom: 2rem;
 	
+	.search-fabrics {
+		display: inline-block;
+		margin-right: 1rem;
+	}
+	
 	// Start Header Top
 	.header-top {
 		background: $brand-light-background;

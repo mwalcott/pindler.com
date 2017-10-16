@@ -1,4 +1,4 @@
-<section class="section-block">
+<section class="section-block as-seen-in">
 	<header class="section-header">
 		<h2><?php the_sub_field('heading'); ?></h2>
 	</header>

@@ -4,7 +4,12 @@
 			
 			<div class="row align-items-center">
 				<div class="col-4 text-left head-search-link">
-					<a href="http://trade.pindler.com/cgi-bin/fccgi.exe?w3exec=public&cmd=cust.fabric.search&stype=fabric">Search Fabrics <i class="fa fa-search" aria-hidden="true"></i></a>
+					<a class="hidden-xs-down search-fabrics" href="http://trade.pindler.com/cgi-bin/fccgi.exe?w3exec=public&cmd=cust.fabric.search&stype=fabric">
+						Search Fabrics <i class="fa fa-search" aria-hidden="true"></i>
+					</a> 
+					<a class="hidden-xs-down search-trim" href="http://trade.pindler.com/cgi-bin/fccgi.exe?w3exec=public&cmd=cust.trim.search&stype=trim">
+						Search Trims <i class="fa fa-search" aria-hidden="true"></i>
+					</a>
 				</div>
 				<div class="col-4 text-center">
 					<ul class="user-links head-foot-links">

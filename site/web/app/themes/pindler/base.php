@@ -82,7 +82,7 @@ use Roots\Sage\Wrapper;
 				);
 				
 				query_posts($args2);
-				echo '<div class="row">';
+				//echo '<div class="row">';
 				if (have_posts()) : while (have_posts()) : the_post(); 
 			
 					global $post;

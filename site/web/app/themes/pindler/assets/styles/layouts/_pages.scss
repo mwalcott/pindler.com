@@ -280,6 +280,11 @@ main.main {
 	margin-bottom: 2rem;
 	border-bottom: 1px solid $brand-light-background;
 	padding-bottom: 1.5rem;
+	
+	&.as-seen-in {
+		border-bottom: none;
+	}
+	
 	header.section-header {
 		text-align: center;
 		margin-bottom: 2rem;

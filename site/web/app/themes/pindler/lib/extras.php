@@ -369,6 +369,7 @@ add_action( 'pre_get_posts', __NAMESPACE__ . '\\custom_tax_order' );
 function modal() { 
 
 $modalID = get_field('modal_id');
+var_dump($modalID);
 
 /*
 if( have_rows('section') ) {
@@ -381,7 +382,6 @@ if( have_rows('section') ) {
 */
 
 ?>
-
 <!-- Modal -->
 <div class="modal fade" id="<?php echo $modalID; ?>" tabindex="-1" role="dialog" aria-labelledby="apply" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
