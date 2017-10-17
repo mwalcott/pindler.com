@@ -12,7 +12,7 @@
 		  <div class="col-md-7">
 		    <h1 class="entry-title"><?php the_title(); ?></h1>
 		    <?php the_content(); ?>
-		    <a href="<?php the_field('pdf'); ?>" class="btn btn-primary">Download Article <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+		    <a target="_blank" href="<?php the_field('pdf'); ?>" class="btn btn-primary">Download Article <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 		  </div>
 		  
 	  </article>
