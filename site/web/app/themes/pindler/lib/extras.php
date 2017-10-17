@@ -368,8 +368,6 @@ add_action( 'pre_get_posts', __NAMESPACE__ . '\\custom_tax_order' );
 
 function modal() { 
 
-$modalID = get_field('modal_id');
-var_dump($modalID);
 
 /*
 if( have_rows('section') ) {
@@ -382,24 +380,27 @@ if( have_rows('section') ) {
 */
 
 ?>
-<!-- Modal -->
-<div class="modal fade" id="<?php echo $modalID; ?>" tabindex="-1" role="dialog" aria-labelledby="apply" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><?php the_field('modal_title'); ?></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <?php the_field('modal_content'); ?>
-      </div>
-      <div class="modal-footer">
-        <?= button( 'get_field', 'modal', '', 'btn-primary float-right' ); ?>
-      </div>
-    </div>
-  </div>
-</div>
+<?php 
+	$modalID = get_field('modal_id');
+?>
+	<!-- Modal -->
+	<div class="modal fade" id="<?php echo $modalID; ?>" tabindex="-1" role="dialog" aria-labelledby="apply" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel"><?php the_field('modal_title'); ?></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <?php the_field('modal_content'); ?>
+	      </div>
+	      <div class="modal-footer">
+	        <?= button( 'get_field', 'modal', '', 'btn-primary float-right' ); ?>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	
 <?php }

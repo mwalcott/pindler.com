@@ -36,7 +36,7 @@ use Roots\Sage\Wrapper;
 	      <div class="content row">
 	        <main class="main">
 	          <?php 
-		          if( is_front_page() || is_page() || is_singular('collections') || is_single() ) {
+		          if( is_front_page() || is_page()  || is_singular('collections') || is_single() ) {
 			          
 			          if( is_singular('post') || is_page_template( 'template-showrooms.php' ) || is_page_template( 'template-resources.php' ) ) {
 				         include Wrapper\template_path();  
@@ -59,8 +59,10 @@ use Roots\Sage\Wrapper;
 	        <?php endif; ?>
 	      </div><!-- /.content -->
 	    </div><!-- /.wrap -->
-	        
 	    <?php
+		    
+		    
+
 	      do_action('get_footer');
 	      get_template_part('templates/footer');
 	      wp_footer();
@@ -69,12 +71,9 @@ use Roots\Sage\Wrapper;
 	
 			
 	
-			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
-			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
-
+		<?= Pindler\modal(); ?>
 			<?php 
-			
+				
 				$args2 = array(
 					'post_type' => 'showrooms',
 					'orderby' => 'title',
@@ -108,8 +107,9 @@ use Roots\Sage\Wrapper;
 			
 			
 				<?php endwhile; endif; ?>
+				
 			
-			<?= Pindler\modal(); ?>
+			
 
 			<!-- Modal -->
 			<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
@@ -137,6 +137,10 @@ use Roots\Sage\Wrapper;
 			    </div>
 			  </div>
 			</div>
+			
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/owl.carousel.min.js"></script>
+			<script src="<?= get_template_directory_uri(); ?>/assets/scripts/jquery.mmenu.all.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYpy0c3e6lcb49OtV8aJMwhf2DPMYqqeM"></script>
   </body>
   
 </html>
