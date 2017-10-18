@@ -5,6 +5,7 @@ web/app/plugins/*
 !web/app/plugins/wp-migrate-db-pro-media-files/
 !web/app/plugins/wp-migrate-db-pro/
 !web/app/plugins/advanced-custom-fields-pro/
+!web/app/plugins//social-feed-by-arrowplugins-premium-1.1/
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b29ad8a750e1c16778bbe8510bea0da9",
+    "content-hash": "0a2b05c502bed9b9a30676b0701d36d3",
     "packages": [
         {
             "name": "composer/installers",
@@ -611,26 +611,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordfence/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-social-feed",
-            "version": "1.1.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-social-feed/",
-                "reference": "tags/1.1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-social-feed.1.1.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-social-feed/"
         }
     ],
     "packages-dev": [
