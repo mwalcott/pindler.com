@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b77b89c6f073d9a872babcca0bc41305",
+    "content-hash": "b29ad8a750e1c16778bbe8510bea0da9",
     "packages": [
         {
             "name": "composer/installers",
@@ -513,26 +513,6 @@
             "homepage": "https://wordpress.org/plugins/duplicate-post/"
         },
         {
-            "name": "wpackagist-plugin/feed-them-social",
-            "version": "2.2.8",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/feed-them-social/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/feed-them-social.zip?timestamp=1506706848",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/feed-them-social/"
-        },
-        {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
             "version": "5.1.1.2",
             "source": {
@@ -631,6 +611,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordfence/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-social-feed",
+            "version": "1.1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-social-feed/",
+                "reference": "tags/1.1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-social-feed.1.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-social-feed/"
         }
     ],
     "packages-dev": [
