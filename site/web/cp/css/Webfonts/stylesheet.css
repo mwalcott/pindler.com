@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'halogenhairline';
+    src: url('halogen-hr-webfont.eot');
+    src: url('halogen-hr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-hr-webfont.woff') format('woff'),
+         url('halogen-hr-webfont.ttf') format('truetype'),
+         url('halogen-hr-webfont.svg#halogenhairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenhairline_oblique';
+    src: url('halogen-hrobl-webfont.eot');
+    src: url('halogen-hrobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-hrobl-webfont.woff') format('woff'),
+         url('halogen-hrobl-webfont.ttf') format('truetype'),
+         url('halogen-hrobl-webfont.svg#halogenhairline_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenthin';
+    src: url('halogen-th-webfont.eot');
+    src: url('halogen-th-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-th-webfont.woff') format('woff'),
+         url('halogen-th-webfont.ttf') format('truetype'),
+         url('halogen-th-webfont.svg#halogenthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenthin_oblique';
+    src: url('halogen-thobl-webfont.eot');
+    src: url('halogen-thobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-thobl-webfont.woff') format('woff'),
+         url('halogen-thobl-webfont.ttf') format('truetype'),
+         url('halogen-thobl-webfont.svg#halogenthin_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenlight';
+    src: url('halogen-lt-webfont.eot');
+    src: url('halogen-lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-lt-webfont.woff') format('woff'),
+         url('halogen-lt-webfont.ttf') format('truetype'),
+         url('halogen-lt-webfont.svg#halogenlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenlight_oblique';
+    src: url('halogen-ltobl-webfont.eot');
+    src: url('halogen-ltobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-ltobl-webfont.woff') format('woff'),
+         url('halogen-ltobl-webfont.ttf') format('truetype'),
+         url('halogen-ltobl-webfont.svg#halogenlight_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenregular';
+    src: url('halogen-rg-webfont.eot');
+    src: url('halogen-rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-rg-webfont.woff') format('woff'),
+         url('halogen-rg-webfont.ttf') format('truetype'),
+         url('halogen-rg-webfont.svg#halogenregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenregular_oblique';
+    src: url('halogen-rgobl-webfont.eot');
+    src: url('halogen-rgobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-rgobl-webfont.woff') format('woff'),
+         url('halogen-rgobl-webfont.ttf') format('truetype'),
+         url('halogen-rgobl-webfont.svg#halogenregular_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenmedium';
+    src: url('halogen-md-webfont.eot');
+    src: url('halogen-md-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-md-webfont.woff') format('woff'),
+         url('halogen-md-webfont.ttf') format('truetype'),
+         url('halogen-md-webfont.svg#halogenmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenmedium_oblique';
+    src: url('halogen-mdobl-webfont.eot');
+    src: url('halogen-mdobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-mdobl-webfont.woff') format('woff'),
+         url('halogen-mdobl-webfont.ttf') format('truetype'),
+         url('halogen-mdobl-webfont.svg#halogenmedium_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenbold';
+    src: url('halogen-bd-webfont.eot');
+    src: url('halogen-bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-bd-webfont.woff') format('woff'),
+         url('halogen-bd-webfont.ttf') format('truetype'),
+         url('halogen-bd-webfont.svg#halogenbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenbold_oblique';
+    src: url('halogen-bdobl-webfont.eot');
+    src: url('halogen-bdobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-bdobl-webfont.woff') format('woff'),
+         url('halogen-bdobl-webfont.ttf') format('truetype'),
+         url('halogen-bdobl-webfont.svg#halogenbold_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenblack';
+    src: url('halogen-bl-webfont.eot');
+    src: url('halogen-bl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-bl-webfont.woff') format('woff'),
+         url('halogen-bl-webfont.ttf') format('truetype'),
+         url('halogen-bl-webfont.svg#halogenblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'halogenblack_oblique';
+    src: url('halogen-blobl-webfont.eot');
+    src: url('halogen-blobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('halogen-blobl-webfont.woff') format('woff'),
+         url('halogen-blobl-webfont.ttf') format('truetype'),
+         url('halogen-blobl-webfont.svg#halogenblack_oblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

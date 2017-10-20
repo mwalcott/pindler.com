@@ -1,0 +1,540 @@
+<!--#include file="header.html"-->
+<div id="wrapper">
+	<div id="main" class="inside-page clearfix">
+		<!-- ///////////////////////////////////////////// -->
+		<!-- INCLUDE CMS-NAVIGATION FILE HERE -->
+		<!-- FOR THE NORMAL WEBSITE, NOT THE TRADE SITE -->
+		<!-- ///////////////////////////////////////////// -->
+		<div class="main-content clearfix">
+		    <div class="content product-search product-search-results">
+		    	<!-- --------------------------------------------------- -->
+		    	<!-- DISPLAY # OF RESULTS TITLE -->
+		    	<!-- --------------------------------------------------- -->
+		        <div class="grid-100 ps-results-title">
+		        	<a class="blue-button" href="index.php">New Search</a>
+		            <h2>Search Results (#)</h2><!-- Number of Results -->
+		        </div>
+		        <!-- --------------------------------------------------- -->
+		    	<!-- END OF DISPLAY # OF RESULTS TITLE -->
+		    	<!-- --------------------------------------------------- -->
+		    	
+		        <!-- --------------------------------------------------- -->
+		    	<!-- SUBMIT NEW OPTIONS or EXPANDED FILTERS -->
+		    	<!-- --------------------------------------------------- -->
+		    	<div class="ps-results-filter grid-25">
+		        	<form class="clearfix" name="filter-search" method="POST" action="">
+		        		<!-- Form Submit Button -->
+		        		<input type="submit" value="Refresh Results" />
+		        		<!-- End Form Submit Button -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option ps-filter-fabric-type">
+		    	    		<h6>Fabric Type</h6>
+			    	    	<ul>
+			    	    	    <li><input type="checkbox" name="fabric-type" value="" />Upholstery</li>
+			    	    	    <li><input type="checkbox" name="fabric-type" value="" />Print</li>
+			    	    	    <li><input type="checkbox" name="fabric-type" value="" />Multi-Purpose</li>
+			    	    	    <li><input type="checkbox" name="fabric-type" value="" />Drapery</li>
+			    	    	    <li><input type="checkbox" name="fabric-type" value="" />Indoor/Outdoor</li>
+			    	    	</ul>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option ps-filter-color-choice">
+		    	    		<a class="brown-button" href="javascript:;">Color Choice &nbsp; >></a>
+		    	    		<!-- Popup Selection -->
+		    	    		<div class="pindler-search grid-100">
+		    	    			<div class="ps-container ps-open clearfix">
+		    	    				<img class="filter-close" src="assets/images/popup-close-small.png" />
+		    	    				<img class="filter-close-save" src="assets/images/popup-close-save.png" />
+			    	    		    <div class="ps-header claerfix">
+			    	    		    	<h3>Colors</h3>
+			    	    		    	<ul class="right select-color-type">
+			    	    		    		<li><input type="radio" name="color-type" value="" checked />Solid</li>
+			    	    		    		<li><input type="radio" name="color-type" value="" />Tonal</li>
+			    	    		    		<li><input class="two-color-option" type="radio" name="color-type" value="" />Two-Color</li>
+			    	    		    		<li><input type="radio" name="color-type" value="" />Multi-Color</li>
+			    	    		    	</ul>
+			    	    		    </div>
+			    	    		    <div class="ps-options ps-color-options">
+			    	    		    	<ul>
+			    	    		    		<li><img class="white" src="assets/images/swatches/white.png" /><p>White</p></li>
+											<li><img class="ivory" src="assets/images/swatches/ivory.png" /><p>Ivory</p></li>
+											<li><img class="straw" src="assets/images/swatches/straw.png" /><p>Straw</p></li>
+											<li><img class="beige" src="assets/images/swatches/beige.png" /><p>Beige</p></li>
+											<li><img class="tan" src="assets/images/swatches/tan.png" /><p>Tan</p></li>
+											<li><img class="taupe" src="assets/images/swatches/taupe.png" /><p>Taupe</p></li>
+											<li><img class="brown" src="assets/images/swatches/brown.png" /><p>Brown</p></li>
+											<li><img class="black" src="assets/images/swatches/black.png" /><p>Black</p></li>
+											<li><img class="light-grey" src="assets/images/swatches/light-grey.png" /><p>Light Grey</p></li>
+											<li><img class="grey" src="assets/images/swatches/grey.png" /><p>Grey</p></li>
+											<li><img class="aqua" src="assets/images/swatches/aqua.png" /><p>Aqua</p></li>
+											<li><img class="teal" src="assets/images/swatches/teal.png" /><p>Teal</p></li>
+											<li><img class="light-blue" src="assets/images/swatches/light-blue.png" /><p>Light Blue</p></li>
+											<li><img class="medium-blue" src="assets/images/swatches/medium-blue.png" /><p>Medium Blue</p></li>
+											<li><img class="dark-blue" src="assets/images/swatches/dark-blue.png" /><p>Dark Blue</p></li>
+											<li><img class="light-green" src="assets/images/swatches/light-green.png" /><p>Light Green</p></li>
+											<li><img class="medium-green" src="assets/images/swatches/medium-green.png" /><p>Medium Green</p></li>
+											<li><img class="dark-green" src="assets/images/swatches/dark-green.png" /><p>Dark Green</p></li>
+											<li><img class="yellow" src="assets/images/swatches/yellow.png" /><p>Yellow</p></li>
+											<li><img class="gold" src="assets/images/swatches/gold.png" /><p>Gold</p></li>
+											<li><img class="orange" src="assets/images/swatches/orange.png" /><p>Orange</p></li>
+											<li><img class="coral" src="assets/images/swatches/coral.png" /><p>Coral</p></li>
+											<li><img class="peach" src="assets/images/swatches/peach.png" /><p>Peach</p></li>
+											<li><img class="terra-cotta" src="assets/images/swatches/terra-cotta.png" /><p>Terra Cotta</p></li>
+											<li><img class="burgundy" src="assets/images/swatches/burgundy.png" /><p>Burgundy</p></li>
+											<li><img class="red" src="assets/images/swatches/red.png" /><p>Red</p></li>
+											<li><img class="pink" src="assets/images/swatches/pink.png" /><p>Pink</p></li>
+											<li><img class="light-pink" src="assets/images/swatches/light-pink.png" /><p>Light Pink</p></li>
+											<li><img class="lilac" src="assets/images/swatches/lilac.png" /><p>Lilac</p></li>
+											<li><img class="purple" src="assets/images/swatches/purple.png" /><p>Purple</p></li>
+			    	    		    	</ul>
+			    	    		    </div>
+			    	    		    <div class="ps-options ps-color-choices">
+			    	    		    	<div class="clearfix">
+			    	    		    		<p>Your Chosen Colors</p>
+			    	    		    		<ul>
+			    	    		    			<li class="color-option-1 select-color"><input type="hidden" name="color-1" value="aqua" /><img class="remove-color-choice right" src="assets/images/icons/icon-delete.png" /></li>
+			    								<li class="color-option-2 select-color"><input type="hidden" name="color-2" value="" /><img class="remove-color-choice right" src="assets/images/icons/icon-delete.png" /></li>
+			    								<li class="color-option-3 select-color"><input type="hidden" name="color-3" value="" /><img class="remove-color-choice right" src="assets/images/icons/icon-delete.png" /></li>
+			    	    		    		</ul>
+			    	    		    	</div>	
+			    	    		    </div>
+			    	    		</div>
+		    	    		</div>
+		    	    		<!-- End Popup Selection -->
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option">
+		    	    		<a class="brown-button" href="javascript:;">Design Styles &nbsp; >></a>
+		    	    		<div class="pindler-search grid-100">
+		    		    		<div class="ps-container ps-open">
+		    		    			<img class="filter-close" src="assets/images/popup-close-small.png" />
+		    		    			<img class="filter-close-save" src="assets/images/popup-close-save.png" />
+		    			    	    <div class="ps-header claerfix">
+		    			    	    	<h3>Design Style</h3>
+		    			    	    </div>
+		    			    	    <div class="ps-options clearfix">
+		    			    	    	<ul class="ps-stacked">
+										    <li><input type="checkbox" name="design" value="" />Abstract</li>
+										    <li><input type="checkbox" name="design" value="" />Animal</li>
+										    <li><input type="checkbox" name="design" value="" />Animal Skin</li>
+										    <li><input type="checkbox" name="design" value="" />Asian</li>
+										    <li><input type="checkbox" name="design" value="" />Birds</li>
+										    <li><input type="checkbox" name="design" value="" />Botanical</li>
+										    <li><input type="checkbox" name="design" value="" />Canvas</li>
+										    <li><input type="checkbox" name="design" value="" />Check</li>
+										    <li><input type="checkbox" name="design" value="" />Chenille</li>
+										    <li><input type="checkbox" name="design" value="" />Chevron</li>
+										    <li><input type="checkbox" name="design" value="" />Chintz</li>
+										    <li><input type="checkbox" name="design" value="" />Contemporary</li>
+										    <li><input type="checkbox" name="design" value="" />Corduroy</li>
+										    <li><input type="checkbox" name="design" value="" />Crewel</li>
+										    <li><input type="checkbox" name="design" value="" />Damask</li>
+										    <li><input type="checkbox" name="design" value="" />Denim</li>
+										</ul>
+										<ul class="ps-stacked">
+										    <li><input type="checkbox" name="design" value="" />Diamond</li>
+										    <li><input type="checkbox" name="design" value="" />Dots/Circles</li>
+										    <li><input type="checkbox" name="design" value="" />Embroidery</li>
+										    <li><input type="checkbox" name="design" value="" />Epingle</li>
+										    <li><input type="checkbox" name="design" value="" />Eyelet</li>
+										    <li><input type="checkbox" name="design" value="" />Ethnic</li>
+										    <li><input type="checkbox" name="design" value="" />Faux Leather</li>
+										    <li><input type="checkbox" name="design" value="" />Faux Silk</li>
+										    <li><input type="checkbox" name="design" value="" />Faux Suede</li>
+										    <li><input type="checkbox" name="design" value="" />Flame Stitch</li>
+										    <li><input type="checkbox" name="design" value="" />Floral</li>
+										    <li><input type="checkbox" name="design" value="" />Geometric</li>
+										    <li><input type="checkbox" name="design" value="" />Greek Key</li>
+										    <li><input type="checkbox" name="design" value="" />Gros Point</li>
+										    <li><input type="checkbox" name="design" value="" />Herringbone</li>
+										    <li><input type="checkbox" name="design" value="" />Houndstooth</li>
+										</ul>
+										<ul class="ps-stacked">
+										    <li><input type="checkbox" name="design" value="" />Ikat</li>
+										    <li><input type="checkbox" name="design" value="" />Imberlines</li>
+										    <li><input type="checkbox" name="design" value="" />Insect</li>
+										    <li><input type="checkbox" name="design" value="" />Jacobean</li>
+										    <li><input type="checkbox" name="design" value="" />Juvenile</li>
+										    <li><input type="checkbox" name="design" value="" />Kilim</li>
+										    <li><input type="checkbox" name="design" value="" />Lace</li>
+										    <li><input type="checkbox" name="design" value="" />Leaf/Foliage/Vine</li>
+										    <li><input type="checkbox" name="design" value="" />Matelasse</li>
+										    <li><input type="checkbox" name="design" value="" />Medallion/Tile</li>
+										    <li><input type="checkbox" name="design" value="" />Metallic</li>
+										    <li><input type="checkbox" name="design" value="" />Moire</li>
+										    <li><input type="checkbox" name="design" value="" />Nautical</li>
+										    <li><input type="checkbox" name="design" value="" />Ogee</li>
+										    <li><input type="checkbox" name="design" value="" />Ombre</li>
+										    <li><input type="checkbox" name="design" value="" />Ottoman</li>
+										</ul>
+										<ul class="ps-stacked">
+										    <li><input type="checkbox" name="design" value="" />Paisley</li>
+										    <li><input type="checkbox" name="design" value="" />Plaid</li>
+										    <li><input type="checkbox" name="design" value="" />Pleated</li>
+										    <li><input type="checkbox" name="design" value="" />Polka Dot</li>
+										    <li><input type="checkbox" name="design" value="" />Quilted</li>
+										    <li><input type="checkbox" name="design" value="" />Raffia</li>
+										    <li><input type="checkbox" name="design" value="" />Railroaded</li>
+										    <li><input type="checkbox" name="design" value="" />Sateen</li>	
+										    <li><input type="checkbox" name="design" value="" />Satin</li>
+										    <li><input type="checkbox" name="design" value="" />Script</li>
+										    <li><input type="checkbox" name="design" value="" />Scroll</li>
+										    <li><input type="checkbox" name="design" value="" />Sheer</li>
+										    <li><input type="checkbox" name="design" value="" />Sheer Casement</li>
+										    <li><input type="checkbox" name="design" value="" />Sheer Semi</li>
+										    <li><input type="checkbox" name="design" value="" />Southwest/Lodge</li>
+										    <li><input type="checkbox" name="design" value="" />Strie</li>
+										</ul>
+										<ul class="ps-stacked">
+										    <li><input type="checkbox" name="design" value="" />Stripe</li>
+										    <li><input type="checkbox" name="design" value="" />Tapestry</li>
+										    <li><input type="checkbox" name="design" value="" />Texture</li>
+										    <li><input type="checkbox" name="design" value="" />Toile</li>
+										    <li><input type="checkbox" name="design" value="" />Traditional</li>
+										    <li><input type="checkbox" name="design" value="" />Transitional</li>
+										    <li><input type="checkbox" name="design" value="" />Trellis/Lattice</li>
+										    <li><input type="checkbox" name="design" value="" />Tropical</li>
+										    <li><input type="checkbox" name="design" value="" />Tweed</li>
+										    <li><input type="checkbox" name="design" value="" />Twill</li>
+										    <li><input type="checkbox" name="design" value="" />Velvet-Cut</li>
+										    <li><input type="checkbox" name="design" value="" />Velvet</li>
+										    <li><input type="checkbox" name="design" value="" />Vermicelli</li>
+										    <li><input type="checkbox" name="design" value="" />Vinyl</li>
+										    <li><input type="checkbox" name="design" value="" />Washed</li>
+										    <li><input type="checkbox" name="design" value="" />Wide Width</li>
+										</ul>
+		    			    	    </div>
+		    			    	</div>
+		    	    		</div>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option">
+		    	    		<h6>Composition</h6>
+			    	    	<ul>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Cotton</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Faux Leather</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Linen</li>   	    	    		
+			    	    	    <li><input type="checkbox" name="composition" value="" />Mohair</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Silk</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Suede</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Velvet</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Vinyl</li>
+			    	    	    <li><input type="checkbox" name="composition" value="" />Wool</li>
+			    	    	</ul>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option">
+		    	    		<h6>Performance</h6>
+		    	    		<ul>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Heavy Duty Abrasion</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Anti-Bacterial/Microbial</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Bleach Cleanable</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Colorfastness to Light</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Commercial Laundering/Washable Fabrics</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Fade Resistant</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Flame Resistant (NFPA 701)</li>
+			    	    	    <li><input type="checkbox" name="performance" value="" />Mildew Resistant</li>
+			    	    	</ul>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option">
+		    	    		<h6>Scale</h6>
+		    	    		<select name="scale">
+		    	    			<option value="">All Sizes</option>
+		    				    <option value="">Small</option>
+		    				    <option value="">Medium</option>
+		    				    <option value="">Large</option>
+		    				</select>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Filter Option -->
+		    	    	<div class="ps-filter-option">
+		    	    		<h6>Pindler Exclusives</h6>
+		    	    		<select name="exclusives">
+		    	    			<option value="">Show All Products</option>
+		    				    <option value="">Show New Products</option>
+		    				    <option value="">Show Pindler Exclusives</option>
+		    				</select>
+		    	    	</div>
+		    	    	<!-- End Filter Option -->
+		    	    	<!-- Form Submit Button -->
+		        		<input type="submit" value="Refresh Results" />
+		        		<!-- End Form Submit Button -->
+		    		</form>
+		    	</div>
+		        <!-- --------------------------------------------------- -->
+		    	<!-- END OF NEW OPTIONS or EXPANDED FILTERS -->
+		    	<!-- --------------------------------------------------- -->
+		    	
+		    	<!-- --------------------------------------------------- -->
+		    	<!-- THUMBNAIL LIST OF FOUND PRODUCTS -->
+		    	<!-- --------------------------------------------------- -->
+		        <div class="ps-results-list grid-75">
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Classique - Parchment</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Fleur de Lis - Slate</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Mer - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Plage - Latte</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Orleans - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Vintage - Cocoa</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Classique - Parchment</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Fleur de Lis - Slate</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Mer - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Plage - Latte</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Orleans - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Vintage - Cocoa</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Classique - Parchment</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Fleur de Lis - Slate</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Mer - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Plage - Latte</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Orleans - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Vintage - Cocoa</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Classique - Parchment</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Fleur de Lis - Slate</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Mer - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">La Plage - Latte</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Orleans - Rose</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Vintage - Cocoa</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	<!-- Individual Fabric Result -->
+		        	<div class="ps-results-single">
+		        		<a href="javascript:;"><!-- Link to Fabric Details Page -->
+		        			<img src="assets/images/fabric-thumbs/example.jpg" /><br />
+		        			<span class="ps-fabric-id">0000</span><!-- Fabric ID # --><br />
+		        			<span class="ps-fabric-name">Vintage - Cocoa</span><!-- Fabric Name -->
+		        		</a>
+		        	</div>
+		        	<!-- End of Individual Fabric Result -->
+		        	
+		        	<!-- --------------------------------------------------- -->
+					<!-- EXAMPLE PAGE NUMBERS -->
+					<!-- --------------------------------------------------- -->
+					
+					<div class="ps-page-numbers-container grid-100">
+						<div class="ps-page-numbers">
+							<ul>
+								<li class="selected">1</li>
+								<li class=""><a href="">2</a></li>
+								<li class=""><a href="">3</a></li>
+								<li class=""><a href="">4</a></li>
+								<li class=""><a href="">5</a></li>
+								<li class=""><a href="">6</a></li>
+								<li class=""><a href="">7</a></li>
+								<li class=""><a href="">8</a></li>
+								<li class=""><a href="">9</a></li>
+								<li class=""><a href="">Next</a></li>
+								<li class=""><a href="">Last</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- --------------------------------------------------- -->
+					<!-- END EXAMPLE PAGE NUMBERS -->
+					<!-- --------------------------------------------------- -->
+		        </div>
+		    	<!-- --------------------------------------------------- -->
+		    	<!-- END OF THUMBNAIL LIST OF FOUND PRODUCTS -->
+		    	<!-- --------------------------------------------------- -->
+		    </div><!-- .content -->
+		</div><!-- .main-content -->
+	</div><!-- #main -->
+</div><!-- #wrapper -->
+<!-- ///////////////////////////////////////////// -->
+<!-- INCLUDE FOOTER FILE -->
+<!-- FOOTER FILE SHOULD INCLUDE CLOSING BODY & HTML TAG -->
+<!-- ///////////////////////////////////////////// -->

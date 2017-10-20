@@ -1,0 +1,470 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pindler :: Trade Site</title>
+
+<link rel="stylesheet" type="text/css" href="/cp/css/cplive.css" />
+
+
+<!-- note: this is a cut-paste of cp.js -->
+<script type="text/javascript">
+
+var anylinkmenu1={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
+anylinkmenu1.items=[
+   ["Fabric", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.fabric.search&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Trim", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.trim.search&sessionid=663635*16924.60287&w3serverpool=cust"] //no comma following last entry!
+
+]
+
+var anylinkmenu2={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
+anylinkmenu2.items=[
+   ["Fabric", "/cgi-bin/fccgi.exe?w3exec=custportal&w3exec=custportal&cmd=cust.fabric.search&stype=closeout&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Trim", "/cgi-bin/fccgi.exe?w3exec=custportal&w3exec=custportal&cmd=cust.trim.search&stype=closeout&sessionid=663635*16924.60287&w3serverpool=cust"] 
+
+]
+
+var anylinkmenu3={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
+anylinkmenu3.items=[
+   ["Order Fabric/Trim/Closeouts", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.order.dw.entry&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Order Samples", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.order.entry&type=sample&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Approve/Waive CFA Orders", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.cfa&which=list&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["List Orders", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.order.list&sessionid=663635*16924.60287&w3serverpool=cust"] 
+
+]
+var anylinkmenu4={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
+anylinkmenu4.items=[
+   ["Inquiries/Comments", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.contact&who=inquiry&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Contact Credit Dept.", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.contact&who=credit&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Contact Local Sales Rep", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.contact&who=slm&sessionid=663635*16924.60287&w3serverpool=cust"],
+   ["Contact Local Showroom", "/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.contact&who=showrm&sessionid=663635*16924.60287&w3serverpool=cust"] 
+]
+
+
+</script>
+
+<script type="text/javascript" src="../js/anylinkmenu.js">
+
+/***********************************************
+* AnyLink JS Drop Down Menu v2.0-  Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/dropmenuindex.htm for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+ 
+//anylinkcssmenu.init("menu_anchors_class") //Pass in the CSS class of anchor links (that contain a sub menu)
+ anylinkcssmenu.init("menuanchorclass")
+ 
+</script>
+
+<script type="text/javascript">
+
+//anylinkmenu.init("menu_anchors_class") //Pass in the CSS class of anchor links (that contain a sub menu)
+anylinkmenu.init("menuanchorclass")
+
+</script>
+
+
+
+
+</head>
+ 
+
+<body ##bodysubs## style="margin: 0">
+<table class="headermain">
+   <tr>
+      <td class="headerlogo">
+      <center><a href="http://www.pindler.com/" id="pindler-logo">Pindler</a></center>
+      </td>
+   </tr>
+   <tr>
+      <td>
+      <table class="headermaster">
+         <tr>
+         <td class="headermenu">
+         <a href="javascript:void(0)" onclick="location.href='" . $ajax_like_link . "'" class="menuanchorclass" rel="anylinkmenu1">Search</a>
+         </td>
+         <td style="width: 66px" class="menu1">
+         <a href="javascript:void(0)" onclick="location.href='" . $ajax_like_link . "'"  class="menuanchorclass" rel="anylinkmenu2">Outlet</a>
+         </td>
+         <td class="headermenu">
+         <a href="javascript:void(0)" onclick="location.href='" . $ajax_like_link . "'"  class="menuanchorclass" rel="anylinkmenu3">orders</a>
+         </td>
+         <td style="width: 178px" class="menu1">
+         <a href="http://www.pindler.com/cp/info.html">information &amp; forms</a>
+         </td>
+         <td class="headermenu">
+         <a href="javascript:void(0)" onclick="location.href='" . $ajax_like_link . "'"  class="menuanchorclass" rel="anylinkmenu4">contact us</a>
+         </td>
+         <td class="headermenu">
+         <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.stock.check&sessionid=663635*16924.60287&w3serverpool=cust">
+         stock check</a>
+         </td>
+         <td class="headermenu">
+         <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.favorites&sessionid=663635*16924.60287&w3serverpool=cust">
+         favorites</a>
+         </td>
+         <td class="headermenu">
+         <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.quote.entry&sessionid=663635*16924.60287&w3serverpool=cust">
+         contract quote</a>
+         </td>
+         <td class="headermenu">
+         <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.change.address&sessionid=663635*16924.60287&w3serverpool=cust">
+         update account</a>
+         </td>
+         <td class="headermenu">
+         <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=cust.static.frame&WIDTH=1150&HEIGHT=400&border=0&which=&#47;cp&#47;clean.html&sessionid=663635*16924.60287&w3serverpool=cust">
+         cleaning instructions</a>
+         </td>
+         </tr>
+         </table>
+      </td>
+   </tr>
+   <tr>
+      <td>
+      <table cellpadding="0" cellspacing="6" style="width: 1200px" align="center">
+         <tr>
+         <td class="headerlogout" style="height: 23px">
+            <a href="/cgi-bin/fccgi.exe?w3exec=custportal&cmd=logoff&sessionid=663635*16924.60287&w3serverpool=cust" class="live">Log Out</a>
+         </td>
+         </tr>
+      </table>
+      </td>
+   </tr>
+</table>
+
+<!----- end of headfoot head    --------------------------------------------->
+
+
+
+<form name="order" method="POST" action="/cgi-bin/fccgi.exe?w3exec=custportal">
+<input type=hidden name=sessionid value="663635*16924.60287">
+<input type=hidden name=cmd value="cust.quote.entry">
+<input type=hidden name=callingpage value="cust.quote.entry">
+<input type=hidden name=w3serverpool value=cust>
+
+  <h1 class="mainpgtitle">contract quote</h1>
+  <div align="center">
+    <center> <table border="0" cellpadding="4" cellspacing="0" width="576">
+    <tr>
+      <td width="203" class="searchtitle">Account Number</td>
+      <td width="382" class="searchtext">663635</td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Company Name</td>
+      <td width="382" class="searchtext">TINA BUTLER </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Telephone Number*</td>
+      <td width="382" class="searchtext">
+        <input type="text" name="Phone" size="15" class="altTextField" value=805-443-8085>
+      </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Fax Back To</td>
+      <td width="382" class="searchtext">
+          <input type="text" name="Fax" size="15" class="altTextField" value=> 
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Requestors Name*</p></td>
+      <td width="382" class="searchtext">
+         <input type="text" name="Name" size="20" class="altTextField" value=>
+      </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Email*</p></td>
+      <td width="382" class="searchtext">
+         <input type="text" name="Email" size="40" class="altTextField" value=tbutler@pindlercorp.com>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" width="203" class="searchtitle">
+            Specifier/Designer<br>(Name and Address)
+      </td>
+      <td width="382" class="searchtext">
+            <textarea rows="4"  name="Specifier" cols="45" class="altTextField"></textarea> 
+        </p>
+     </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Project Name</td>
+      <td width="382" class="searchtext">
+           <input type="text" name="PName" size="15" class="altTextField" value=> 
+        </p>
+     </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Project Location</td>
+      <td width="382" class="searchtext">
+          <input type="text" name="ploc" size="15" class="altTextField" value=""> 
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="203" class="searchtitle">Estimated Install Date</td>
+      <td width="382" class="searchtext">
+           <input type="text" name="InstallDate" size="15" class="altTextField" value=""> 
+        </p>
+     </td>
+    </tr>
+    <tr>
+      <td valign="top" colspan="2" width="595">
+        <div align="left">
+        <table border="0" cellpadding="0" width="507" >
+          <tr>
+            <td width="168" class="OEHeader" height="30">Pattern Name or Number 
+            </td>
+            <td width="181" class="OEHeader">Color 
+            </td>
+            <td width="74" class="OEHeader">Quantity 
+            </td>
+            <td width="138" class="OEHeader">End Use 
+            </td>
+            <td width="234" class="OEHeader">Sidemark 
+            </td>
+          </tr>
+
+
+          <tr>
+            <td width="168" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="pn_1" size="25" class="altTextField" value=><br />
+			  <a href="javascript:order.which.value='pn';order.submit()" class="find">Find Pattern</a><p class="label" style="margin-top: 6">
+              &nbsp;</td>
+            <td width="181" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="Color_1" size="15" class="altTextField" style="height: 21px"> 
+            </td>
+            <td width="74" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="qty_1" size="3" class="altTextField" value=> 
+            </td>
+            <td width="138" valign="top" align="center">
+               <p class="label" style="margin-top: 6">
+               <select size="1" name="Use_1" class="altselect" >
+                 <option value="">Select One</option>
+<option >BEDDING</option>
+<option >CORNICE</option>
+<option >CUSHIONS</option>
+<option >DRAPERY</option>
+<option >DRAPERY LINING</option>
+<option >HEADBOARD</option>
+<option >LAMP SHADES</option>
+<option >PILLOWS</option>
+<option >ROMAN SHADE</option>
+<option >SLIPCOVERS</option>
+<option >TABLE CLOTH</option>
+<option >UNKNOWN</option>
+<option >UPHOLSTERY</option>
+<option >WALL COVERING</option>
+<option >WELT</option>
+<option >WINDOW TREATMENT</option>
+
+              </select> 
+            </td>
+            <td width="234" valign="top" align="center">
+              <p class="label" style="margin-top: 6">
+                  <textarea rows="3" name="sidemark_1" cols="25" class="altTextField"></textarea> 
+            </td>
+          </tr>
+
+
+          <tr>
+            <td width="168" valign="top" align="center">&nbsp;</td>
+            <td width="181" valign="top" align="center">Colors will populate in 
+			a drop down box when the &quot;Find Pattern&quot; link is clicked</td>
+            <td width="74" valign="top" align="center">&nbsp;</td>
+            <td width="138" valign="top" align="center">
+               &nbsp;</td>
+            <td width="234" valign="top" align="center">
+              &nbsp;</td>
+          </tr>
+
+
+          <tr>
+            <td width="168" valign="top" align="center">&nbsp;</td>
+            <td width="181" valign="top" align="center">&nbsp;</td>
+            <td width="74" valign="top" align="center">&nbsp;</td>
+            <td width="138" valign="top" align="center">
+               &nbsp;</td>
+            <td width="234" valign="top" align="center">
+              &nbsp;</td>
+          </tr>
+
+
+          <tr>
+            <td valign="top" colspan="4">A new line item will automatically 
+			insert after the first line item is filled in</td>
+            <td width="234" valign="top" align="center">
+              &nbsp;</td>
+          </tr>
+
+
+            <tr>
+            <td width="168" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="pn_2" size="25" class="altTextField" value=><br />
+			  <a href="javascript:order.which.value='pn';order.submit()" class="find">Find Pattern</a><p class="label" style="margin-top: 6">
+              &nbsp;</td>
+            <td width="181" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="Color_2" size="15" class="altTextField" style="height: 21px"> 
+            </td>
+            <td width="74" valign="top" align="center"><p class="label" style="margin-top: 6">
+              <input type="text" name="qty_2" size="3" class="altTextField" value=> 
+            </td>
+            <td width="138" valign="top" align="center">
+               <p class="label" style="margin-top: 6">
+               <select size="1" name="Use_2" class="altselect" >
+                 <option value="">Select One</option>
+<option >BEDDING</option>
+<option >CORNICE</option>
+<option >CUSHIONS</option>
+<option >DRAPERY</option>
+<option >DRAPERY LINING</option>
+<option >HEADBOARD</option>
+<option >LAMP SHADES</option>
+<option >PILLOWS</option>
+<option >ROMAN SHADE</option>
+<option >SLIPCOVERS</option>
+<option >TABLE CLOTH</option>
+<option >UNKNOWN</option>
+<option >UPHOLSTERY</option>
+<option >WALL COVERING</option>
+<option >WELT</option>
+<option >WINDOW TREATMENT</option>
+
+              </select> 
+            </td>
+            <td width="234" valign="top" align="center">
+              <p class="label" style="margin-top: 6">
+                  <textarea rows="3" name="sidemark_2" cols="25" class="altTextField"></textarea> 
+            </td>
+            </tr>
+
+
+          <tr>
+            <td valign="top" colspan="4">&nbsp;</td>
+            <td width="234" valign="top" align="center">
+              &nbsp;</td>
+          </tr>
+
+
+          <tr>
+            <td width="349" valign="top" align="left" colspan="2" class="searchtitle">
+              Notes / Special Information
+            </td></tr>
+<tr>
+            <td width="446" valign="top" align="left" colspan="5">
+               <textarea rows="4"  name="Inquiry" cols="125" class="altTextField"></textarea> 
+            </td>
+          </tr>
+        </table>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" width="595" class="Required">
+        *&nbsp;Required Field<br><button type="submit" style="border:none;background-color:#fff;width:101">
+            <img src="../cp/images/submitrequest.jpg" align="center">
+        </button><br>Quotes will be emailed unless requested otherwise in the Special Instructions field.</td>
+    </tr>
+  </table>
+  </div>
+</form>
+
+<!-- START OF WEBTRENDS LIVE TAG -->
+<!-- Copyright 2003 NetIQ Corporation -->
+<!--  For privacy concerns, check our Privacy Policy at http://www.webtrendslive.com/wtl_system/privacy_policy.htm -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// Modification of this code is not allowed and will permanently disable your account!
+// SiteName:  Pindler & Pindler
+function wtl_Tag5_9658()
+{
+    var SERVER= "";
+    var CONTENTGROUP= "CustPortal,ContractQuote";
+
+    var wtl_URL= document.URL;
+    var wtl_Title= document.title;
+
+    function D8( d)
+    {
+        var fwd=0, seed= new Date('01/01/2000'), key= "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        var s= key.charAt( d.getFullYear()-2000)+key.charAt( d.getMonth()+1)+key.charAt( d.getDate());
+        s+= key.charAt( d.getHours())+key.charAt( d.getMinutes())+key.charAt( d.getSeconds());
+        while( seed.getDay()!=fwd) seed= new Date(seed.getTime() + 86400000);
+        var w= Math.floor( (d.getTime()-(seed.getTime()+86400000)) / 604800000 );
+        s+= key.charAt( (w-(w%16))/16 );
+        s+= key.charAt( w%16);
+        return s;
+    }
+
+    function A( B, C)
+    {
+        W+="&"+B+"="+escape(C);
+    }
+
+    var t = new Date();
+    var W="http"+(document.URL.indexOf('https:')==0?'s':'')+"://statse.webtrendslive.com/S005-00-5-8-135419-7349/button5.asp?tagver=5&si=9658&fw=0";
+    A( "server", typeof(SERVER)== "string" ? SERVER : "");
+    A( "Group", typeof(CONTENTGROUP)== "string" ? CONTENTGROUP : "");
+    A( "tz", t.getTimezoneOffset());
+    A( "ch", t.getHours());
+    A( "cl", D8(t));
+    A( "ti", typeof(wtl_Title)== "string" ? wtl_Title : document.title);
+    A( "url", typeof(wtl_URL)== "string" ? wtl_URL : document.URL);
+    A( "rf", window.document.referrer);
+    A( "js", "Yes");
+    A( "ul", navigator.appName=="Netscape" ? navigator.language : navigator.userLanguage);
+    if(typeof(screen)=="object")
+    {
+    A( "sr", screen.width+"x"+screen.height);
+    A( "cd", screen.colorDepth);
+    A( "jo", navigator.javaEnabled()?"Yes":"No");
+    }
+    if( W.length>2048 && navigator.userAgent.indexOf('MSIE')>=0)
+        W= W.substring( 0, 2043)+"&tu=1";
+
+    document.write('<IMG ID="WTL_9658" BORDER="0" WIDTH="1" HEIGHT="1" SRC="'+W+'">');
+}
+
+wtl_Tag5_9658();
+//-->
+</SCRIPT>
+<h2 class="typeface">This is a test</h2>
+</p>
+<p>&nbsp;</p>
+<NOSCRIPT>
+<IMG BORDER="0" WIDTH="1" HEIGHT="1" SRC="http://statse.webtrendslive.com/S005-00-5-8-135419-7349/button5.asp?tagver=5&si=9658&fw=0&js=No&">
+</NOSCRIPT>
+<!-- END OF WEBTRENDS LIVE TAG -->
+
+<!----- start of headfoot foot --------------------------------------------->
+
+<table class="mainfooter">
+   <tr>
+      <td>
+      <table class="mainfooter">
+         <tr>
+            <td class="footerlinks">
+            <a class="foot" href="http://www.pindler.com/cp/tc.html">Pindler Website terms</a>&nbsp;&nbsp;&nbsp; 
+            <a class="foot" href="http://www.pindler.com/cp/tc.html#T&C">Terms & Conditions</a>&nbsp;&nbsp;&nbsp; 
+            <a href="http://www.pindler.com/cp/tc.html#PP" class="foot">Privacy Policy</a>
+            <p class="copyright">800.669.6002<br>
+             <img height="13" src="/cp/images/copy.gif" width="15" class="copyimage"/>  <script type="text/javascript">
+            var theDate=new Date()
+            document.write(theDate.getFullYear())
+           </script>  
+            PINDLER
+           </p>
+           </td>
+         </tr>
+      </table>
+      </td>
+   </tr>
+</table>
+
+</body>
+</html>

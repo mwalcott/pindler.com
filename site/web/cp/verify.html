@@ -1,0 +1,168 @@
+﻿
+<head>
+<link rel="stylesheet" type="text/css" href="/cp/css/cplive.css" />
+<style type="text/css">
+.style1 {
+   margin-right: 0px;
+}
+.style2 {
+   margin-right: 9px;
+}
+.style3 {
+   text-align: center;
+}
+</style>
+</head>
+
+##begin##
+<style type="text/css">
+.style1 {
+   margin-right: 0px;
+}
+.style2 {
+   margin-right: 9px;
+}
+.style3 {
+   text-align: center;
+}
+</style>
+<div class="style3">
+<img border="0" src="/cp/Search/images/Pindler-Logo.png"><br>
+
+<form method="POST" action="##action##" name="address">
+
+<input type="hidden" name="sessionid" value="##sessionid##">
+<input type="hidden" name="callingpage" value="cust.verify">
+<input type="hidden" name="cmd" value="cust.verify">
+<input type="hidden" name="w3serverpool" value="##pool##">
+<input type="hidden" name="which" value="">
+
+<h1 class="mainpgtitle">account verification</h1> 
+   <p class="COTitle" style="font-size: small">To ensure effective communications, we 
+
+request an update or verification 
+   of your account information.&nbsp; If there are no changes to your account, 
+   please select the &quot;No Change&quot; button.&nbsp; Otherwise, please make any 
+   necessary changes below and select the &quot;Submit Change&quot; button.&nbsp; 
+   Pindler &amp; Pindler appreciates and values your business.</p>
+
+  <div align="center">
+    <center> <table border="0" cellpadding="4" cellspacing="0" width="596">
+    <tr>
+      <td width="167"><p class="label">Account Number</td>
+      <td width="409"><p class="static">##cn##</td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">Company Name</td>
+      <td width="409"><p class="static">##cname##</td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">Address 1</p></td>
+      <td width="409">
+         <input type="text" name="Addr1" size="20" class="altTextField" 
+
+value="##addr1##">
+      </td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">Address 2</td>
+      <td width="409">
+          <input type="text" name="Addr2" size="20" class="altTextField" 
+
+value="##addr2##">
+      </td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">City</td>
+      <td width="409">
+         <p class="label">
+         <input type="text" name="City" size="20" class="altTextField" 
+
+value="##city##">
+          State 
+         <select name="state" class="altSelect">
+            ##statelist##
+         </SELECT>
+          Zip <input type="text" name="Zip" size="7" class="altTextField" 
+
+value="##zip##"></td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">
+         Telephone  Number
+       </td>
+      <td width="409"><p class="label">
+          <input type="text" name="Phone" size="15" class="altTextField" 
+
+value="##phone##">
+           Fax Number <input type="text" name="Fax" size="15" class="altTextField" 
+
+value="##fax##">
+           </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="167"><p class="label">Email</td>
+      <td width="409">
+         <input type="text" name="Email" size="40" class="altTextField" 
+
+value="##email##"></td>
+    </tr>
+    </center>
+    <tr>
+      <td colspan="2" width="586">
+      </td>
+    </tr>
+    <center>
+    <tr>
+      <td colspan="2" width="586" style="height: 30px" valign="top">
+         <p class="COTitle" style="font-size: small"><font 
+
+color="red"><b>##warning##</b></font></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="586" style="height: 33px" valign="top">
+       <p align="center" class="topspace"><font size="2" face="Arial">
+       
+         <button type="submit" style="border:none;background-color:#fff;width:82" 
+
+onclick="javascript:address.which.value='nofile';address.submit();">
+             <img src="/images/customer_portal/NoChange.jpg" width="64" height="15" 
+
+class="style1">
+          </button>
+    
+          <button type="submit" name="file" style="border:none;background-
+
+color:#fff;width:82" 
+
+onclick="javascript:address.file.disabled=true;address.sbutton.src='/images/customer_p
+
+ortal/submitfinal.gif' ;address.which.value='file';address.submit();">
+<!-- 
+<button type="button" name="file" style="border:none;background-color:#fff;width:82" 
+
+onclick="javascript:address.file.disabled=true;address.sbutton.src='/images/customer_p
+
+ortal/submitfinal.gif' ;address.which.value='file';alert('disabled=' + 
+
+address.file.disabled);">          
+-->
+              <img name="sbutton" src="/images/customer_portal/SubmitChange.jpg" 
+
+width="82" height="15" class="style2">
+          </button>
+
+      </p>
+      </center>
+      </font>
+      </td>
+    </tr>
+  </table>
+  </div>
+   </div>
+</form>
+##end##
+
+

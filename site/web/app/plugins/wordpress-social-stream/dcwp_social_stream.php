@@ -45,13 +45,16 @@ class dc_jqsocialstream {
 
 	function add_dcwss_scripts() {
 
-		wp_enqueue_script( 'jquery' );
+		
+/*
 		wp_enqueue_script( 'dcwss-wall', plugins_url() . '/wordpress-social-stream/js/jquery.social.stream.wall.1.6.js' );
 		wp_enqueue_script( 'dcwss', plugins_url() . '/wordpress-social-stream/js/jquery.social.stream.1.5.18.min.js' );
+*/
 
 	// load footer	
-	//	wp_enqueue_script( 'dcwss-wall', dc_jqsocialstream::get_plugin_directory() . '/js/jquery.social.stream.wall.1.6.js', array(), '', true );
-	//	wp_enqueue_script( 'dcwss', dc_jqsocialstream::get_plugin_directory() . '/js/jquery.social.stream.1.5.18.min.js', array(), '', true );
+		wp_enqueue_script( 'jquery' );
+		wp_enqueue_script( 'dcwss-wall', dc_jqsocialstream::get_plugin_directory() . '/js/jquery.social.stream.wall.1.6.js', array(), 110, true );
+		wp_enqueue_script( 'dcwss', dc_jqsocialstream::get_plugin_directory() . '/js/jquery.social.stream.1.5.18.min.js', array(), 110, true );
 
 	}
 		

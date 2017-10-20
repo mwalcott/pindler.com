@@ -1,0 +1,5711 @@
+﻿/*  -------------------------------------------------------------
+Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+	
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ul {
+	font-size: 0px;
+}
+
+li {
+	font-size: 13px;
+}
+
+/*  -------------------------------------------------------------
+General Styles
+-------------------------------------------------------------- */
+
+::selection {
+	background: #4e83b6;
+	color: #fff;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #4e83b6;
+	color: #fff;
+	text-shadow: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	color: #555;
+	font-size: 13px;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-bottom: 20px;
+}
+
+.center {
+	text-align: center;
+}
+
+.blue {
+	color: #00334d;
+}
+
+.brown {
+	color: #8c8372;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	/*display: inline-block;*/
+}
+ 
+html[xmlns] .clearfix {
+	/*display: block;*/
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+.displaynone {
+	display: none;
+}
+
+a {
+	color: #00334d;
+}
+
+a:hover {
+	color: #555;
+}
+
+a.blue-button,
+a.brown-button,
+a.white-button {
+	display: inline-block;
+	color: #fff;
+	padding: 12px 17px;
+	text-transform: uppercase;
+	font-size: 14px;
+	cursor: pointer;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+a.blue-button:first-child,
+a.brown-button:first-child,
+a.white-button:first-child {
+}
+
+a.blue-button {
+	background-color: #00334d;
+	border: 1px solid #00334d;
+}
+
+a.blue-button:hover {
+	background: #fff;
+	color: #00334d;
+	border: 1px solid #00334d;
+}
+
+a.brown-button {
+	background-color: #8c8372;
+	border: 1px solid #8c8372;
+	color: #FFFFFF;
+}
+
+a.brown-button:hover {
+	background: #fff;
+	color: #8c8372;
+	border: 1px solid #8c8372;
+}
+
+a.white-button {
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+a.white-button:hover {
+	color: #00334d;
+	background: #fff;
+}
+
+.toggle-bar {
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #887e6d;
+	background: #eae6df;
+	padding-top: 23px;
+	padding-bottom: 19px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.toggle-bar:hover {
+	background: #887e6d;
+	color: #eae6df;
+}
+
+.toggle-bar img {
+	width: 9px;
+}	
+
+/*  -------------------------------------------------------------
+Structure
+-------------------------------------------------------------- */
+
+body {
+	background: #eae6df;
+	/* color: #eae6df;*/
+	color: #555;
+	font-family: 'Arial', sans-serif;
+}
+
+#wrapper,
+#header,
+#footer {
+	width: 100%;
+}
+
+.content {
+	width:  100%;
+	max-width: 1020px;
+	padding: 0 10px;
+	margin: auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#main {
+	background: #fff;
+}
+
+.main-content {
+	background: #fff;
+	padding: 45px 0 0;
+}
+
+.inside-page {
+	padding-bottom: 70px;
+}
+
+.inside-page .main-content {
+	padding-top: 20px;
+} 
+
+#footer {
+	padding: 45px 0 0;
+}
+
+/*  -------------------------------------------------------------
+Header
+-------------------------------------------------------------- */
+
+#header {
+	background: #fff;
+	font-family: 'Halogen', san-serif;
+	padding-bottom: 1px;
+}
+
+#header .company-logo {
+	padding-top: 44px;
+	padding-bottom: 32px;
+}
+
+#header .company-logo a {
+	display: block;
+	margin: auto;
+	max-width: 257px;	
+}
+#header .company-logo a:hover {
+background:none;
+
+}
+
+
+/* Navigation */
+
+#navigation {
+	width: 100%;
+	background: #00334d;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#navigation .grid-100 {
+	margin-bottom: 0;
+}
+
+#navigation .nav-containers {
+	text-align: center;
+	margin-bottom: -4px;
+}
+
+#navigation .nav-containers .nav-login-container,
+#navigation .nav-containers .nav-main-container {
+	display: inline-block;
+	text-align: left;
+}
+
+#navigation ul {
+	float: left;
+}
+
+#navigation li,
+#navigation li a {
+	color: #fff;
+	font-size: 12px;
+}
+
+#navigation li {
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
+#navigation li a {
+	display: block;
+	text-decoration: none;
+	padding: 13px 11px 13px 12px;
+}
+
+/* Login Navigation - No Drop Down */
+
+#navigation .nav-login,
+#nav-login {
+	border-right: 1px solid #fff;
+}
+
+#navigation .nav-login li,
+#nav-login li {
+	margin-right: 12px;
+}
+
+#navigation .nav-login li:first-child,
+#nav-login li:first-child {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#navigation .nav-login li a:hover,
+#nav-login li a:hover {
+	text-decoration: underline;
+}
+
+#navigation .nav-login li:first-child a,
+#nav-login li:first-child a {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/* Main Navigation - With Drop Down */
+
+#navigation .nav-website li,
+#nav-website li {
+	position: relative;
+}
+
+#navigation .nav-website li a:hover,
+#navigation .nav-website li:hover a,
+#nav-website li a:hover,
+#nav-website li:hover a {
+	background: #fff;
+	color: #00334d;
+}
+
+#navigation .nav-website li:first-child a,
+#nav-website li:first-child a {
+	margin-left: 11px;
+}
+
+#navigation .nav-website li.phone a,
+#nav-website li.phone a {
+	cursor: text;
+	padding-right: 0;
+}
+
+#navigation .nav-website li.phone a:hover,
+#nav-website li.phone a:hover {
+	background: #00334d;
+	color: #fff;
+}
+
+#navigation .nav-website li ul,
+#nav-website li ul {
+	background: #fff;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	z-index: 99999;
+	display: none;
+	border-bottom: 2px solid #00334d;
+}
+
+#navigation .nav-website li:hover ul,
+#nav-website li:hover ul {
+	display: block;
+}
+
+#navigation .nav-website li ul li,
+#nav-website li ul li {
+	border: 0;
+	display: block;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#navigation .nav-website li ul li a,
+#nav-website li ul li a {
+	padding: 15px 12px;
+	white-space: normal;
+	width: 175px;
+	color: #555;
+	padding-left: 17px;
+	line-height: 1.5;
+	font-size: 12px;
+	text-transform: none;
+}
+
+#navigation .nav-website li ul li:first-child a,
+#nav-website li ul li:first-child a {
+	margin-left: 0;
+}
+
+#navigation .nav-website li ul li a:hover,
+#nav-website li ul li a:hover {
+	background: #00334d;
+	color: #fff;
+}
+
+/* Media Navigation - No Drop Down */
+
+#nav-media {
+	background: #eae6df;
+	margin-top: 1px;
+}
+
+#nav-media ul li {
+	display: inline-block;
+}
+
+#nav-media ul li a {
+	color: #887e6d;
+	text-decoration: none;
+	font-family: 'Halogen', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	display: block;
+	padding: 23px 23px 19px;
+}
+
+#nav-media ul li a:hover {
+	background: #887e6d;
+	color: #eae6df;
+}
+
+#nav-media ul li.current-menu-item a {
+	background: #fff;
+}
+
+#nav-media ul li.current-menu-item a:hover {
+	background: #fff;
+	color: #887e6d;
+}
+
+/*  -------------------------------------------------------------
+Page Templates
+-------------------------------------------------------------- */
+
+/* Page Header */
+
+#page-header {
+	height: 150px;
+	display: table;
+	width: 100%;
+	background: #00334d;
+}
+
+#page-header .content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#page-header h1 {
+	color: #fff;
+	text-align: center;
+	font-family: 'Halogen', sans-serif;
+	font-size: 26px;
+	letter-spacing: 7px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding-right: 0;
+	max-width: 980px;
+	margin: auto;
+}
+
+/* Typography */
+
+.inside-page .main-content h1,
+.inside-page .main-content h2,
+.inside-page .main-content h3,
+.inside-page .main-content h4,
+.inside-page .main-content h5,
+.inside-page .main-content h6 {
+	font-family: 'Halogen', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.inside-page .main-content h1,
+.inside-page .main-content h2 {
+	font-size: 24px;
+	color: #00334d;
+	width: 100%;
+	padding-bottom: 10px;
+	margin-top: 70px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid #00334d;
+}
+
+.inside-page .main-content h3,
+.inside-page .main-content h4,
+.inside-page .main-content h5,
+.inside-page .main-content h6 {
+	color: #555;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.inside-page .main-content h3 {
+	font-size: 20px;
+}
+
+.inside-page .main-content h4 {
+	font-size: 14px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.inside-page .main-content h5 {
+	font-size: 16px;
+}
+
+.inside-page .main-content h6 {
+	font-size: 13px;
+}
+
+.inside-page p {
+	color: #555;
+}
+
+.inside-page .main-content ul {
+	list-style: square;
+	margin: 0 0 30px 30px;
+	line-height: 1.5;
+}
+
+.inside-page .main-content ol {
+	list-style: decimal;
+	margin: 0 0 30px 30px;
+	line-height: 1.5;
+}
+
+.inside-page .main-content a {
+	text-decoration: underline;
+	color: #8c8372;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+}
+
+.inside-page .main-content a:hover {
+	color: #00334d;
+	background:none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:13px;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+cite, dfn, em, i {
+	font-style: italic;
+}
+
+del {
+	color: #767676;
+}
+
+blockquote,
+blockquote p {
+	color: #767676;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+hr {
+	background-color: #aaa;
+	border: 0;
+	height: 1px;
+	margin-bottom: 20px;
+}
+
+address {
+	font-style: italic;
+	margin-bottom: 20px;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+pre {
+	font-size: 15px;
+	border: 1px solid #aaa;
+	margin-bottom: 20px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 12px;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: monospace, serif;
+	hyphens: none;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	line-height: 1.5;
+}
+
+/*  -------------------------------------------------------------
+Pindler Search Colors
+-------------------------------------------------------------- */
+
+.product-search .light-green {
+	background: #add575;
+}
+
+.product-search .medium-green {
+	background: #6d9c42;
+}
+
+.product-search .dark-green {
+	background: #1b5137;
+}
+
+.product-search .teal {
+	background: #008290;
+}
+
+.product-search .aqua {
+	background: #5ee5d0;
+}
+
+.product-search .light-blue {
+	background: #86c5e1;
+}
+
+.product-search .medium-blue {
+	background: #3d628e;
+}
+
+.product-search .dark-blue {
+	background: #284464;
+}
+
+.product-search .purple {
+	background: #7c4c75;
+}
+
+.product-search .lilac {
+	background: #e3b1e3;
+}
+
+.product-search .yellow {
+	background: #ffdf77;
+}
+
+.product-search .gold {
+	background: #ba944e;
+}
+
+.product-search .orange {
+	background: #fa6534;
+}
+
+.product-search .coral {
+	background: #eb6954;
+}
+
+.product-search .peach {
+	background: #feba8f;
+}
+
+.product-search .terra-cotta {
+	background: #c36d51;
+}
+
+.product-search .burgundy {
+	background: #702c3b;
+}
+
+.product-search .red {
+	background: #d32526;
+}
+
+.product-search .pink {
+	background: #f7295e;
+}
+
+.product-search .light-pink {
+	background: #fd7d98;
+}
+
+.product-search .white {
+	background: #ffffff;
+}
+
+.product-search .ivory {
+	background: #fefbdb;
+}
+
+.product-search .straw {
+	background: #e1c69e;
+}
+
+.product-search .beige {
+	background: #beafa4;
+}
+
+.product-search .tan {
+	background: #b29677;
+}
+
+.product-search .taupe {
+	background: #8d766e;
+}
+
+.product-search .light-grey {
+	background: #b6b6b6;
+}
+
+.product-search .grey {
+	background: #767f7c;
+}
+
+.product-search .brown {
+	background: #61524f;
+}
+
+.product-search .black {
+	background: #2b2b2b;
+}
+
+/*  -------------------------------------------------------------
+Pindler Search
+-------------------------------------------------------------- */
+
+/* Grid Corrections */
+.product-search .grid-50 {
+    margin-bottom: 0;
+}
+
+/* Search Forms */
+
+.pattern-search form {
+	background: #eae6df;
+	padding: 8px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.pattern-search input {
+	border: none;
+	border-radius: 0;
+	color: #555;
+	padding: 20px 24px 18px;
+	font-family: 'Arial', sans-serif;
+	font-style: italic;
+	font-size: 13px;
+	font-weight: 400;
+	width: 80%;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	float: left;
+}
+
+.pindler-search input[type=radio], .pindler-search input[type=checkbox] {
+	margin-right: 10px;
+}
+
+.pattern-search input[type=submit] {
+	width: 20%;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	background: #00334d;
+	color: #fff;
+	font-style: normal;
+	text-transform: none;
+	font-size: 15px;
+	letter-spacing: 1px;
+	padding: 19px 24px 17px;
+	cursor: pointer;
+}
+
+.guided-search input[type=submit], .book-search input[type=submit] {
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	background: #00334d;
+	color: #fff;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 1px;
+	padding: 19px 24px 17px;
+	font-family: 'Halogen', sans-serif;
+	border: none;
+	cursor: pointer;
+}
+
+.guided-search select,
+.book-search select {
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.pattern-search input[type=submit]:hover, .guided-search input[type=submit]:hover, .book-search input[type=submit]:hover {
+	background: #8c8372;
+}
+
+.inside-page .main-content .guided-search .brown-button,
+.inside-page .main-content .book-search .brown-button {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: 'Halogen', san-serif;
+	letter-spacing: 1px;
+	padding-top: 14px;
+}
+
+.inside-page .main-content .guided-search .brown-button:hover,
+.inside-page .main-content .book-search .brown-button:hover {
+	color: #8c8372;
+}
+
+/* Search Containers */
+
+.pindler-search .ps-container {
+	background: #eae6df;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.inside-page .pindler-search .ps-closed {
+	padding-bottom: 0px;
+}
+
+.pattern-search p {
+	margin-bottom: 10px;
+}
+
+/* Search Container Header */
+
+.inside-page .ps-header {
+	padding: 18px 20px 14px;
+}
+
+.inside-page .ps-open .ps-header {
+	background: #00334d;
+}
+
+.inside-page .ps-toggle.ps-open .ps-header {
+	background: #00334d url('/../../../../../../cp/search/images/popup-arrow-up.png') no-repeat right top;
+}
+
+.inside-page .ps-closed .ps-header {
+	background: #eae6df url('/../../../../../../cp/search/images/popup-arrow-down.png') no-repeat right top;
+	margin-bottom: 0px;
+}
+
+.inside-page .ps-toggle .ps-header {
+	cursor: pointer;
+}
+
+.inside-page .ps-open .ps-header h3,
+.inside-page .ps-header h3 {
+	color: #fff;
+	font-size: 16px;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.inside-page .ps-closed .ps-header h3 {
+	color: #887e6d;
+}
+
+.inside-page .ps-header ul {
+	margin: -2px 0 0 0;
+	list-style: none;
+}
+
+.inside-page .ps-header ul li {
+	margin-right: 10px;
+	margin-left: 30px;
+	color: #fff;
+}
+
+.pindler-search .ps-closed .ps-options {
+	display: none;
+}
+
+.pindler-search .ps-options {
+	margin: 8px;
+	background: #fff;
+	padding: 20px 20px 5px;
+	color: #00334d;
+}
+
+.inside-page .ps-options ul,
+.inside-page .ps-clean ul {
+	margin: 0px;
+	list-style: none;
+}
+
+.inside-page .ps-options li,
+.inside-page .ps-clean li,
+.inside-page .ps-header li {
+	float: left;
+	margin-left: 10px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+}
+
+.inside-page .ps-stacked {
+	width: 20%;
+	float: left;
+}
+
+.inside-page .ps-stacked li,
+.inside-page .ps-full li {
+	float: none;
+}
+
+/* Color Swatch Selection */
+
+.inside-page .main-content .ps-color-options {
+	max-width: 670px;
+	float: left;
+	padding: 0;
+}
+
+.inside-page .main-content .ps-color-options ul {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.inside-page .main-content .ps-color-options ul li {
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 0;
+	position: relative;
+	font-size: 0px;
+}
+
+.inside-page .main-content .ps-color-options ul li img {
+	cursor: pointer;
+}
+
+.inside-page .main-content .ps-color-options ul li p {
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background: #fff;
+	padding: 6px;
+	font-size: 11px;
+	text-align: center;
+	border: 1px solid #aaa;
+}
+
+.inside-page .main-content .ps-color-options ul li:hover p {
+	display: block;
+}
+
+.inside-page .main-content .ps-color-choices {
+	width: 278px;
+	float: right;
+	padding: 0;
+	min-height: 286px;
+}
+
+.ps-color-choices div {
+	padding: 10px;
+}
+
+.ps-color-choices div p {
+	text-align: center;
+	margin: 30px 0;
+	text-transform: uppercase;
+}
+
+.inside-page .main-content .ps-color-choices ul li {
+	display: block;
+	float: none;
+	margin: 0;
+	height: 36px;
+	width: 100%;
+	border: 1px solid #555;
+	margin-top: 7px;
+}
+
+.remove-color-choice {
+	cursor: pointer;
+	display: none;
+}
+
+
+/*  -------------------------------------------------------------
+Pindler Search Results
+-------------------------------------------------------------- */
+
+/* Header */
+.ps-results-title {
+	position: relative;
+}
+
+.product-search-results .ps-results-title .blue-button {
+	font-family: 'Halogen', sans-serif;
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding-top: 15px;
+	position: absolute;
+	right: 5px;
+	top: 60px;
+}
+.product-search-results .ps-results-title .blue-button:hover {
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+}
+
+
+.ps-social-shortcuts {
+	position: absolute;
+	right: 10px;
+	top: 120px;
+	list-style-type: none;
+}
+
+.ps-social-shortcuts li {
+	list-style-type: none;
+	float: left;
+	margin-left: 10px;
+}
+
+.ps-social-shortcuts li:first-child {
+	margin-left: 0;
+}
+
+/* Filter */
+
+.product-search-results .ps-results-filter {
+	background: #eeeeee;
+	padding: 10px 15px;
+}
+
+.inside-page .ps-results-filter ul {
+	margin-left: 0;
+	margin-bottom: 15px;
+	list-style-type: none;
+}
+
+.inside-page .ps-results-filter ul li {
+	margin-left: 24px;
+}
+
+.inside-page .ps-results-filter ul li input {
+	margin-left: -24px;
+	margin-right: 12px;
+}
+
+.ps-results-filter li,
+.inside-page .ps-results-filter h6 {
+	color: #00334d;
+}
+
+.inside-page .ps-results-filter h6 {
+	margin-top: 10px;
+}
+
+.ps-filter-option {
+	border-top: 1px solid #fff;
+	padding-top: 10px;
+}
+
+.ps-results-filter .ps-filter-option:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+.ps-filter-color-choice li {
+	/*display: inline-block;
+	width: 33.333%;
+	height: 50px;*/
+}
+
+.ps-results-filter input[type=submit] {
+	width: 100%;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	background: #00334d;
+	color: #fff;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 15px 17px 12px;
+	font-family: 'Halogen', sans-serif;
+	border-radius: 0;
+	font-weight: 400;
+	margin: 7px 0 15px;
+	border: none;
+	cursor: pointer;
+}
+
+.ps-results-filter input[type=submit]:hover {
+	background: #8c8372;
+}
+
+.inside-page .ps-results-filter a {
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	margin: 10px 0 5px 0;
+	padding: 15px 17px 12px;
+}
+
+.inside-page .ps-results-filter a.brown-button {
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+.inside-page .ps-results-filter a.brown-button:hover {
+	color: #8c8372;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	background: #fff;
+
+}
+
+.ps-results-filter select {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+/* Filter Hidden Fields & Overlays */
+
+.ps-results-filter .pindler-search,
+.ps-click-overlay {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 100%;
+	visibility: hidden;
+}
+
+.ps-results-filter .pindler-search .ps-container,
+.ps-click-overlay .ps-container {
+	max-width: 960px;
+	margin: 366px auto;
+	display: block;
+	padding-bottom: 1px;
+	-webkit-box-shadow: 0px 0px 40px 9px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 40px 9px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 40px 9px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+.ps-click-overlay .ps-container {
+	margin: 0 auto;
+}
+
+.ps-click-overlay .ps-click-overlay-content {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 15px;
+	background: #fff;
+	padding: 20px;
+}
+
+/* Overlay Specifics */
+
+.ps-results-filter .pindler-search .ps-container ul {
+	margin-bottom: 0;
+}
+
+.filter-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.filter-close-save {
+	position: absolute;
+	top: 0;
+	right: 48px;
+	cursor: pointer;
+}
+
+.ps-results-filter .pindler-search .ps-color-choices {
+	width: 258px;
+}
+
+.ps-results-filter .pindler-search .ps-container .ps-header ul {
+	margin-right: 150px;
+}
+
+.inside-page .ps-details-main .ps-click-overlay .ps-click-overlay-content p:first-child {
+	margin-top: 0;
+}
+
+.inside-page .ps-details-main .ps-click-overlay .ps-click-overlay-content p {
+	float: none;
+	background: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0;
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.ps-details-main .ps-click-overlay .ps-container {
+	margin-top: 160px;
+}
+
+/* Results */
+
+.ps-results-list .ps-results-single {
+	float: left;
+	width: 125px;
+	margin-left: 20px;
+	text-align: center;
+	margin-bottom: 25px;
+	min-height: 210px;
+}
+
+.ps-results-list .ps-results-single a {
+	text-decoration: none;
+	font-size: 13px;
+}
+
+.ps-results-list .ps-results-single img {
+	margin-bottom: 10px;
+}
+
+.ps-results-list .ps-results-single .ps-fabric-name {
+	color: #00334d;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: capitalize;
+	background-color: white;
+}
+
+.ps-results-list .ps-results-single a:hover .ps-fabric-name {
+	text-decoration: underline;
+	text-transform: capitalize;
+	background-color: white;
+}
+
+.ps-results-list .ps-results-single .ps-fabric-id,
+.product-search-results .ps-details-extra-info .ps-fabric-id {
+	color: #8c8372;
+	font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:white;
+
+}
+A.pattlink:link  {
+	text-decoration: none;
+	color: #00324f;
+	font-size: 13px;
+	font-family:Arial, Helvetica, sans-serif
+}
+A.pattlink:hover {
+	text-decoration: underline;
+	background-color:white;
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	
+}
+A.pattlinkLC:link  {
+	text-decoration: none;
+	color: #8c8372;
+	font-size: 13px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:capitalize
+}
+A.pattlinkLC:hover {
+	text-decoration: underline;
+	background-color:white;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+
+}
+
+
+/* Page Numbers */
+
+.ps-page-numbers-container {
+	text-align: right;
+	border-top: 1px solid #eae6df;
+}
+
+.ps-page-numbers {
+	margin-top: 15px;
+}
+
+.inside-page .ps-page-numbers ul {
+	list-style-type: none;
+
+}
+
+.inside-page .ps-page-numbers ul li {
+	display: inline-block;
+	margin-left: 10px;
+
+}
+
+.inside-page .ps-page-numbers ul li.selected {
+	font-weight: 700;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:white
+
+}
+
+.inside-page .ps-page-numbers ul li a {
+	text-decoration: none;
+
+}
+
+/*  -------------------------------------------------------------
+Pindler Fabric Details
+-------------------------------------------------------------- */
+
+/* Product Image */
+
+.inside-page .ps-details-image p {
+	margin: 15px 0;
+}
+
+.inside-page .ps-details-image ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+.inside-page .ps-details-image ul li {
+	float: left;
+	max-width: 86px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.inside-page .ps-details-image ul li:first-child {
+}
+
+.inside-page .ps-details-image ul li a {
+	color: #00334d;
+	text-decoration: none;
+}
+
+.inside-page .ps-details-image ul li a:hover .ps-fabric-color {
+	text-decoration: underline;
+	background-color:white;
+	border:0px;
+}
+
+.inside-page .ps-details-image ul li img {
+	margin-bottom: 10px;
+}
+
+.inside-page .ps-details-image ul li:first-child a img {
+	border: 2px solid #00334d;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+}
+
+.view-more-colors,
+.view-less-colors {
+	background: #eae6df;
+	color: #887e6d;
+	text-align: center;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 18px 20px 14px;
+	max-width: 256px;
+	margin-top: 30px;
+	cursor: pointer;
+	border: 1px solid #eae6df;
+}
+
+.view-more-colors:hover,
+.view-less-colors:hover {
+	border: 1px solid #887e6d;
+	background: #fff;
+}
+
+/* Product Details */
+
+.ps-details-main {
+}
+
+.ps-details-main p {
+}
+
+.inside-page .ps-details-main p,
+.inside-page .ps-details-secondary p {
+	margin-bottom: 8px;
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.inside-page .ps-details-main {
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #eae6df;
+}
+
+.inside-page .ps-details-main p {
+	width: 50%;
+	float: left;
+	padding-right: 20px;
+}
+
+.inside-page .ps-details-secondary p {
+}
+
+.ps-details-info {
+	position: relative;
+}
+
+.inside-page .ps-details-main a {
+	color: #fff;
+	text-decoration: none;
+	font-family: Halogen;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 9px 10px 7px;
+	margin: 8px 0 0;
+}
+
+.inside-page .ps-details-main a:hover {
+	color: #8c8372;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+
+}
+
+/* Product Details - Login Form */
+
+.ps-details-info .login-form {
+	background: #eeeeee;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 15px 5px 5px;
+	margin-bottom: 25px;
+}
+
+.inside-page .ps-details-info .login-form p {
+	margin-bottom: 10px;
+	line-height: 1.3;
+}
+
+.inside-page .ps-details-info .login-form p a {
+	color: #00334d;
+	text-decoration: none;
+}
+
+.inside-page .ps-details-info .login-form p a:hover {
+	text-decoration: underline;
+}
+
+.ps-details-info .login-form input {
+	width: 100%;
+	margin-bottom: 5px;
+	font-size: 12px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 2px;
+}
+
+.ps-details-info .login-form input[type=submit] {
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	background: #00334d;
+	color: #fff;
+	font-style: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding: 10px 17px 7px;
+	font-family: 'Halogen', sans-serif;
+	border-radius: 0;
+	font-weight: 400;
+	font-size: 10px;
+	margin-bottom: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.ps-details-info .login-form input[type=submit]:hover {
+	background: #8c8372;
+}
+
+.inside-page .login-form p.login-form-links {
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color: #eeeeee;
+	color: #00334d;
+}
+
+.inside-page .login-form p.login-form-links a {
+	margin-left: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:capitalize;
+	font-size: 12px;
+	background-color: #eeeeee;
+	color: #00334d;
+
+}
+
+.inside-page .login-form p.login-form-links a:first-child {
+	margin-left: 0;
+	background-color: #eeeeee;
+	color: #00334d;
+}
+
+/* All Color Options */
+
+.ps-details-colors {
+	display: none;
+}
+
+/* Extra Info */
+
+.ps-details-extra-info,
+.ps-details-colors {
+	border-top: 1px solid #eae6df;
+	margin-top: 40px;
+	padding-top: 20px;
+}
+
+.inside-page ul.image-thumb-list {
+	margin: 0;
+	list-style-type: none;
+}
+
+.inside-page ul.image-thumb-list li {
+	margin-right: 20px;
+	float: left;
+	max-width: 86px;
+	text-align: center;
+}
+
+ul.image-thumb-list li:first-child {
+	margin-left: 0;
+}
+
+.inside-page ul.image-thumb-list li a {
+	color: #00334d;
+	text-decoration: none;
+}
+
+.inside-page ul.image-thumb-list li a:hover {
+}
+
+.inside-page ul.image-thumb-list li a:hover .ps-fabric-name,
+.inside-page ul.image-thumb-list li a:hover .ps-fabric-color {
+	text-decoration: underline;
+	background-color:white;
+	border:0px;
+}
+
+.inside-page ul.image-thumb-list li a img {
+	margin-bottom: 10px;
+}
+
+.you-may-like,
+.recently-viewed {
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.you-may-like {
+	padding-right: 30px;
+	border-right: 1px solid #eae6df;
+}
+
+.recently-viewed {
+	/*padding-left: 30px;*/
+}
+
+/*  -------------------------------------------------------------
+Footer
+-------------------------------------------------------------- */
+
+.footer-details {
+	margin-bottom: 45px;
+}
+
+.flex-content {
+	overflow: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.flex-content:first-child {
+}
+
+.flex-image {
+	overflow: hidden;
+	height: 167px;
+	max-width: 33.333%;
+}
+
+.flex-image img {
+	width: auto;
+	max-width: 500%;
+}
+
+.flex-content-details {
+	background: #fff;
+	width: 66.666%;
+	height: 167px;
+	max-height: 167px;
+	padding: 20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.flex-content h5 {
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.flex-content h6 {
+	font-size: 13px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	line-height: 16px;
+}
+
+.flex-content p {
+	margin-bottom: 0px;
+}
+
+.follow {
+	font-size: 15px;
+	font-family: 'Halogen', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.follow p {
+	color: #8c8372;
+	margin: 5px 15px 0px 0px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.follow ul {
+	display: inline;
+}
+
+.follow ul li {
+	display: inline-block;
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+.follow ul li:first-child {
+	margin-left: 0px;
+}
+
+.follow ul li img {
+	max-width: 26px;
+}
+
+.nav-footer {
+	margin-bottom: 10px;
+}
+
+.nav-footer ul li {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.nav-footer ul li:first-child {
+	margin-left: 0;
+}
+
+.nav-footer ul li a {
+	text-decoration: none;
+	font-size: 13px;
+	color: #00334d;
+	text-transform: none;
+	font-family: arial, sans-serif;
+}
+
+.nav-footer ul li a:hover {
+	text-decoration: underline;
+}
+
+.copyright {
+	text-align: right;
+	margin-bottom: 0;
+}
+
+/*  -------------------------------------------------------------
+Print Styles
+-------------------------------------------------------------- */
+
+@media print {
+
+	#navigation,
+	.ps-results-title .blue-button,
+	.ps-social-shortcuts,
+	.ps-details-image p,
+	.ps-details-image ul,
+	.login-form,
+	.view-more-colors,
+	.ps-details-extra-info,
+	#footer {
+		display: none;
+	}
+	
+	.ps-details-image {
+		width: 50%;
+		float: left;
+	}
+	
+	.ps-details-info {
+		width: 50%;
+		float: right;
+	}
+	
+	.ps-details-info .ps-details-main,
+	.ps-details-info .ps-details-secondary {
+		width: 100%;
+		float: left;
+	}	
+	
+	.inside-page .main-content .ps-results-title h2 {
+		margin-top: 10px;
+	}
+	
+}
+
+/*  -------------------------------------------------------------
+Unsemantic Responsive Grid System
+-------------------------------------------------------------- */
+/* ============================================ */
+/* This file has a mobile-to-desktop breakpoint */
+/* ============================================ */
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+}
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.grid-container:before, .grid-5:before, .mobile-grid-5:before, .grid-10:before, .mobile-grid-10:before, .grid-15:before, .mobile-grid-15:before, .grid-20:before, .mobile-grid-20:before, .grid-25:before, .mobile-grid-25:before, .grid-30:before, .mobile-grid-30:before, .grid-35:before, .mobile-grid-35:before, .grid-40:before, .mobile-grid-40:before, .grid-45:before, .mobile-grid-45:before, .grid-50:before, .mobile-grid-50:before, .grid-55:before, .mobile-grid-55:before, .grid-60:before, .mobile-grid-60:before, .grid-65:before, .mobile-grid-65:before, .grid-70:before, .mobile-grid-70:before, .grid-75:before, .mobile-grid-75:before, .grid-80:before, .mobile-grid-80:before, .grid-85:before, .mobile-grid-85:before, .grid-90:before, .mobile-grid-90:before, .grid-95:before, .mobile-grid-95:before, .grid-100:before, .mobile-grid-100:before, .grid-33:before, .mobile-grid-33:before, .grid-66:before, .mobile-grid-66:before, .clearfix:before,
+.grid-container:after,
+.grid-5:after,
+.mobile-grid-5:after,
+.grid-10:after,
+.mobile-grid-10:after,
+.grid-15:after,
+.mobile-grid-15:after,
+.grid-20:after,
+.mobile-grid-20:after,
+.grid-25:after,
+.mobile-grid-25:after,
+.grid-30:after,
+.mobile-grid-30:after,
+.grid-35:after,
+.mobile-grid-35:after,
+.grid-40:after,
+.mobile-grid-40:after,
+.grid-45:after,
+.mobile-grid-45:after,
+.grid-50:after,
+.mobile-grid-50:after,
+.grid-55:after,
+.mobile-grid-55:after,
+.grid-60:after,
+.mobile-grid-60:after,
+.grid-65:after,
+.mobile-grid-65:after,
+.grid-70:after,
+.mobile-grid-70:after,
+.grid-75:after,
+.mobile-grid-75:after,
+.grid-80:after,
+.mobile-grid-80:after,
+.grid-85:after,
+.mobile-grid-85:after,
+.grid-90:after,
+.mobile-grid-90:after,
+.grid-95:after,
+.mobile-grid-95:after,
+.grid-100:after,
+.mobile-grid-100:after,
+.grid-33:after,
+.mobile-grid-33:after,
+.grid-66:after,
+.mobile-grid-66:after,
+.clearfix:after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.grid-container:after, .grid-5:after, .mobile-grid-5:after, .grid-10:after, .mobile-grid-10:after, .grid-15:after, .mobile-grid-15:after, .grid-20:after, .mobile-grid-20:after, .grid-25:after, .mobile-grid-25:after, .grid-30:after, .mobile-grid-30:after, .grid-35:after, .mobile-grid-35:after, .grid-40:after, .mobile-grid-40:after, .grid-45:after, .mobile-grid-45:after, .grid-50:after, .mobile-grid-50:after, .grid-55:after, .mobile-grid-55:after, .grid-60:after, .mobile-grid-60:after, .grid-65:after, .mobile-grid-65:after, .grid-70:after, .mobile-grid-70:after, .grid-75:after, .mobile-grid-75:after, .grid-80:after, .mobile-grid-80:after, .grid-85:after, .mobile-grid-85:after, .grid-90:after, .mobile-grid-90:after, .grid-95:after, .mobile-grid-95:after, .grid-100:after, .mobile-grid-100:after, .grid-33:after, .mobile-grid-33:after, .grid-66:after, .mobile-grid-66:after, .clearfix:after {
+  clear: both;
+}
+
+.grid-container, .grid-5, .mobile-grid-5, .grid-10, .mobile-grid-10, .grid-15, .mobile-grid-15, .grid-20, .mobile-grid-20, .grid-25, .mobile-grid-25, .grid-30, .mobile-grid-30, .grid-35, .mobile-grid-35, .grid-40, .mobile-grid-40, .grid-45, .mobile-grid-45, .grid-50, .mobile-grid-50, .grid-55, .mobile-grid-55, .grid-60, .mobile-grid-60, .grid-65, .mobile-grid-65, .grid-70, .mobile-grid-70, .grid-75, .mobile-grid-75, .grid-80, .mobile-grid-80, .grid-85, .mobile-grid-85, .grid-90, .mobile-grid-90, .grid-95, .mobile-grid-95, .grid-100, .mobile-grid-100, .grid-33, .mobile-grid-33, .grid-66, .mobile-grid-66, .clearfix {
+  /* <IE7> */
+  *zoom: 1;
+  /* </IE7> */
+}
+
+.grid-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.grid-5, .mobile-grid-5, .grid-10, .mobile-grid-10, .grid-15, .mobile-grid-15, .grid-20, .mobile-grid-20, .grid-25, .mobile-grid-25, .grid-30, .mobile-grid-30, .grid-35, .mobile-grid-35, .grid-40, .mobile-grid-40, .grid-45, .mobile-grid-45, .grid-50, .mobile-grid-50, .grid-55, .mobile-grid-55, .grid-60, .mobile-grid-60, .grid-65, .mobile-grid-65, .grid-70, .mobile-grid-70, .grid-75, .mobile-grid-75, .grid-80, .mobile-grid-80, .grid-85, .mobile-grid-85, .grid-90, .mobile-grid-90, .grid-95, .mobile-grid-95, .grid-100, .mobile-grid-100, .grid-33, .mobile-grid-33, .grid-66, .mobile-grid-66 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* <IE7> */
+  *padding-left: 0;
+  *padding-right: 0;
+  /* </IE7> */
+}
+.grid-5 > *, .mobile-grid-5 > *, .grid-10 > *, .mobile-grid-10 > *, .grid-15 > *, .mobile-grid-15 > *, .grid-20 > *, .mobile-grid-20 > *, .grid-25 > *, .mobile-grid-25 > *, .grid-30 > *, .mobile-grid-30 > *, .grid-35 > *, .mobile-grid-35 > *, .grid-40 > *, .mobile-grid-40 > *, .grid-45 > *, .mobile-grid-45 > *, .grid-50 > *, .mobile-grid-50 > *, .grid-55 > *, .mobile-grid-55 > *, .grid-60 > *, .mobile-grid-60 > *, .grid-65 > *, .mobile-grid-65 > *, .grid-70 > *, .mobile-grid-70 > *, .grid-75 > *, .mobile-grid-75 > *, .grid-80 > *, .mobile-grid-80 > *, .grid-85 > *, .mobile-grid-85 > *, .grid-90 > *, .mobile-grid-90 > *, .grid-95 > *, .mobile-grid-95 > *, .grid-100 > *, .mobile-grid-100 > *, .grid-33 > *, .mobile-grid-33 > *, .grid-66 > *, .mobile-grid-66 > * {
+  /* <IE7> */
+  *margin-left: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block" && this.currentStyle.width === "auto") && "10px");
+  *margin-right: expression((!this.className.match(/grid-[1-9]/) && this.currentStyle.display === "block" && this.currentStyle.width === "auto") && "10px");
+  /* </IE7> */
+}
+
+.grid-parent {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-push-5, .mobile-pull-5, .mobile-push-10, .mobile-pull-10, .mobile-push-15, .mobile-pull-15, .mobile-push-20, .mobile-pull-20, .mobile-push-25, .mobile-pull-25, .mobile-push-30, .mobile-pull-30, .mobile-push-35, .mobile-pull-35, .mobile-push-40, .mobile-pull-40, .mobile-push-45, .mobile-pull-45, .mobile-push-50, .mobile-pull-50, .mobile-push-55, .mobile-pull-55, .mobile-push-60, .mobile-pull-60, .mobile-push-65, .mobile-pull-65, .mobile-push-70, .mobile-pull-70, .mobile-push-75, .mobile-pull-75, .mobile-push-80, .mobile-pull-80, .mobile-push-85, .mobile-pull-85, .mobile-push-90, .mobile-pull-90, .mobile-push-95, .mobile-pull-95, .mobile-push-33, .mobile-pull-33, .mobile-push-66, .mobile-pull-66 {
+    position: relative;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .mobile-grid-5 {
+    float: left;
+    width: 5%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-5 {
+    margin-left: 5%;
+  }
+
+  .mobile-suffix-5 {
+    margin-right: 5%;
+  }
+
+  .mobile-push-5 {
+    left: 5%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-5 {
+    left: -5%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-10 {
+    float: left;
+    width: 10%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-10 {
+    margin-left: 10%;
+  }
+
+  .mobile-suffix-10 {
+    margin-right: 10%;
+  }
+
+  .mobile-push-10 {
+    left: 10%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-10 {
+    left: -10%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-15 {
+    float: left;
+    width: 15%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-15 {
+    margin-left: 15%;
+  }
+
+  .mobile-suffix-15 {
+    margin-right: 15%;
+  }
+
+  .mobile-push-15 {
+    left: 15%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-15 {
+    left: -15%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-20 {
+    float: left;
+    width: 20%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-20 {
+    margin-left: 20%;
+  }
+
+  .mobile-suffix-20 {
+    margin-right: 20%;
+  }
+
+  .mobile-push-20 {
+    left: 20%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-20 {
+    left: -20%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-25 {
+    float: left;
+    width: 25%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-25 {
+    margin-left: 25%;
+  }
+
+  .mobile-suffix-25 {
+    margin-right: 25%;
+  }
+
+  .mobile-push-25 {
+    left: 25%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-25 {
+    left: -25%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-30 {
+    float: left;
+    width: 30%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-30 {
+    margin-left: 30%;
+  }
+
+  .mobile-suffix-30 {
+    margin-right: 30%;
+  }
+
+  .mobile-push-30 {
+    left: 30%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-30 {
+    left: -30%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-35 {
+    float: left;
+    width: 35%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-35 {
+    margin-left: 35%;
+  }
+
+  .mobile-suffix-35 {
+    margin-right: 35%;
+  }
+
+  .mobile-push-35 {
+    left: 35%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-35 {
+    left: -35%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-40 {
+    float: left;
+    width: 40%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-40 {
+    margin-left: 40%;
+  }
+
+  .mobile-suffix-40 {
+    margin-right: 40%;
+  }
+
+  .mobile-push-40 {
+    left: 40%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-40 {
+    left: -40%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-45 {
+    float: left;
+    width: 45%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-45 {
+    margin-left: 45%;
+  }
+
+  .mobile-suffix-45 {
+    margin-right: 45%;
+  }
+
+  .mobile-push-45 {
+    left: 45%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-45 {
+    left: -45%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-50 {
+    float: left;
+    width: 50%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-50 {
+    margin-left: 50%;
+  }
+
+  .mobile-suffix-50 {
+    margin-right: 50%;
+  }
+
+  .mobile-push-50 {
+    left: 50%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-50 {
+    left: -50%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-55 {
+    float: left;
+    width: 55%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-55 {
+    margin-left: 55%;
+  }
+
+  .mobile-suffix-55 {
+    margin-right: 55%;
+  }
+
+  .mobile-push-55 {
+    left: 55%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-55 {
+    left: -55%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-60 {
+    float: left;
+    width: 60%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-60 {
+    margin-left: 60%;
+  }
+
+  .mobile-suffix-60 {
+    margin-right: 60%;
+  }
+
+  .mobile-push-60 {
+    left: 60%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-60 {
+    left: -60%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-65 {
+    float: left;
+    width: 65%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-65 {
+    margin-left: 65%;
+  }
+
+  .mobile-suffix-65 {
+    margin-right: 65%;
+  }
+
+  .mobile-push-65 {
+    left: 65%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-65 {
+    left: -65%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-70 {
+    float: left;
+    width: 70%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-70 {
+    margin-left: 70%;
+  }
+
+  .mobile-suffix-70 {
+    margin-right: 70%;
+  }
+
+  .mobile-push-70 {
+    left: 70%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-70 {
+    left: -70%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-75 {
+    float: left;
+    width: 75%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-75 {
+    margin-left: 75%;
+  }
+
+  .mobile-suffix-75 {
+    margin-right: 75%;
+  }
+
+  .mobile-push-75 {
+    left: 75%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-75 {
+    left: -75%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-80 {
+    float: left;
+    width: 80%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-80 {
+    margin-left: 80%;
+  }
+
+  .mobile-suffix-80 {
+    margin-right: 80%;
+  }
+
+  .mobile-push-80 {
+    left: 80%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-80 {
+    left: -80%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-85 {
+    float: left;
+    width: 85%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-85 {
+    margin-left: 85%;
+  }
+
+  .mobile-suffix-85 {
+    margin-right: 85%;
+  }
+
+  .mobile-push-85 {
+    left: 85%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-85 {
+    left: -85%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-90 {
+    float: left;
+    width: 90%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-90 {
+    margin-left: 90%;
+  }
+
+  .mobile-suffix-90 {
+    margin-right: 90%;
+  }
+
+  .mobile-push-90 {
+    left: 90%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-90 {
+    left: -90%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-95 {
+    float: left;
+    width: 95%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-95 {
+    margin-left: 95%;
+  }
+
+  .mobile-suffix-95 {
+    margin-right: 95%;
+  }
+
+  .mobile-push-95 {
+    left: 95%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-95 {
+    left: -95%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-33 {
+    float: left;
+    width: 33.33333%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-33 {
+    margin-left: 33.33333%;
+  }
+
+  .mobile-suffix-33 {
+    margin-right: 33.33333%;
+  }
+
+  .mobile-push-33 {
+    left: 33.33333%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-33 {
+    left: -33.33333%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-66 {
+    float: left;
+    width: 66.66667%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-prefix-66 {
+    margin-left: 66.66667%;
+  }
+
+  .mobile-suffix-66 {
+    margin-right: 66.66667%;
+  }
+
+  .mobile-push-66 {
+    left: 66.66667%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-pull-66 {
+    left: -66.66667%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .mobile-grid-100 {
+    clear: both;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .push-5, .pull-5, .push-10, .pull-10, .push-15, .pull-15, .push-20, .pull-20, .push-25, .pull-25, .push-30, .pull-30, .push-35, .pull-35, .push-40, .pull-40, .push-45, .pull-45, .push-50, .pull-50, .push-55, .pull-55, .push-60, .pull-60, .push-65, .pull-65, .push-70, .pull-70, .push-75, .pull-75, .push-80, .pull-80, .push-85, .pull-85, .push-90, .pull-90, .push-95, .pull-95, .push-33, .pull-33, .push-66, .pull-66 {
+    position: relative;
+  }
+
+  .hide-on-desktop {
+    display: none !important;
+  }
+
+  .grid-5 {
+    float: left;
+    width: 5%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-5 {
+    margin-left: 5%;
+  }
+
+  .suffix-5 {
+    margin-right: 5%;
+  }
+
+  .push-5 {
+    left: 5%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-5 {
+    left: -5%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.05 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-10 {
+    float: left;
+    width: 10%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-10 {
+    margin-left: 10%;
+  }
+
+  .suffix-10 {
+    margin-right: 10%;
+  }
+
+  .push-10 {
+    left: 10%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-10 {
+    left: -10%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.1 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-15 {
+    float: left;
+    width: 15%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-15 {
+    margin-left: 15%;
+  }
+
+  .suffix-15 {
+    margin-right: 15%;
+  }
+
+  .push-15 {
+    left: 15%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-15 {
+    left: -15%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.15 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-20 {
+    float: left;
+    width: 20%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-20 {
+    margin-left: 20%;
+  }
+
+  .suffix-20 {
+    margin-right: 20%;
+  }
+
+  .push-20 {
+    left: 20%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-20 {
+    left: -20%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.2 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-25 {
+    float: left;
+    width: 25%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-25 {
+    margin-left: 25%;
+  }
+
+  .suffix-25 {
+    margin-right: 25%;
+  }
+
+  .push-25 {
+    left: 25%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-25 {
+    left: -25%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.25 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-30 {
+    float: left;
+    width: 30%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-30 {
+    margin-left: 30%;
+  }
+
+  .suffix-30 {
+    margin-right: 30%;
+  }
+
+  .push-30 {
+    left: 30%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-30 {
+    left: -30%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.3 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-35 {
+    float: left;
+    width: 35%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-35 {
+    margin-left: 35%;
+  }
+
+  .suffix-35 {
+    margin-right: 35%;
+  }
+
+  .push-35 {
+    left: 35%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-35 {
+    left: -35%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.35 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-40 {
+    float: left;
+    width: 40%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-40 {
+    margin-left: 40%;
+  }
+
+  .suffix-40 {
+    margin-right: 40%;
+  }
+
+  .push-40 {
+    left: 40%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-40 {
+    left: -40%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.4 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-45 {
+    float: left;
+    width: 45%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-45 {
+    margin-left: 45%;
+  }
+
+  .suffix-45 {
+    margin-right: 45%;
+  }
+
+  .push-45 {
+    left: 45%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-45 {
+    left: -45%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.45 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-50 {
+    float: left;
+    width: 50%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-50 {
+    margin-left: 50%;
+  }
+
+  .suffix-50 {
+    margin-right: 50%;
+  }
+
+  .push-50 {
+    left: 50%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-50 {
+    left: -50%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.5 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-55 {
+    float: left;
+    width: 55%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-55 {
+    margin-left: 55%;
+  }
+
+  .suffix-55 {
+    margin-right: 55%;
+  }
+
+  .push-55 {
+    left: 55%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-55 {
+    left: -55%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.55 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-60 {
+    float: left;
+    width: 60%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-60 {
+    margin-left: 60%;
+  }
+
+  .suffix-60 {
+    margin-right: 60%;
+  }
+
+  .push-60 {
+    left: 60%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-60 {
+    left: -60%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.6 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-65 {
+    float: left;
+    width: 65%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-65 {
+    margin-left: 65%;
+  }
+
+  .suffix-65 {
+    margin-right: 65%;
+  }
+
+  .push-65 {
+    left: 65%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-65 {
+    left: -65%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.65 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-70 {
+    float: left;
+    width: 70%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-70 {
+    margin-left: 70%;
+  }
+
+  .suffix-70 {
+    margin-right: 70%;
+  }
+
+  .push-70 {
+    left: 70%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-70 {
+    left: -70%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.7 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-75 {
+    float: left;
+    width: 75%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-75 {
+    margin-left: 75%;
+  }
+
+  .suffix-75 {
+    margin-right: 75%;
+  }
+
+  .push-75 {
+    left: 75%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-75 {
+    left: -75%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.75 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-80 {
+    float: left;
+    width: 80%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-80 {
+    margin-left: 80%;
+  }
+
+  .suffix-80 {
+    margin-right: 80%;
+  }
+
+  .push-80 {
+    left: 80%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-80 {
+    left: -80%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.8 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-85 {
+    float: left;
+    width: 85%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-85 {
+    margin-left: 85%;
+  }
+
+  .suffix-85 {
+    margin-right: 85%;
+  }
+
+  .push-85 {
+    left: 85%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-85 {
+    left: -85%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.85 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-90 {
+    float: left;
+    width: 90%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-90 {
+    margin-left: 90%;
+  }
+
+  .suffix-90 {
+    margin-right: 90%;
+  }
+
+  .push-90 {
+    left: 90%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-90 {
+    left: -90%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.9 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-95 {
+    float: left;
+    width: 95%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-95 {
+    margin-left: 95%;
+  }
+
+  .suffix-95 {
+    margin-right: 95%;
+  }
+
+  .push-95 {
+    left: 95%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-95 {
+    left: -95%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.95 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-33 {
+    float: left;
+    width: 33.33333%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-33 {
+    margin-left: 33.33333%;
+  }
+
+  .suffix-33 {
+    margin-right: 33.33333%;
+  }
+
+  .push-33 {
+    left: 33.33333%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-33 {
+    left: -33.33333%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.33333 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-66 {
+    float: left;
+    width: 66.66667%;
+    /* <IE7> */
+    *width: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .prefix-66 {
+    margin-left: 66.66667%;
+  }
+
+  .suffix-66 {
+    margin-right: 66.66667%;
+  }
+
+  .push-66 {
+    left: 66.66667%;
+    /* <IE7> */
+    *left: expression(Math.floor(0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .pull-66 {
+    left: -66.66667%;
+    /* <IE7> */
+    *left: expression(Math.floor(-0.66667 * (this.parentNode.offsetWidth - parseFloat(this.parentNode.currentStyle.paddingLeft) - parseFloat(this.parentNode.currentStyle.paddingRight))) + "px");
+    /* </IE7> */
+  }
+
+  .grid-100 {
+    clear: both;
+    width: 100%;
+  }
+}
+/* Start - Header menu links */
+table.headermain {
+	text-align: center;
+	width: 100%;
+}
+td.headerlogo {
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+#pindler-logo {
+	background-image: url(../images/logo.jpg);
+	display: block;
+	width: 262px; /* Width of new image */;
+	height: 56px; /* Height of new image */;
+	text-indent: -9999px;
+	text-align:center;
+	margin-bottom:20px;
+}
+table.headermaster {
+	align: center;
+	width: 100%;
+	background-image:url('/../../../../../../cp/images/menuback.jpg');
+}
+td.headermenu {
+	color: #ECECEC;
+	font-size: 8pt;
+	text-transform: capitalize;
+	text-align: center;
+	vertical-align: middle;
+	height: 55px;
+}
+td.headerlogout {
+	color: #FFFFFF;
+	font-size: 9pt;
+	font-family: "halogen-rg-webfont", Georgia, serif;
+	text-transform: uppercase;
+	text-align: right;
+	vertical-align: middle;
+}
+tr.headerlogout {
+	color: #FFFFFF;
+	font-size: 9pt;
+	font-family: "halogen-rg-webfont", Georgia, serif;
+	text-transform: uppercase;
+	text-align: float;
+	vertical-align: middle;
+	right: 250px;
+}
+
+.anylinkmenu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	border: 0px;
+	border-bottom-width: 0;
+	font-family: "halogen-rg-webfont", Georgia, serif;
+	font-size: 9px;
+	line-height: 38px;
+	z-index: 100; /* zIndex should be greater than that of shadow's below */;
+	background-color: #FFFFFF;
+	width: 300px;
+	font-family: "halogen-rg-webfont", Georgia, serif;
+}
+
+.anylinkmenu ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.anylinkmenu ul li a{
+	width: 100%;
+	display: block;
+	text-indent: 3px;
+	border-bottom: 1px solid black;
+	padding: 2px 0;
+	text-decoration: none;
+	font-family: "halogen-bd-webfont", Georgia, serif;
+	text-indent: 5px;
+	text-transform: capitalize;
+}
+
+.anylinkmenu a:hover{
+/*hover background color*/
+	background: #00334b;
+	color: white;
+}
+.anylinkmenucols{
+	position: absolute;
+	width: 350px;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	border: 1px solid black;
+	padding: 10px;
+	font-family: "halogen-rg-webfont", Georgia, serif;
+	font-size: 9px;
+	z-index: 100; /*zIndex should be greater than that of shadow's below*/;
+	background: #000080;
+}
+
+.anylinkmenucols li{
+	padding-bottom: 3px;
+}
+
+.anylinkmenucols .column{
+	float: left;
+	padding: 3px 8px;
+	margin-right: 5px;
+	background: #FFFFFF;
+	background-color: #000080;
+}
+
+.anylinkmenucols .column ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* ######### class for shadow DIV ######### */
+a:link {
+	color: #685E4B;
+	font-family: "Halogen", Georgia, serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 8.5pt;
+}
+a:visited {
+	color: #685E4B;
+	font-family: Ã¢â‚¬Å“HalogenÃ¢â‚¬Â, Georgia, serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 8.5pt;
+}
+a:hover {
+	color: #00334b;
+	font-family: "Halogen", Georgia, serif;
+	text-decoration: underline;
+	text-transform:uppercase;
+	font-size:8.5pt;
+	color: white; 
+}
+/* End - Header menu links */
+
+A.print:link  {
+	text-decoration: none;
+	color: #000000;
+	border-width: 0px;
+}
+A.print:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+	border-width:0px
+
+}
+A.print:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+	border-width:0px
+
+}
+A.print:active {
+	text-decoration: none;
+	color: #FFFFFF;
+	border-width:0px
+}
+.fb-share-button{
+	margin-top: 5px;
+}
+
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.1 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/* /////////////////////////////// */
+/* GENERAL UPDTES */
+/* ////////////////////////////// */
+
+.ps-results-list .ps-results-single .ps-fabric-color {
+	color: #00334d;
+	line-height: 1.5;
+	font-family:Arial, Helvetica, sans-serif;
+	background: white;
+	margin-left:
+
+}
+
+/* /////////////////////////////// */
+/* CLOSEOUT FABRIC SEARCH */
+/* ////////////////////////////// */
+
+.inside-page .main-content .guided-search .ps-closeout-submit .brown-button {
+	font-size: 15px;
+	padding: 21px 24px 18px;
+}
+
+/* /////////////////////////////// */
+/* CLOSEOUT PRODUCT DETAILS */
+/* ////////////////////////////// */
+
+.ps-original-price {
+	text-decoration: line-through;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color:white
+}
+
+.ps-results-single:hover .ps-original-price {
+	color: #8c8372;
+	background-color:white
+}
+
+.ps-results-list .ps-results-single .ps-closeout-price,
+.ps-closeout-price {
+	color: purple;
+	font-family:Arial, Helvetica, sans-serif
+}
+
+.ps-disclaimer-stock p {
+	text-align: center;
+	color: purple;
+	text-transform: uppercase;
+}
+
+/* ///////////////////// */
+/* PRODUCT DETAILS */
+/* ///////////////////// */
+
+/* Clear Colors Button */
+.inside-page .ps-reset-colors .brown-button,
+.inside-page .ps-filter-option .ps-reset-colors .brown-button {
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 10px;
+}
+
+.inside-page .ps-reset-design-styles .brown-button,
+.inside-page .ps-filter-option .ps-reset-design-styles .brown-button {
+	margin: 15px auto;
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	max-width: 140px;
+}
+
+/* Product Details Back Button */
+.product-search-results .ps-results-title .brown-button {
+	font-family: 'Halogen', sans-serif;
+	color:	 #fff;
+	text-decoration: none;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding-top	: 15px;
+	position: absolute;
+	top: 60px;
+	right: 170px;
+	color: white;
+}
+
+.product-search-results .ps-results-title .brown-button:hover {
+	color: #8c8372;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+
+}
+
+/* Product Details Important Links */
+.inside-page .main-content .ps-product-links {
+	position: absolute;
+	left: 10px;
+	top: 125px;
+	list-style: none;
+	margin-left: 0;
+}
+
+.ps-product-links li {
+	list-style-type: none;
+	float: left;
+	margin-left: 10px;
+	border-left: 1px solid #eae6df;
+	padding-left: 10px;
+}
+
+.ps-product-links li:first-child {
+	margin-left: 0;
+	padding-left: 0;
+	border-left: none;
+}
+
+.inside-page .main-content .ps-product-links li a {
+	text-decoration: none;
+}
+
+.inside-page .main-content .ps-product-links li a:hover {
+	text-decoration: underline;
+}
+
+/* Product Details Image Zoom Size */
+.ps-details-main-image {
+	width: 100%;
+	max-width: 450px;
+}
+
+/*
+ Cloud Zoom CSS. (c)2012-2013 Star Plugins
+*/
+
+/* CSS for lens */
+.cloudzoom-lens {
+    border:5px solid #888;
+    width:100px;
+    height:100px;
+    box-shadow: -0px -0px 10px rgba(0,0,0,0.40);
+    cursor:crosshair;
+    z-index: 10;
+}
+/* CSS for zoom window. */
+.cloudzoom-zoom {
+    border:1px solid #888;
+    width:500px;
+    height:200px;
+    box-shadow: -0px -0px 10px rgba(0,0,0,0.40);
+	z-index:999;
+}
+/* CSS for zoom window in 'inside' mode. */
+.cloudzoom-zoom-inside {
+    border:none;
+    box-shadow:none;
+	z-index:999;
+}
+
+/* CSS for captions */
+.cloudzoom-caption {
+    display:none;   /* CSS captions should be hidden initially */
+    text-align: left;
+    background-color:#000;
+    color:#fff;
+    font-weight:bold;
+    padding:10px;
+    font-family: sans-serif;
+    font-size:11px;
+}
+
+/* A blank image */
+.cloudzoom-blank {
+    background-image:url(blank.png);
+}
+
+/* The animated ajax loading image */
+.cloudzoom-ajax-loader {
+    background-image:url(ajax-loader.gif);
+    width:32px;
+    height:32px;
+}
+
+/* Printer Pages */
+.printer-page .inside-page .main-content h2 {
+	margin-top: 10px;
+}
+
+.printer-page #wrapper {
+	width: 770px;
+	min-width: 770px;
+	margin: auto;
+}
+
+.print-nav {
+	text-align: center;
+}
+.print-nav a.brown-button,
+.print-nav a.blue-button {
+	font-size: 14px;
+	color: #fff;
+}
+
+.print-nav a.brown-button:hover {
+	color: #685E4B;
+}
+
+.print-nav a.blue-button:hover {
+	color: #00334d;
+}
+
+
+/* Email Pop Up */
+.ps-email-overlay {
+	z-index: 9999;
+}
+
+.inside-page .ps-email-overlay .ps-header {
+	padding: 15px 20px 9px;
+}
+
+.ps-email-overlay input {
+	width: 100%;
+	margin: 5px 0 0;
+	font-size: 12px;
+	padding: 2px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.ps-email-overlay textarea {
+	width: 100%;
+	min-height: 100px;
+	padding: 2px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin-top: 5px;
+}
+
+.inside-page .ps-email-overlay form p {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.ps-email-overlay input[type=submit] {
+	text-align: center;
+	background: #00334d;
+	color: #fff;
+	padding: 10px 17px 7px;
+	font-family: 'Halogen', sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-style: normal;
+	border-radius: 0;
+	font-weight: 400;
+	font-size: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.ps-email-overlay input[type=submit]:hover {
+	background: #8c8372;
+}
+	a.searchoption     { 
+	font-family: Arial, Helvetica, sans-serif, Verdana; 
+	font-size: 9pt; 
+	color: #00334d; 
+	text-align: Left; 
+	text-transform: uppercase
+}
+
+/* ///////////////////// */
+/* FAVORITES */
+/* ///////////////////// */
+
+.ps-favorites .ps-results-list .ps-results-single {
+	margin-left: 30px;
+}
+
+.ps-favorites .ps-results-list .ps-results-single a {
+	margin-bottom: 5px;
+	display: block;
+	line-height: 1.5;
+}
+
+.ps-favorites .ps-results-list .ps-results-single a img {
+	margin-top: 10px;
+}
+
+.ps-favorites .ps-results-list .ps-results-single {
+	min-height: 340px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 15px;
+}
+
+.ps-favorites .ps-results-list .ps-results-single a.ps-fab-item-link {
+	text-align: left;
+	font-size: x-small;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	margin-left: 12px;
+	background-color:white;
+}
+
+.ps-favorites .ps-results-list .ps-results-single a .ps-fab-item-icon {
+	position: absolute;
+	left: -12px;
+}
+
+/* ///////////////////// */
+/* MANUAL PRINT SETTINGS */
+/* ///////////////////// */
+
+@media print {
+
+	#navigation,
+	.ps-results-title .blue-button,
+	.ps-social-shortcuts,
+	.ps-details-image p,
+	.ps-details-image ul,
+	.login-form,
+	.view-more-colors,
+	.ps-details-extra-info,
+	#footer,
+	.print-nav,
+	.ps-product-links,
+	.ps-results-title .brown-button,
+	.ps-details-info .brown-button {
+		display: none;
+		background: none;
+		
+	}
+	
+	.printer-page .ps-details-image p,
+	.ps-disclaimer-stock p {
+		display: block;
+		font-size: 8px;
+	}
+	
+	.ps-details-image {
+		width: 50%;
+		float: left;
+	}
+	
+	.ps-details-info {
+		width: 50%;
+		float: right;
+	}
+	
+	.ps-details-info .ps-details-main,
+	.ps-details-info .ps-details-secondary {
+		width: 100%;
+		float: left;
+	}
+	
+	.inside-page .main-content h2,
+	.printer-page .inside-page .main-content h2 {
+		margin-top: 0px;
+	}
+	
+	.inside-page .main-content h2 {
+		margin-bottom: 25px;
+	}
+	
+	.inside-page .ps-details-main p {
+		font-size: 10px;
+		margin-bottom: 7px;
+	}
+	
+	.printer-page .inside-page .ps-details-main p,
+	.printer-page .inside-page .ps-details-secondary p,
+	.printer-page .inside-page .ps-details-image p {
+		font-size: 9px;
+	}
+	
+	#header .company-logo {
+		padding-top: 22px;
+		padding-bottom: 16px;
+	}
+	
+}	
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.3.3 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Condense Size of Layout
+-------------------------------------------------------------- */
+
+#wrapper #page-header {
+	height: 110px;
+}
+
+#wrapper #page-header h1 {
+	font-size: 20px;
+	letter-spacing: 4px;
+	line-height: 1.2;
+}
+
+#wrapper .inside-page .main-content {
+	padding-top: 30px;
+}
+
+#wrapper .inside-page .main-content h1,
+#wrapper .inside-page .main-content h2 {
+	font-size: 18px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#wrapper .inside-page .main-content .product-search-results h2 {
+	margin-bottom: 50px;
+}
+
+#wrapper .inside-page .main-content h3 {
+	font-size: 15px;
+}
+
+#wrapper .inside-page .ps-open .ps-header {
+	position: relative;
+}
+
+#wrapper .inside-page .ps-header ul {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+#wrapper .inside-page .ps-header ul li {
+	margin-bottom: 0;
+}
+
+#wrapper .inside-page .ps-open .ps-header h3,
+#wrapper .inside-page .ps-header h3 {
+	font-size: 14px;
+}
+
+#wrapper .guided-search input[type=submit], #wrapper .book-search input[type=submit] {
+	font-size: 14px;
+	padding: 13px 18px 11px;
+	margin-bottom: 30px;
+}
+
+#wrapper .inside-page .main-content .guided-search .ps-closeout-submit .brown-button {
+	font-size: 14px;
+	padding: 15px 18px 12px;
+}
+
+#wrapper .product-search-results .ps-results-title .blue-button {
+	top: 10px;
+}
+
+#wrapper .ps-social-shortcuts,
+#wrapper .ps-organize-results {
+	top: 73px;
+}
+
+#wrapper .filter-close,
+#wrapper .filter-close-save {
+	z-index: 1;
+}
+
+#wrapper .inside-page .main-content .ps-product-links {
+	top: 75px;
+}
+
+#wrapper .product-search-results .ps-results-title .brown-button {
+	top: 10px;
+}
+
+#wrapper .inside-page .ps-click-overlay .ps-header {
+	padding: 19px 20px 15px;
+}
+
+#wrapper .inside-page .ps-email-overlay .ps-header {
+	padding: 16px 20px 11px;
+}
+
+#header .nav-mobile-trigger {
+	display: none;
+}
+
+#header #navigation .mobile-nav-close {
+	display: none;
+}
+
+.noscroll {
+	overflow: hidden;
+	position: fixed;
+}
+
+.ps-email-overlay {
+	min-width: 320px;
+	margin-left: -70px;
+}
+
+#wrapper .pindler-search input[type=radio], .pindler-search input[type=checkbox] {
+	float: left;
+	margin-bottom: 10px;
+}
+	
+#wrapper .inside-page .pindler-search .ps-header ul li input[type=radio], #wrapper .inside-page .pindler-search .ps-header ul li input[type=checkbox] {
+	margin-bottom: 0;
+}
+
+div.anylinkshadow {
+	display: inline;
+}
+
+#navigation.trade-navigation {
+	background-color: #8c8372;
+}
+
+body .page-title-buttons-container {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0 10px;
+	max-width: 1000px;
+}
+
+.page-title-buttons-container .page-title-buttons-links {
+	right: 5px;
+	top: -20px;
+}
+
+.inside-page .main-content .pts-cfa-link:link,
+.inside-page .main-content .pts-cfa-link:visited,
+.inside-page .main-content .pts-cfa-link:hover,
+.inside-page .main-content .pts-cfa-link:active{
+	color: #00334d;
+}
+
+/*  -------------------------------------------------------------
+Mobile Compatibility
+-------------------------------------------------------------- */
+
+@media screen and (max-width: 1035px) {
+	
+	#wrapper .inside-page .main-content .ps-color-options {
+		width: 65%;
+		height: auto;
+		margin: 0;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		border-top: 10px solid #eae6df;
+		border-bottom: 10px solid #eae6df;
+		border-left: 10px solid #eae6df;
+		border-right: 5px solid #eae6df;
+	}
+	
+	#wrapper .inside-page .main-content .ps-color-options ul li {
+		width: 20%;
+		margin: 0;
+		padding: 0 10px 10px 0;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	
+	#wrapper .inside-page .main-content .ps-color-choices {
+		width: 35%;
+		height: auto;
+		min-height: 0px;
+		margin: 0;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		border-top: 10px solid #eae6df;
+		border-bottom: 10px solid #eae6df;
+		border-right: 10px solid #eae6df;
+		border-left: 5px solid #eae6df;
+	}
+	
+	#wrapper .ps-color-choices div p {
+		margin: 10px 0;
+	}
+
+}
+
+@media screen and (max-width: 1030px) {
+	
+	/* Results */
+	
+	#wrapper .ps-results-list .ps-results-single {
+		width: 25%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	/* Favorites */
+	
+	.ps-favorites .ps-results-list .ps-results-single a .ps-fab-item-icon {
+		position: static;
+		margin-right: 5px;
+	}
+	
+	.ps-favorites .ps-results-list .ps-results-single a.ps-fab-item-link {
+		margin-left: 0;
+		text-align: center;
+	}
+	
+	.ps-favorites .ps-results-single + .grid-100 p {
+		clear: both;
+	}
+	
+}
+
+@media screen and (max-width: 960px) {
+	
+	/*Product Details */
+	#wrapper .inside-page .ps-details-image ul li {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+	
+	#wrapper .inside-page ul.image-thumb-list li {
+		margin-left: 0;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+	
+	/* Trade Website */
+	
+	.page-title-buttons-container .page-title-buttons-links {
+		position: relative;
+		margin-top: 30px;
+	}
+	
+}
+
+@media screen and (max-width: 900px) {
+	
+	#wrapper .inside-page .ps-options li,
+	#wrapper .inside-page .ps-clean li {
+		margin-right: 10px;
+	}
+	
+}
+
+@media screen and (max-width: 840px) {
+	
+	/* Navigation - Convert to Condensed Navigation */
+	
+	body #header {
+		background: #f5f5f5;
+	}
+	
+	#header .nav-mobile-trigger {
+		display: block;
+		float: right;
+		max-width: 35px;
+		margin: 4px 30px 0 0;
+		cursor: pointer;
+	}
+	
+	#header .company-logo a {
+		margin: 0 0 0 30px;
+		max-width: 200px;
+		float: left;
+	}
+	
+	#header #navigation {
+		display: block;
+		width: 100%;
+		max-width: 350px;
+		position: fixed;
+		top: 0;
+		left: -500px;
+		z-index: 999999;
+		height: 100%;
+		overflow-y: auto;
+	}
+	
+	#header #navigation .nav-containers {
+		text-align: left;
+	}
+	
+	#header #navigation .nav-containers .nav-login-container,
+	#header #navigation .nav-containers .nav-main-container {
+		display: block;
+	}
+	
+	#header #navigation #nav-login {
+		border-right: none;
+		border-bottom: 1px solid #485d67;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	
+	#header #navigation #nav-website {
+		padding-left: 15px;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		margin-bottom: 50px;
+	}
+	
+	#header #navigation ul {
+		width: 100%;
+	}
+	
+	#header #navigation li {
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+	
+	#header #navigation li a {
+		padding-left: 0;
+		font-size: 14px;
+		display: inline-block;
+	}
+	
+	#header #navigation #nav-website li:first-child a {
+		margin-left: 0;
+	}
+	
+	#header #navigation #nav-login li a:hover,
+	#header #nav-login li a:hover {
+		text-decoration: none;
+	}
+	
+	/* Navigation - Sub Navigation */
+	/* Hover Corrections */
+	#header #navigation #nav-website li:hover ul,
+	#header #nav-website li:hover ul {
+		display: block;
+	}
+	
+	#header #navigation #nav-website li a:hover,
+	#header #navigation #nav-website li:hover a,
+	#header #nav-website li a:hover,
+	#header #nav-website li:hover a {
+		background: none;
+		color: #fff;
+	}
+	
+	/* Navigation - Sub Navigation */
+	/* Styling Corrections */
+	#header #navigation #nav-website li ul,
+	#header #nav-website li ul {
+		display: block;
+		float: none;
+		position: static;
+		background: none;
+		margin-bottom: 10px;
+	}
+	
+	#header #navigation #nav-website li ul li {
+		border-top: 1px solid #485d67;
+	}
+	
+	#header #navigation #nav-website li ul li:first-child {
+		border-top: none;
+	}
+	
+	#header #navigation #nav-website li ul li a {
+		width: 100%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 12px 12px;
+		color: #818e95;
+	}
+	
+	#header #navigation #nav-website li ul li a:hover,
+	#header #navigation #nav-website li:hover ul li a {
+		color: #818e95;
+		background: none;
+	}
+	
+	/* Login Popup */
+	#header .nav-login-container:hover .login-popup {
+		display: none;
+		margin-left: -9999px;
+	}
+	
+	#header .nav-login-container .login-popup {
+		display: none;
+		margin-left: -9999px;
+		float: left;
+	}
+	
+	/* Color Choices */
+	#wrapper .inside-page .main-content .ps-color-options ul li {
+		width: 25%;
+	}
+	
+	/* Search Options */
+	#wrapper .ps-toggle-all {
+		float: none;
+		display: inline-block;
+		margin-left: 10px;
+	}
+	
+	#wrapper .inside-page .ps-options li,
+	#wrapper .inside-page .ps-clean li {
+		margin-right: 0px;
+	}
+	
+	/* Product Details */
+	
+	#wrapper .ps-print-results {
+		display: none;
+	}
+	
+	/* Trade Navigation */
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+	/* Footer */
+	
+	.follow {
+		margin-bottom: 25px;
+	}
+	
+	.nav-footer ul {
+		float: none;
+		text-align: left;
+	}
+	
+	.copyright {
+		text-align: left;
+	}
+	
+	.nav-footer ul li {
+		margin-left: 0;
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+	
+	/* Results */
+	
+	#wrapper .product-search-results .ps-results-filter {
+		display: none;
+	}
+	
+	#wrapper .ps-page-numbers-container {
+		clear: both;
+	}
+	
+	#wrapper .product-search-results .ps-results-title .blue-button {
+		position: static;
+		margin: 0;
+	}
+	
+	#wrapper .ps-organize-results {
+		position: static;
+		margin-top: -30px;
+	}
+	
+	/* Product Details */
+	
+	#wrapper .ps-details-image {
+		max-width: 320px;
+		margin: 10px auto 40px;
+	}
+	
+	#wrapper .ps-details-image p,
+	#wrapper .ps-details-image ul,
+	#wrapper .ps-details-image .view-more-colors {
+		display: none;
+	}
+	
+	#wrapper .inside-page .ps-details-main p {
+		width: 33.33333%;
+	}
+	
+	#wrapper .inside-page .ps-details-main .ps-click-overlay .ps-click-overlay-content p {
+		width: auto;
+	}
+	
+	#wrapper .ps-details-main .ps-click-overlay .ps-container {
+		margin-top: 130px;
+	}
+	
+	#wrapper .ps-social-shortcuts,
+	#wrapper .inside-page .main-content .ps-product-links {
+		position: static;
+		margin-left: 0;
+	}
+	
+	#wrapper .ps-social-shortcuts {
+		margin-bottom: 10px;
+		margin-top: -30px;
+	}
+	
+	#wrapper .product-search-results .ps-results-title .blue-button,
+	#wrapper .product-search-results .ps-results-title .brown-button {
+		position: static;
+	}
+	
+	#wrapper .ps-product-links li {
+		border: none;
+		padding-right: 10px;
+		margin-right: 10px;
+		padding-left: 0px;
+		margin-left: 0px;
+		margin-bottom: 10px;
+	}
+	
+	#wrapper .ps-social-shortcuts li {
+		border: none;
+		margin-right: 10px;
+		padding-left: 0px;
+		margin-left: 0px;
+		margin-bottom: 10px;
+	}
+	
+	#wrapper .ps-email-overlay {
+		min-width: 0;
+		margin-left: 0;
+		margin-top: 90px;
+		max-width: 500px;
+	}
+
+	
+	/* Favorites */
+	
+	#wrapper.ps-favorites .ps-results-list .ps-results-single {
+		width: 33.33333%;
+	}
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+	/* Color Choices */
+	
+	#wrapper .inside-page .main-content .ps-color-options {
+		width: 100%;
+		border-right: 10px solid #eae6df;
+		border-bottom: 5px solid #eae6df;
+	}
+	
+	#wrapper .inside-page .main-content .ps-color-choices {
+		width: 100%;
+		border-left: 10px solid #eae6df;
+		border-top: 5px solid #eae6df;
+	}
+	
+	#wrapper .inside-page .main-content .ps-color-options ul li {
+		width: 16.66666%;
+	}
+	
+	/* Search Options */
+	
+	#wrapper .inside-page .ps-header ul {
+		position: static;
+		float: none;
+		display: inline-block;
+		width: 100%;
+	}
+	
+	#wrapper .inside-page .ps-header ul li {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+	
+	#wrapper .inside-page .ps-stacked {
+		width: 33.33333%;
+		margin-bottom: 30px;
+		padding-bottom: 12px;
+		border-bottom: 1px solid #aaa;
+	}
+	
+	#wrapper .inside-page .ps-stacked li {
+		margin-right: 0;
+	}
+	
+	#wrapper .inside-page .main-content .guided-search .ps-closeout-submit .brown-button {
+		margin-left: 0;
+	}
+	
+}
+
+@media screen and (max-width: 600px) {
+
+	/* Results */
+	
+	#wrapper .ps-results-list .ps-results-single {
+		width: 33.33333%;
+	}
+	
+	#wrapper .product-search-results .ps-results-title .blue-button {
+		position: static;
+		margin: 0;
+	}
+	
+	#wrapper .ps-organize-results {
+		position: static;
+		margin-top: -30px;
+	}
+	
+}
+
+@media screen and (max-width: 550px) {
+	
+	/* Search Options */
+	
+	#wrapper .inside-page .ps-stacked {
+		width: 100%;
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	#wrapper .inside-page .ps-stacked li {
+		width: 50%;
+		margin: 0;
+		float: left;
+	}
+	
+	#wrapper .pattern-search input {
+		width: 100%;
+	}
+	
+	#wrapper .pattern-search input[type=submit] {
+		width: 100%;
+	}
+	
+	#wrapper .ps-toggle-all {
+		display: none;
+	}
+	
+	#wrapper .pindler-search input[type=radio], .pindler-search input[type=checkbox] {
+		float: left;
+		margin-bottom: 10px;
+	}
+	
+	#wrapper .inside-page .pindler-search .ps-header ul li input[type=radio], #wrapper .inside-page .pindler-search .ps-header ul li input[type=checkbox] {
+		margin-bottom: 0;
+	}
+	
+	#wrapper .inside-page .ps-header ul li {
+		margin-top: 15px;
+	}
+	
+	/* Favorites */
+	
+	#wrapper.ps-favorites .ps-results-list .ps-results-single {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 500px) {
+	
+	/* Navigation */
+	#header #navigation {
+		max-width: none;
+	}
+	
+	#header #navigation .mobile-nav-close {
+		display: block;
+		cursor: pointer;
+		position: fixed;
+		top: 0;
+		right: -54px;
+		z-index: 999999;
+	}
+	
+	/* Header */
+	#wrapper #page-header {
+		height: 100px;
+	}
+	
+	/* Page Content */
+	#wrapper .inside-page {
+		padding-bottom: 30px;
+	}
+	
+	#wrapper .inside-page .main-content h1,
+	#wrapper .inside-page .main-content h2 {
+		font-size: 16px;
+	}
+	
+	#wrapper .inside-page .main-content h4 {
+		font-size: 14px;
+	}
+	
+	#wrapper .inside-page .main-content h1,
+	#wrapper .inside-page .main-content h2,
+	#wrapper .inside-page .main-content h3,
+	#wrapper .inside-page .main-content h4,
+	#wrapper .inside-page .main-content h5 {
+		/*margin-bottom: 20px;*/
+		line-height: 1.4;
+	}
+	
+	#wrapper #page-header h1 {
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+	
+	/* Color Choices */
+	
+	#wrapper .inside-page .main-content .ps-color-options ul li {
+		width: 20%;
+		padding: 0 5px 5px 0;
+	}
+	
+	#wrapper .inside-page .ps-color-choices ul li {
+		width: 100%;
+		margin-top: 7px;
+		padding: 0;
+		height: 38px;
+	}
+	
+	/* Search Options */
+	#wrapper .inside-page .ps-options li {
+		margin: 0;
+		width: 50%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 0 10px 10px 0;
+	}
+	
+	#wrapper .inside-page .ps-options .ps-full li {
+		width: auto;
+	}
+	
+	/* Product Details */
+	
+	#wrapper .inside-page .ps-details-main p {
+		width: 50%;
+	}
+	
+	#wrapper .inside-page .ps-click-overlay .ps-header {
+		padding: 16px 20px 13px;
+	}
+	
+}
+
+@media screen and (max-width: 450px) {
+	
+	/* Navigation */
+	#header .nav-mobile-trigger {
+		max-width: 25px;
+		margin: 2px 10px 0 0;
+	}
+	
+	#header .company-logo {
+		padding-top: 30px;
+		padding-bottom: 18px;
+	}
+	
+	#header .company-logo a {
+		margin-left: 10px;
+		max-width: 150px;
+	}
+	
+	/* Results */
+	
+	#wrapper .ps-results-list .ps-results-single {
+		width: 50%;
+	}
+	
+}
+
+@media screen and (max-width: 400px) {
+
+	/* Footer */
+	.follow ul {
+		display: block;
+		margin-top: 5px;
+	}
+	
+	/* Color Choices */
+	
+	#wrapper .inside-page .main-content .ps-color-options ul li {
+		width: 25%;
+	}
+	
+	/* Search Options */
+	
+	#wrapper .ps-toggle h3 {
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding-right: 35px;
+	}
+	
+	#wrapper.ps-favorites .ps-results-list .ps-results-single {
+		width: 100%;
+	}
+	
+	#wrapper .inside-page .ps-options li {
+		width: 100%;
+	}
+}
+
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.0 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Organize Results
+-------------------------------------------------------------- */
+
+.ps-sortviews {
+	text-align: right;
+	margin-bottom: 10px;
+	margin-top: -20px;
+}
+
+.ps-sortchoice {
+	text-align: right;
+	margin-bottom: 20px;
+}
+#wrapper .inside-page .main-content h2.SearchDesc {
+	font-family: "arial";
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #00334d;
+	border-bottom:none;
+	margin-top:-41px;
+	margin-bottom:20px;
+	
+}
+h2.ReturnPg {
+	font-family: "halogen-th-webfont", Georgia, serif;
+
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #00334d;
+	text-align:center;
+}
+p.text {
+}
+div.ReturnPgContent {
+background:#fff;
+}
+
+@media screen and (max-width: 767px) {
+	
+	.ps-sortviews,
+	.ps-sortchoice {
+		text-align: left;
+	}
+	
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.1 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Trade Site Updates
+
+- Changed navigation to match the public website
+- Updated spacing of header buttons
+-------------------------------------------------------------- */
+
+#wrapper .inside-page .main-content a.blue-button {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+#wrapper .inside-page .main-content a.blue-button:hover {
+	color: #00334d;
+}
+
+#wrapper .inside-page .main-content a.brown-button {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Halogen', sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+#wrapper .inside-page .main-content a.brown-button:hover {
+	color: #8c8372;
+}
+
+#navigation.trade-navigation .nav-containers #nav-login a:hover {
+	background: #8c8372;
+}
+
+#navigation.trade-navigation #nav-website li ul {
+	border-bottom: 2px solid #8c8372;
+}
+
+#navigation.trade-navigation #nav-website li ul li a:hover {
+	background: #8c8372;
+}
+
+#navigation.trade-navigation #nav-website li:first-child ul li a {
+	margin-left: 0;
+}
+
+@media screen and (max-width: 840px) {
+	
+	#header  #navigation.trade-navigation #nav-login {
+		border-bottom: 1px solid #afa594;
+	}
+	
+	#navigation.trade-navigation #nav-website li ul {
+		border-bottom: 2px solid #8c8372;
+	}
+	
+	#header #navigation.trade-navigation #nav-website li ul li a,
+	#header #navigation.trade-navigation #nav-website li ul li a:hover {
+		color: #eae5df;
+	}
+	
+	#header #navigation.trade-navigation #nav-website li ul li {
+		border-top: 1px solid #afa594;
+	}
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.2 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Trade Site Updates
+
+- Updates to order details, order confirm and order verify pages
+- Converted tables to divs
+- Included grid elements for spacing
+- Fixed spacing for checkboxes
+- Updated form field styles
+- Update order details table
+- Update misc fonts and styles for additiona information
+- Mobile updates for entire layout
+- Update order list layout
+-------------------------------------------------------------- */
+
+.inside-page .main-content .ts-quad-list {
+	margin: 0 0 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.ts-quad-list li {
+	width: 25%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-right: 10px;
+	float: left;
+	list-style: none;
+}
+
+.ts-form-fields {
+	border: 1px solid #f0f0f0;
+	padding: 15px;
+	background: #fafafa;
+	margin-bottom: 10px;
+}
+
+div.ordsumlabel {
+	font-size: 13px;
+	line-height: 1.5;
+	margin-bottom: 2px;
+	border-bottom: thin #dcd8d5 solid;
+}
+
+div.ordsumlabel label {
+	display: block;
+	line-height: 27px;
+}
+
+div.ordsumlabel input[type=text],
+div.ordsumlabel select {
+	border-bottom: none;
+}
+
+div.ordsumlabel input[type=text],
+div.ordsumlabel select,
+div.ordsumlabel textarea {
+	width: 100%;
+	padding: 7px 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ts-form-fields .grid-100 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.ts-form-fields .ordsumlabel .grid-50:first-child {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.ts-form-fields .ordsumlabel .grid-50 {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+.ts-form-fields .ts-checkbox {
+	border: none;
+}
+
+.ts-form-fields .ts-checkbox label,
+.ts-form-fields .paytable label {
+	display: block;
+	padding-left: 25px;
+	text-indent: -25px;
+}
+
+.ts-form-fields .ts-checkbox input[type=checkbox],
+.ts-form-fields .paytable input[type=radio] {
+	vertical-align: middle;
+	top: -1px;
+	position: relative;
+	*overflow: hidden;
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+.ts-form-fields .shipnotice {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.ts-form-fields .paytable {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.ts-form-fields .paytable div {
+	margin-top: 10px;
+}
+
+.ts-form-fields .paytable div:first-child {
+	margin-top: 0;
+}
+
+.ts-form-fields .ts-textarea {
+	margin-bottom: 0;
+}
+
+.ts-order-table {
+	border: 1px solid #f0f0f0;
+	width: 100%;
+	background: #fafafa;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin-bottom: 0;
+}
+
+.ts-order-table .OETable {
+	width: 100%;
+	border-collapse: separate;
+}
+
+.ts-order-table .ts-order-item {
+	border-top: 1px solid #dcd8d5;
+	padding: 20px;
+	margin-top: 25px;
+}
+
+.ts-order-table > .ts-order-item:first-child {
+	border-top: 0;
+	margin-top: 0;
+}
+
+.inside-page .main-content .ts-order-item ul {
+	list-style: none;
+	margin: 0;
+}
+
+.inside-page .main-content .ts-order-item ul li {
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 20px;
+}
+
+.ts-order-item grid-33 {
+	padding-right: 0;
+}
+
+.ts-order-item .ts-order-price {
+	text-align: right;
+	border-left: 1px dashed #dcd8d5;
+	min-height: 150px;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-price ul li {
+	float: none;
+	display: block;
+	margin: 20px 0 0 0;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-price ul li:first-child {
+	margin-top: 0;
+}
+
+.ts-order-item .ts-order-detail {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.ts-order-item .ts-order-price input {
+	text-align: right;
+	padding: 5px 5px 3px 5px;
+}
+
+.ts-order-price .statictable {
+	display: inline;
+	color: #8c8372;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-item-details li {
+	width: 25%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-left: 20px;
+	margin: 0 0 15px;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-item-choices li {
+	width: 25%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-left: 20px;
+	margin: 0 0 15px;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-item-details li:first-child,
+.inside-page .main-content .ts-order-item .ts-order-item-choices li:first-child {
+	padding-left: 0;
+}
+
+.inside-page .main-content .ts-order-item .ts-order-item-choices select,
+.inside-page .main-content .ts-order-item .ts-order-item-choices textarea,
+.inside-page .main-content .ts-order-item .ts-order-item-choices input {
+	padding: 5px;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ts-remove-button button {
+	padding-left: 0;
+	padding-right: 0;
+	cursor: pointer;
+}
+
+.ts-sidemark p {
+	margin-bottom: 5px;
+}
+
+.ts-sidemark textarea {
+	width: 75%;
+}
+
+.ts-order-add-item-container {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.ts-order-add-item {
+}
+
+.ts-order-add-item .grid-66,
+.ts-order-add-item .grid-33 {
+	padding: 20px;
+}
+
+.ts-order-add-item .grid-66 {
+	background: #f0f0f0;
+}
+
+.ts-order-add-item .grid-33 {
+	background: #eae6df;
+	position: absolute;
+	right: 10px;
+	height: 100%;
+	text-align: right;
+}
+
+.inside-page .main-content .ts-order-add-item h6 {
+	margin-top: 0;
+}
+
+.inside-page .main-content .ts-order-add-item ul {
+	margin-left: 0;
+}
+
+.ts-order-add-item ul li {
+	list-style-type: none;
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 20px;
+}
+
+.ts-order-add-item ul li p {
+	margin-bottom: 0;
+}
+
+.ts-order-add-item ul li input {
+	padding: 5px;
+	margin-right: 5px;
+}
+
+.ts-order-add-item ul li select {
+	padding: 5px;
+}
+
+.ts-order-add-item-container .grid-33 button {
+	margin-bottom: 10px;
+	padding: 0;
+	border: none;
+}
+
+.ts-order-add-item p.ts-notes {
+	font-size: 12px;
+	color: #888;
+}
+
+.GRANDTOTAL {
+	font-weight: bold;
+}
+
+.ts-disclaimer {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 30px;
+	margin: 0 0 20px;
+}
+
+.ts-disclaimer p {
+	font-size: 12px;
+	margin: 0;
+	color: #8c8c8c;
+}
+
+.order-summary .grid-50 p {
+	margin-bottom: 0;
+}
+
+.inside-page .main-content .ts-order-review-details ul {
+	margin: 0 0 20px;
+}
+
+.ts-order-review-details ul li {
+	list-style-type: none;
+	width: 20%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-right: 10px;
+	float: left;
+}
+
+.ts-order-review-details p {
+	margin-bottom: 0;
+}
+
+.ts-order-item p.statictable {
+	text-align: left;
+	margin-bottom: 0;
+}
+
+.ts-leadtime input {
+	display: block;
+	float: left;
+	margin: 3px 10px 10px 0;
+}
+
+.ts-order-confirm-container .grid-100 {
+	background: #eae6df;
+	text-align: center;
+	padding: 30px;
+}
+
+.inside-page .ts-order-confirm-container .grid-100 p {
+	text-align: center;
+}
+
+.inside-page .ts-order-confirm-container .grid-100 p.GRANDTOTAL {
+	font-size: 28px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.content .ts-final-order-total {
+	margin-bottom: 0;
+}
+
+.ts-final-payment {
+	border: 1px solid #f0f0f0;
+	border-top: none;
+	padding: 30px;
+	text-align: center;
+}
+
+.order-list-item {
+	background: #f0f0f0;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 10px 20px 20px 20px;
+	border-top: 1px solid #dcd8d5;
+}
+
+.order-list-item:first-child {
+	border-top: 0;
+}
+
+.inside-page .main-content .order-list-item ul {
+	margin: 0;
+}
+
+.order-list-item ul li {
+	list-style-type: none;
+	width: 25%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-right: 10px;
+	float: left;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.order-list-item ul li .simple-title {
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.ts-cfa-list .order-list-item ul:first-child li {
+	width: 20%;
+}
+
+.ts-required {
+	background: lightyellow;
+}
+
+.order-list-item .cfa-choice-list li {
+	max-width: 120px;
+}
+
+.order-list-item ul li.order-list-sidemark-75 {
+	width: 75%;
+	font-weight: 400;
+}
+
+.order-list-item ul li.order-list-sidemark-100 {
+	width: 100%;
+	font-weight: 400;
+}
+
+.pts-order-list-payment {
+	background-color: #dcd8d5;
+	padding: 10px 20px;
+	margin-top: 0px;
+	margin-right: -30px;
+	margin-left: 20px;
+	margin-bottom: -50px;
+	border: 1px solid #fff;
+	border-right: none;
+}
+
+.pts-order-list-payment select {
+	margin-top: 10px;
+	width: 100%;
+	padding: 5px;
+}
+
+.pts-splash {
+	background: #eae6df;
+}
+
+.pts-splash-note {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 50px 30px 0;
+	max-width: 1000px;
+	margin: 0 auto 0;
+}
+
+.pts-splash h1 {
+	text-align: center;
+	width: 100%;
+	padding: 0;
+	font-family: 'Halogen';
+	text-transform: uppercase;
+	font-size: 24px;
+	letter-spacing: 0.075em;
+	color: #777;
+	line-height: 1.5;
+ }
+ 
+ .pts-splash p {
+	 text-align: center;
+	 margin-top: 20px;
+	}
+
+.pts-splash-image {
+	width: 100%;
+	max-width: 1120px;
+	margin: 50px auto 0;
+}
+
+.pts-splash-image img {
+	width: 100%;
+}
+
+.pts-splash-content .grid-50 {
+	padding: 0 30px;
+}
+
+@media screen and (max-width: 840px) {
+	.ts-quad-list li {
+		width: 100%;
+	}
+		
+	.inside-page .main-content .ts-order-item .ts-order-item-details li,
+	.inside-page .main-content .ts-order-item .ts-order-item-choices li {
+		width: 50%;
+		padding-left: 0;
+		padding-right: 10px;
+	}
+	
+	.ts-order-review-details ul li {
+		margin-top: 10px;
+		width: 33.33333%;
+	}
+	
+	.order-list-item ul li,
+	.ts-cfa-list .order-list-item ul:first-child li {
+		width: 33.33333%;
+	}
+	
+	.pts-order-list-payment {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: -20px;
+		margin-right: 0;
+		border-right: 1px solid #fff;
+		border-left: none;
+	}
+	
+	.order-list-item ul .pts-order-list-payment-container {
+		width: 100%;
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
+	div.ordsumlabel {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		padding-right: 20px;
+		border-bottom: none;
+	}
+	
+	.ts-form-fields .ordsumlabel .grid-50 {
+		padding-left: 0;
+	}
+	
+	div.ordsumlabel input[type=text], div.ordsumlabel select {
+		border-bottom: thin #dcd8d5 solid
+	}
+	
+	.ts-form-fields .ts-textarea {
+		float: none;
+		width	: 100%;
+		padding-right: 0;
+	}
+	
+	.paymenttable-container,
+	.instructions-container {
+		width: 50%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		float: left;
+	}
+	
+	.ts-order-item-details-container {
+		width: 70%;
+		float: left;
+	}
+	
+	.ts-order-item .ts-order-price {
+		width: 30%;
+		float: right;
+	}
+	
+	.ts-order-add-item .grid-33 {
+		position: static;
+	}
+	
+	.inside-page .main-content .ts-order-add-item h6 {
+		display: inline;
+	}
+	
+	.ts-order-add-item .GRANDTOTAL {
+		display: inline;
+		margin-left: 20px;
+	}
+	
+	.ts-order-add-item-container .grid-33 button {
+		margin-top: 20px;
+		display: block;
+		width: 100%;
+		text-align: right;
+		background: none;
+	}
+	
+	.ts-order-add-item .grid-33 p.ts-notes {
+		clear: both;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 678px) {
+	.inside-page .main-content .ts-order-item .ts-order-item-details li {
+		width: 50%;
+		padding-left: 0px;
+	}
+	
+	.ts-order-review-details ul li {
+		width: 50%;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+	.paymenttable-container, .instructions-container {
+		width: 100%;
+	}
+	
+	.ts-order-item-details-container {
+		width: 100%;
+		float: none;
+		padding: 0;
+	}
+	
+	.inside-page .main-content .ts-order-item .ts-order-item-choices li {
+		width: 50%;
+	}
+	
+	.ts-sidemark textarea {
+		width: 100%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	
+	.ts-order-item .ts-order-price {
+		width: 100%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: none;
+		margin-top: 25px;
+		padding: 0;
+		min-height: 0;
+	}
+	
+	.inside-page .main-content .ts-order-item .ts-order-price ul li {
+		width: 50%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		float: left;
+		text-align: left;
+		margin: 0;
+		min-height: 50px;
+	}
+	
+	.order-list-item ul li,
+	.ts-cfa-list .order-list-item ul:first-child li {
+		width: 50%;
+	}
+	
+	.order-list-item .cfa-choice-list li {
+		max-width: none;
+		width: 50%;
+	}
+	
+	.order-list-item ul li.pts-order-list-payment-container {
+		width: 100%;
+	}
+	
+	.pts-order-list-payment {
+		margin-left: 0;
+		margin-right: 0;
+		border: none;
+		border-left: none;
+		background: none;
+		padding: 10px 0;
+	 }
+  
+}
+
+@media screen and (max-width: 450px) {
+	div.ordsumlabel {
+		width: 100%;
+	}
+	
+	.inside-page .main-content .ts-order-item .ts-order-price ul li {
+		width: 100%;
+	}
+	
+	.ts-order-review-details ul li {
+		width: 100%;
+	}
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.3 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Trade Site Updates
+
+- Mobile Optimization for all pages
+- Convert contact pages to new format
+-------------------------------------------------------------- */
+
+.ts-contact-form div.ordsumlabel {
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+	padding-top: 20px;
+}
+
+.ts-contact-form div.ordsumlabel input[type=text],
+.ts-contact-form div.ordsumlabel select {
+	border-bottom: thin #dcd8d5 solid;	
+}
+
+.ts-contact-form p {
+	margin-bottom: 0;
+}
+
+.ts-contact-form .ordsumlabel.ts-textarea {
+	border-bottom: none;
+}
+
+.ts-contact-form .ordsumlabel.ts-submit {
+	border-bottom: none;
+}
+
+.ts-contact-form .ordsumlabel.ts-submit button {
+	background: #03324c;
+	padding: 10px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+	
+	.ts-contact-form div.ordsumlabel {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.ts-contact-form div.ordsumlabel .grid-50,
+	.ts-contact-form div.ordsumlabel .grid-100 {
+		margin-top: 20px;
+		padding: 0;
+	}
+	
+	.ts-contact-form div.ordsumlabel:first-child .grid-50:first-child,
+	.ts-contact-form div.ordsumlabel:first-child .grid-100 {
+		margin-top: 0;
+	}
+	
+	.ts-contact-form .ordsumlabel .grid-50:first-child {
+		padding: 0;
+	}
+	
+	.ts-contact-form .ordsumlabel.ts-textarea {
+		float: left;
+	}
+	
+	.ts-contact-form div.ordsumlabel input[type=text],
+	.ts-contact-form div.ordsumlabel select,
+	.ts-contact-form div.ordsumlabel textarea {
+		width: 100%;
+	}
+	
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.4 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Trade Site Updates (Phase 3)
+
+- Product Details Page Updates
+-------------------------------------------------------------- */
+
+/* Product Details Page */
+
+.ps-details-tabs-container {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	padding: 30px 0px;
+}
+
+.inside-page .main-content .ps-details-tabs-buttons ul {
+	margin: 0;
+	list-style-type: none;
+}
+
+.inside-page .main-content .ps-details-tabs-buttons ul li {
+	float: left;
+	line-height: 1;
+	padding: 15px 10px;
+	background: #eae6df;
+	color: #b8b3aa;
+	font-family: 'Halogen', sans-serif;
+	font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.inside-page .main-content .ps-details-tabs-buttons ul li.active {
+	background: #8c8372;
+	color: #fff;
+	cursor: default;
+}
+
+.inside-page .main-content .ps-details-tabs-buttons ul li:hover {
+	background: #8c8372;
+	color: #fff;
+}
+
+.ps-details-tab-content {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #8c8372;
+	padding: 20px;
+}
+
+.ps-details-tab-content > div {
+	display: none;
+}
+
+.ps-details-tab-content .active {
+	display: block;
+}
+
+#wrapper .inside-page .main-content .ps-details-tab-content .blue-button {
+	margin: 10px 0 0;
+}
+
+.ps-details-image .image-NA {
+	display: none;
+}
+
+.ps-details-NA,
+.ps-details-No {
+	display: none;
+}
+
+/* Product Details Print Page */
+
+.printer-page #header .company-logo {
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+
+#wrapper.printer-page .inside-page .main-content .product-search-results h2 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.printer-page .inside-page .ps-details-main p,
+.printer-page .inside-page .ps-details-secondary p,
+.printer-page .inside-page .ps-details-image p {
+	font-size: 11px;
+}
+
+@media print {
+	
+	.ps-details-tab-item {
+		display: none;
+	}
+	
+	.ps-details-tab-content {
+		border: none;
+	}
+	
+	.inside-page .ps-details-secondary p {
+		font-size: 9px;
+	}
+	
+	.inside-page .main-content .ps-details-secondary a {
+		font-size: 9px;
+	}
+	
+	.printer-page .inside-page .main-content p.ps-details-NA {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 1000px) {
+	
+	#wrapper .inside-page .main-content a.brown-button,
+	#wrapper .inside-page .main-content a.blue-button {
+		font-size: 10px;
+	}
+	
+	.product-search-results .ps-results-title .brown-button {
+		right: 150px;
+	}
+
+}
+
+@media screen and (max-width: 840px) {
+	
+	#wrapper .product-search-results .ps-results-title .blue-button,
+	#wrapper .product-search-results .ps-results-title .brown-button {
+		position: static;
+	}
+	
+	#wrapper .inside-page .main-content .ps-product-links {
+		top: 133px;
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+	.inside-page .main-content .ps-details-tabs-buttons ul {
+		margin-bottom: 5px;
+	}
+	
+	.ps-details-tabs-container {
+		padding-top: 0px;
+	}
+	
+}
+
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+/* Version Update 1.4.5 */
+/* ////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+
+/*  -------------------------------------------------------------
+Trade Site Updates (Phase 3)
+
+- Mobile Updates
+-------------------------------------------------------------- */
+
+/* Address Change */
+
+.ts-condensed-form .ordsumlabel label {
+	margin-top: 10px;
+}
+
+ts-condensed-form .ordsumlabel label:first-child {
+	margin-top: 0;
+}
