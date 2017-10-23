@@ -16,7 +16,7 @@ use Roots\Sage\Wrapper;
 	      </div>
 	    <![endif]-->
 			
-			<nav id="my-menu">
+			<nav id="my-menu" class="hidden-md-up">
 	      <?php
 	      if (has_nav_menu('mobile_navigation')) :
 	        wp_nav_menu(['theme_location' => 'mobile_navigation', 'menu_class' => 'nav']);
