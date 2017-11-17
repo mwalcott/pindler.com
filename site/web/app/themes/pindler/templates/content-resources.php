@@ -51,11 +51,9 @@
 			<?php endwhile; endif;
 		echo '</ul>';
 
-		$i2 = -1;
+		$i2 = 0;
 		$args2 = array(
 			'post_type' => 'resource',
-			'orderby' => 'title',
-			'order' => 'ASC',
 			'tax_query' => array(
 				array(
 					'taxonomy' => $taxonomyName,
