@@ -51,7 +51,7 @@
 			<?php endwhile; endif;
 		echo '</ul>';
 
-		$i2 = 0;
+		$i2 = -1;
 		$args2 = array(
 			'post_type' => 'resource',
 			'orderby' => 'title',
