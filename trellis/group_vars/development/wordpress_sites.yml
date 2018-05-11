@@ -5,9 +5,9 @@
 wordpress_sites:
   pindler2017.com:
     site_hosts:
-      - canonical: pindler2017.dev
+      - canonical: pindler2017.test
         redirects:
-          - www.pindler2017.dev
+          - www.pindler2017.test
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: mike@mustangmktg.com
     multisite:
